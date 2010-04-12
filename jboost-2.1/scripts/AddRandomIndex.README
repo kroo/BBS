@@ -1,0 +1,38 @@
+AddRandomIndex.py
+=================
+Add a random index [0..number of examples-1] to the first column of a jboost .data file and saves a copy of the .data file suffixed with "_idx" (for example: test.data becomes test_idx.data). Also adds a new column at feature position zero to the spec file called "INDEX" with type "number".
+
+
+Requirements
+============
+* Jython or Python
+* boosting .data and .spec files
+
+Usage
+=====
+Invoke the script:
+
+[user@host scripts] $ python AddRandomIndex.py <path to data/spec file stem>
+
+where <path to data/spec file stem> is the full path to the stem of your data and spec files (assume both files located in the same directory).
+
+Example
+=======
+[user@host scripts] $ ls /Users/jsmith/boostinginfo/
+
+mydata.data
+mydata.spec
+
+[user@host scripts] $ python AddRandomIndex.py /Users/jsmith/boostinginfo/mydata
+
+wrote /Users/jsmith/boostinginfo/mydata_idx.data.
+wrote /Users/jsmith/boostinginfo/mydata_idx.spec.
+
+[user@host scripts] $ ls /Users/jsmith/boostinginfo/
+
+mydata.data
+mydata_idx.data
+mydata.spec
+mydata_idx.spec
+
+Use these new *_idx.data and *_idx.spec file as your training data for jboost (via jboost directly or as data sources for nfold.py script).

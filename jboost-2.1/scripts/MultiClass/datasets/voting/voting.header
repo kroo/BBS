@@ -1,0 +1,18 @@
+@relation voting
+@attribute handicapped-infants {y,n}
+@attribute water-project-cost-sharing {y,n}
+@attribute adoption-of-the-budget-resolution {y,n}
+@attribute el-salvador-aid {y,n}
+@attribute religious-groups-in-schools {y,n}
+@attribute anti-satellite-test-ban {y,n}
+@attribute aid-to-nicaraguan-contras {y,n}
+@attribute mx-missle {y,n}
+@attribute immigration {y,n}
+@attribute synfuels-corporation-cutback {y,n}
+@attribute education-spending {y,n}
+@attribute superfund-right-to-sue {y,n}
+@attribute crime {y,n}
+@attribute duty-free-exports {y,n}
+@attribute export-administration-act-south-africa {y,n}
+@attribute class {democrat,republican}
+@data

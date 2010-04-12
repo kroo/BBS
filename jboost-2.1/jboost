@@ -1,0 +1,34 @@
+#!/bin/sh
+
+PWD=`pwd`
+JBOOST_HOME=`echo "$PWD/$0" | sed 's/\/jboost$//'`
+CLASSPATH="$JBOOST_HOME/dist/jboost.jar:$CLASSPATH"
+
+#echo $PWD
+#echo $JBOOST_HOME
+#echo $CLASSPATH
+
+NUM_JBOOST_JAR=`echo "${CLASSPATH}" | sed 's/:/\n/g' | grep 'jboost\.jar'  | wc -l`
+if [ $NUM_JBOOST_JAR -eq 0 ]; then
+    echo "You do not have your CLASSPATH variable set correctly."
+    echo "You have the following dirs in your java path:"
+    echo "$CLASSPATH" | sed 's/:/\n/g' | sed 's/^[ \t]*//' | sed '/^$/d' | sed 's/^/\t/g'
+    echo "You need to have the following in your path:"
+    echo -e "\tJBOOST_HOME/dist/jboost.jar."
+    echo -e "\tJBOOST_HOME/lib/jfreechart-1.0.10.jar."
+    echo -e "\tJBOOST_HOME/lib/jcommon-1.0.8.jar."
+    echo "If jboost.jar doesn't exist, downloaded the distribution again."
+    echo "To set CLASSPATH, see the documentation in JBOOST_HOME/doc or online."
+fi
+
+echo -n "JBoost jar file is: "
+echo "${CLASSPATH}" | sed 's/:/\n/g' | grep 'jboost\.jar'
+
+exec java -Xmx500M jboost.controller.Controller  $@
+
+if [ $? -ne 0 ]; then
+    echo "JBoost could not run, please see above errors."
+fi
+
+
+exit $?

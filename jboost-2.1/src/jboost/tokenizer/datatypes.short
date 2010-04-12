@@ -1,0 +1,303 @@
+Add: a description of the spec file.
+
+
+Boostexter takes three input files. A specification file named
+"stem".spec and two data files: a train file named "stem".train 
+and a test file, "stem".test. "stem" can be any valid file name, 
+typically describing the task, e.g., medinfo.{spec,train,test}.
+
+The data files consist of a sequence of examples, each a sequence 
+of attributes, each either an element or several elements. We use 
+separators to denote the end of each term.
+
+Terminators
+===========
+
+We use the following terminators to indicate the end of an element,
+an attribute, and an example.
+
+exampleTerminator:   .
+attributeTerminator: , 
+elementTerminator:   white space (>=1 spaces, tabs, newlines, etc.)
+
+An attributeTerminator appears even if the attribute is empty.
+It does not appear after the label.
+
+The Preamble
+============
+
+Terminators that are often used in examples can be overriden 
+in the specification file (syntax below). The new terminator 
+can be any string containing no end of line. Furthermore, no 
+terminator can be a substring of another. (And at this point,
+to simplify the code terminators cannot contain a "\", though
+that will be eliminated).
+
+If a terminator needs to be represented as text it's done by preceding 
+it with a backslash (5\.2 to indicate 5.2). Likewise for a // at the 
+beginning of a line (\/\/). A backslash is represented by a 
+doublebackslash (\\). 
+
+Note: Preparing the file and parsing it are easy.
+To prepare the file, first duplicate any \, then 
+add a \ before reserved words (that assumes that
+reserved words contain no \).
+To parse the file, convert an even number of backslashes 
+to half as many, and an odd number must be followed by a 
+separator or //, and are
+converted to floor of half followed by reserved word. 
+
+Error tolerance 
+
+errorTolerance n - describes the maximal number of wrong 
+or missing non-crucial attributes that can be tolerated
+in an example. If more, the example is ignored.
+
+default = ??
+
+1. The specification file
+*************************
+
+The specification file describes the format of the data files.
+It is made of a list of attribute descriptors. Each attribute
+description appears in a single line. It consists of a data 
+type, possible options that help the program detect errors 
+and process the attribute, and a field name that can be later 
+used to interpret results.
+
+There are two kinds of types. Basic types have associated weak 
+hypotheses. Compound types are composed of basic- and previously-
+defined compound types. 
+
+1.1 Basic types
+===============
+
+number  any number, represented as float
+
+	number temperature
+
+string	any string, treated as one element (even if it contains spaces)
+
+	string variableName
+	string address
+
+finite	one of a finite, prescribed, comma separated, set of strings.
+	A comma in a string is preceded by a backslash and a backslash 
+	is written as \\
+
+	(yes, no) reply
+	(first class, business class, economy class) serviceClass 
+	(1\,000, 2\,000) millennia (in data files 1,000 is fine
+				if record separator has been redefined)
+
+In all basic types, preceding and trailing spaces are ignored. A number
+attributed that doesn't conform reports an error, likewise for finite
+attributes (options determine whether capitalization and spacings matter).
+The program first reports all detected errors and continues only if none
+found. 
+
+Options
+-------
+
+A type may have options. +option indicates that the option is activated, 
+-option that it is not. The order of the options is irrelevant.
+
+crucial: don't process example if this attribute is missing or incorrect
+         (potentially: distinguish between the two cases)
+	 default: - for all
+
+ignoreAttribute: ignore this attribute
+
+ignoreCase: convert everything to lower case
+	default: + for string, - for finite
+	number: N/A (error)
+
+ignorePunctuation: omit all punctuations then replace multiple whitespace
+        with a single space (e.g. "I.B,   M." -> "IB M")
+	default: + for string, - for finite, 
+	number: N/A (error)
+
+singlespace: convert multiple white space to a single space
+	default: + for string, - for finite
+	number: N/A (error)
+
+	NOT IMPLEMENTED
+
+trim:   eliminate leading and trailing whitespace (unicode <= \u0020)
+	default + for all
+
+	NOT IMPLEMENTED
+
+existence: create a new attribute indicating if a value is provided
+	default: + for all
+
+	string favoriteDrug 
+
+inequality: use inequality tests
+	number: numeric order, default: +
+	finite: the prespecified order, default: -
+	string: N/A (error)
+
+	number temperature
+	number -inequality lotteryNumber 
+	(sweet, sour, hot) flavor 
+	(mild, medium, hot) +inequality spiceLevel
+	(high school, B.S., M.S., Ph.D.) +inequality highestDegree
+
+	NOT IMPLEMENTED
+
+
+
+1.2 Sets and sequences (NOT IMPLEMENTED)
+======================
+
+A compound type is an attribute consisting of several basic types. The 
+preporcessor converts it to one or more basic types. We allow just one 
+compound type: multiset, which consists of previously defined types.
+Options indicate whether order, size, etc. can be used. Multisets can 
+be specified in two formats:
+
+multiset (type_1, type_2, ..., type_n) 
+	The only one we support now is:	multiset (string, number)
+
+	multiset (string, number) confidence
+
+multiset type (interpreted as "set type*")
+
+	multiset string pets
+
+Options
+-------
+
+In addition to ignoreattribute, ignorecase, ignorepunctuation, 
+and existence, which have the same meaning and defaults as basic 
+types, multisets have the following options:
+
+order:	use the order in which elements appear, default: -order
+	Note: different meaning of order than in basic types
+
+	multiset string pets
+	multiset string +order biography 
+	multiset number +order yearlySales
+
+size:	create a new attribute containing the number of values be used
+	default: -
+
+	multiset finite (C, C++, Java, Perl) +size languagesKnown 
+
+unique: all elements must be unique, error if not, used for error correction
+	default: -
+
+	multiset string students 
+	multiset string +unique children 
+	multiset finite (comedy, action, drama, musical) +unique genresLiked 
+
+termfrequency: use the number of times each term appears
+	default: +
+
+	multiset string pets
+
+The following options take an additional argument (rather than preceded by +/-)
+
+ngrams:	(with +order) maximum number of consecutive elements considered
+	default: 1
+
+	multiset string +order ngrams 2 compoundAdjectives 
+
+nsets:	(for sets of finite, maybe more?) maximum size of subsets considered
+	default: 1
+
+	multiset string +unique nsets 2 medicationsTaken 
+	(looking for combinations of two)
+
+Predefined abbreviations
+------------------------
+
+set	     = multiset +unique 
+sequence     = multiset +order
+orderedset   = multiset +unique +order
+
+text	     = sequence string
+timeseries   = sequence number
+
+	set name myKids 
+	orderedset name myKidsInOrder 
+	text summary
+	timesequence yearlySales 
+
+1.3 Example
+===========
+
+As in the original boostexter man page we try to predict if 
+a person is rich, smart, happy, or a combination of those.
+Here is a possible specification file:
+
+// An arbitrary comment on the specification file
+
+ElementTerminator=-
+
+// We redefined the default ElementTerminator (",") to "-" in order
+// to show that the "," below has nothing to do with it.
+
+number income
+gender (male, female) 
+highestDeg (none, high school, B.S., M.S., Ph.D.) +order
+set hobbies
+text objective
+rich, smart, happy
+
+2. DATA FILES
+*************
+
+Recall that there are two data files, a train file "stem".train,
+and a test file "stem".test. Both have the same format. 
+
+2.1 Format
+==========
+
+The data files consist of a sequence of examples follows, separated 
+by ExampleTerminator. Each example consists of the sequence of attributes 
+described in the specifications and separated by AttributeTerminator which
+appears also after the last attribute to introduce the optional
+label, which comes next. Elements fo compound attributes are separated 
+by ElementTerminator.
+
+Lines starting with // are ignored (for comments, or to exclude examples)
+
+2.2 Example
+===========
+
+The following example corresponds to the specification example above. 
+
+// Here are two examples
+
+50000;
+female;
+M\.S\.;
+golf - tennis;
+get rich quick;
+smart - rich
+.
+10000;
+mail;
+Ph\.D.;
+tennis, piano playing;
+Run for vice\-president;
+//note, no label
+.
+
+3. COMMENTS
+***********
+
+The most likely extensions of these features are:
+
+A range option (a regular expression basic
+types should be in and a size multisets should obey)
+
+Predefined abbreviations for basic types (such as
+int, boolean, etc.)
+
+A separator option to compound attributes (for example
+to separate a date into month, day, year).
+
+An XML format for the data files

@@ -1,0 +1,16 @@
+@relation heart-s
+@attribute age NUMERIC
+@attribute sex {0,1}
+@attribute cp {1,2,3,4}
+@attribute trestbps NUMERIC
+@attribute chol NUMERIC
+@attribute fbs {0,1}
+@attribute restecg {0,1,2}
+@attribute thalach NUMERIC
+@attribute exang {0,1}
+@attribute oldpeak NUMERIC
+@attribute slope {1,2,3}
+@attribute ca {0,1,2,3}
+@attribute thal {3,6,7}
+@attribute class {0,1}
+@data

@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+
+<project name="jboost Buildfile" default="jar" basedir=".">
+  
+  <!-- Properties -->
+  
+  <property environment="env"/>
+  <property name="jboost.version" value="2.1"/>
+  <property name="dir.src" value="src"/>
+  <property name="dir.lib" value="lib"/>
+  <property name="dir.build" value="build"/>
+  <property name="dir.dist" value="dist"/>
+  <property name="dir.doc" value="doc"/>
+  <property name="dir.demo" value="demo"/>
+  <property name="dir.lib" value="lib"/>
+  <property name="dir.scripts" value="scripts"/>
+  <property name="dir.javadoc" value="javadoc"/>
+  <property name="test.class.name" value="jboost.AllTests"/>
+ 
+  <path id="test.classpath">
+    <pathelement location="${dir.dist}" />
+    <pathelement location="${dir.lib}" />
+    <fileset dir="${dir.dist}">
+      <include name="*.jar"/>
+    </fileset>
+    <fileset dir="${dir.lib}">
+      <include name="*.jar"/>
+    </fileset>
+  </path>
+  
+  <!-- Targets -->
+  
+  <target name="prepare">
+    <mkdir dir="${dir.build}"/>
+    <mkdir dir="${dir.dist}"/>
+    <dirname property="jboost.home" file="build.xml"/>
+  </target>
+  
+
+  <target name="clean"
+          description="Remove all JBoost files.">
+    <delete dir="${dir.build}"/>
+    <delete dir="${dir.dist}"/>
+    <delete dir="${dir.javadoc}"/>
+    <delete dir="jboost-${jboost.version}" />
+    <delete file="jboost-${jboost.version}.tgz" />
+    <delete file="jboost-${jboost.version}.tar" />
+    <delete file="jboost-${jboost.version}.zip" />
+    <delete file="jboost-${jboost.version}.exe" />
+    <delete>
+      <fileset dir="." includes="**/*~"/>
+    </delete> 
+  </target>
+
+  
+  <target name="clean-all" depends="clean"
+          description="Remove all generated files.">
+    <!--
+	<delete>
+	  <fileset dir="." 
+		   includes="**/*.info,**/*.scores,**/*.tree,**/*.sampling,**/*.log,**/*.serialized"/>
+	</delete> 
+-->
+    <delete dir="${dir.doc}/css"/>
+    <delete dir="${dir.doc}/images"/>
+    <delete dir="${dir.doc}/diagrams"/>
+    <delete dir="${dir.doc}/javadoc"/>
+    <delete>
+      <fileset dir="." includes="${dir.doc}/*.html" />
+    </delete> 
+  </target>
+
+
+  <target name="compile" depends="prepare"
+          description="Compile all source code.">
+    <javac srcdir="${dir.src}" 
+           classpath="${dir.lib}/junit.jar:${dir.lib}/jfreechart-1.0.10.jar:${dir.lib}/jcommon-1.0.8.jar" 
+           destdir="${dir.build}" 
+           debug="on" />
+  </target>
+
+
+  <target name="jar" depends="compile" description="Generates jboost.jar in the 'dist' directory.">
+    <jar jarfile="${dir.dist}/jboost.jar" basedir="${dir.build}">
+      <manifest>	
+     	<attribute name="Main-Class" value="jboost.controller.Controller"/>
+      </manifest>
+    </jar>
+  </target>
+  
+
+  <target name="javadoc" depends="prepare"
+          description="create documentation">
+    <mkdir dir="${dir.javadoc}"/>
+    <javadoc packagenames="jboost,jboost.*"
+             excludepackagenames="jboost.monitor"
+             sourcepath="${dir.src}"
+             destdir="${dir.javadoc}"
+             author="true"
+             version="true"
+             use="true"
+             windowtitle="JBoost API">           
+      <packageset dir="${dir.src}" defaultexcludes="yes">
+  	<exclude name="**/*Test*"/>
+      </packageset>
+    </javadoc>	
+  </target>
+
+  
+  <target name="test-all" depends="jar"
+  	  description="run all junit tests">
+    <echo message="Set jboost.home=${jboost.home}"/>
+    <junit fork="yes" haltonfailure="yes">
+      <jvmarg value="-Djboost.home=${jboost.home}"/>
+      <test name="${test.class.name}"/>
+      <formatter type="plain" usefile="false"/>
+      <classpath refid="test.classpath" />
+    </junit>	
+  </target>
+  
+  <target name="dist" depends="jar"
+  	  description="create distribution file">
+
+    <delete dir="${jboost.home}/jboost-${jboost.version}" />
+    <delete dir="${jboost.home}/doc/css" />
+    <delete dir="${jboost.home}/doc/diagrams" />
+    <delete dir="${jboost.home}/doc/images" />
+    <delete dir="${jboost.home}/doc/javadoc" />
+
+    <echo message="Building version ${jboost.version}"/>    
+    <mkdir dir="${jboost.home}/jboost-${jboost.version}" />
+    <mkdir dir="${jboost.home}/jboost-${jboost.version}/scripts" />
+    <mkdir dir="${jboost.home}/jboost-${jboost.version}/demo" />
+
+    <!-- <exec executable="./doc/get_doc.sh" /> -->
+    <move todir="${jboost.home}/doc" >
+      <fileset dir="${jboost.home}">
+        <include name="*.html" />
+        <include name="css/" />
+        <include name="images/" />
+        <include name="diagrams/" />
+        <include name="javadoc/" />
+      </fileset>
+    </move>
+
+    <exec executable="cp" >
+      <arg value="-r" />
+      <arg value="${jboost.home}/src" />
+      <arg value="${jboost.home}/doc" />
+      <arg value="${jboost.home}/dist" />
+      <arg value="${jboost.home}/build.xml" />
+      <arg value="${jboost.home}/lib" />
+      <arg value="${jboost.home}/README" />
+      <arg value="${jboost.home}/LICENSE" />
+      <arg value="${jboost.home}/CHANGES" />
+      <arg value="${jboost.home}/jboost" />
+      <arg value="${jboost.home}/jboost.bat" />
+      <arg value="${jboost.home}/jboost-${jboost.version}" />
+    </exec>
+ 
+    <copy todir="${jboost.home}/jboost-${jboost.version}/scripts/" >
+      <fileset dir="${dir.scripts}">
+        <include name="*.py" />
+        <include name="*.pl" />
+        <include name="*.README" />
+	<include name="MultiClass/*" />
+      </fileset>
+    </copy>
+
+    <copy todir="${jboost.home}/jboost-${jboost.version}/scripts/MultiClass/" >
+      <fileset dir="${dir.scripts}/MultiClass">
+      </fileset>
+    </copy>
+
+   
+    <copy todir="${jboost.home}/jboost-${jboost.version}/demo/" >
+      <fileset dir="${dir.demo}">
+        <include name="README" />
+        <include name="*.data" />
+        <include name="*.train" />
+        <include name="*.test" />
+        <include name="*.spec" />
+      </fileset>
+    </copy>
+       
+    <exec executable="find">
+      <arg value="${jboost.home}/jboost-${jboost.version}" />
+      <arg value="-type" />
+      <arg value="d" />
+      <arg value="-name" />
+      <arg value="CVS" />
+      <arg value="-exec" />
+      <arg value="rm" />
+      <arg value="-r" />
+      <arg value="{}" />
+      <arg value=";" />
+    </exec>
+
+    <exec executable="tar" >
+      <arg value="cpzf" />
+      <arg value="jboost-${jboost.version}.tgz" />
+      <arg value="jboost-${jboost.version}" />
+    </exec>
+    
+    <zip destfile="jboost-${jboost.version}.zip">
+      <zipfileset dir="jboost-${jboost.version}" prefix="jboost-${jboost.version}"/>
+    </zip>
+
+    <concat destfile="jboost-${jboost.version}.exe"  force="yes"  binary="true">
+      <filelist dir="." files="${dir.lib}/unzipsfx.exe,jboost-${jboost.version}.zip"/>
+    </concat>
+
+    <exec executable="zip" >
+      <arg value="-A" />
+      <arg value="jboost-${jboost.version}.exe" />
+    </exec>
+
+  </target> 
+
+  
+  <!-- TODO: UPDATE THIS -->
+  <target name="post-sf" depends="dist"
+  		description="ftp files to sourceforge">
+       
+        <ftp    server="upload.sourceforge.net"
+                remotedir="/incoming"
+                userid="anonymous"
+                password=""
+                passive="yes"
+                depends="yes"
+                binary="yes">
+          <fileset dir=".">
+               <include name="jboost-${jboost.version}.exe"/>
+               <include name="jboost-${jboost.version}.zip"/>
+               <include name="jboost-${jboost.version}.tgz"/>
+          </fileset>
+       </ftp>
+  </target>
+
+  
+</project>
+

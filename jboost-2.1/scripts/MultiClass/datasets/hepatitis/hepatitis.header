@@ -1,0 +1,22 @@
+@relation hepatitis
+@attribute age NUMERIC
+@attribute sex {1,2}
+@attribute steroid {1,2}
+@attribute antivirals {1,2}
+@attribute fatigue {1,2}
+@attribute malaise {1,2}
+@attribute anorexia {1,2}
+@attribute liver_big {1,2}
+@attribute liver_firm {1,2}
+@attribute spleen_palpable {1,2}
+@attribute spiders {1,2}
+@attribute ascites {1,2}
+@attribute varices {1,2}
+@attribute bilirubin NUMERIC
+@attribute alk_phosphate NUMERIC
+@attribute sgot NUMERIC
+@attribute albumin NUMERIC
+@attribute protime NUMERIC
+@attribute histology {1,2}
+@attribute class {1,2}
+@data

@@ -1,0 +1,45 @@
+<body>
+<b>controller</b> 
+
+
+
+
+
+The controller is responsible for tying all of the other components together.
+Currently, the thought is that the controller may be largely re-written for
+each application, or that it may take a script which describes the details 
+of its operation.
+<p>
+Its basic job is to:
+<ol>
+<li> Construct the {@link SplitterBuilderFamily}s.
+<li> Call the SplitterBuilderFamilies to construct the {@link SplitterBuilder}s.
+<li> Construct the {@link ExampleStream}
+<li> Construct the {@link Booster}
+<li> Construct the {@link ComplexLearner}
+<li> Read the examples and send them to the Booster, ComplexLearner and 
+SplitterBuilders so that they may build their data structures.
+<li> While want to boost:
+	<ol>
+	<il> good splits = get the {@link CandidateSplit}s from the ComplexLearner
+	<il> best splits = evaluate the good splits
+	<il> add the best splits to the ComplexLearner
+	<il> test a stopping criterion
+	</ol>
+<il> end
+<il> Output the generated {@link ComplexPredictor}.
+</ol>
+<p>
+Several important issues remain:
+<ol>
+<li> How does the controller, control which SplitterBuilders are built for
+which attributes?
+<li> How are the good splits evaluated?
+<li> What are useful stopping criteria?
+</ol>
+These questions will be examined further when we start incorporating heuristics
+for adding several candidates at a time, choosing among candidates
+using a cross-validation set, and using data resampling.
+<p>
+{@version $Header: /cvsroot/jboost/jboost/src/jboost/controller/package.html,v 1.1.1.1 2007/05/16 04:06:02 aarvey Exp $}
+</body>

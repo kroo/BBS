@@ -1,0 +1,39 @@
+<body>
+<b>learner</b> 
+
+The learner package encapsulates all of the weak learning functionality.
+It consists of:
+<ul>
+<li> Learner Families, called {@link SplitterBuiderFamily}s,
+each of which encapsulates a general type of 
+weak learner e.g. decision stumps, decision trees, linear rules etc,
+<li> Base classifiers called {@link Splitter}s,
+<li> Base learners called {@link SplitterBuilder}s.
+</ul>
+
+Each learner family is capable of constructing a set of splitterbuilders for a 
+set of attributes.
+Each learner family is endowed with a default policy (which may be overridden)
+which determines which splitterbuilders it should use for an ExampleDescription.
+<p>
+{@link SplitterBuilder}s implement the data structures that make learning efficient.
+The initial construction of these data structures is done when the data is read in.
+Examples are added to the {@link SplitterBuilder} one at a time.
+When all the examples have been added, the {@link SplitterBuilder} can then 
+construct the efficient data structures and be used for learning.
+{@link SplitterBuilder}s have the ability to spawn copies of themselves based on
+an example mask. 
+This allows the construction of another SplitterBuilder on a subset of the data.
+This functionality is used as new {@link PredictorNode}s are added to an 
+{@link AlternatingTree}.
+<p>
+Note that the SplitterBuilder requires a split function which will calculate the split
+produced by a given splitter on the data maintained by this SplitterBuilder.
+This is required so that the {@link CandidateSplit} can calculate the partition of the 
+data induced by this splitter. 
+The alternative way of storing the partition in the {@link CandidateSplit}, would be
+far too costly in memory.
+<p>
+{@version $Header: /cvsroot/jboost/jboost/src/jboost/learner/package.html,v 1.1.1.1 2007/05/16 04:06:02 aarvey Exp $}
+{@author Yoav Freund}
+</body>

@@ -1,0 +1,93 @@
+package jboost.tokenizer;
+
+import java.util.*;
+import java.io.*;
+import java.util.Random;
+import jboost.controller.Configuration;
+import jboost.tokenizer.*;
+import jboost.examples.*;
+import jboost.monitor.Monitor;
+
+/** This extension of DataStream generates a pseudo-random subset
+    (subsequence) of the stream. Used to seperate data into training
+    data and test data.
+    @author Yoav Freund
+  * @version $Header: /cvsroot/jboost/jboost/src/jboost/tokenizer/SubsetDataStream.java.defunct,v 1.1.1.1 2007/05/16 04:06:02 aarvey Exp $ */
+public class SubsetDataStream extends DataStream{
+   /** Returns the line number of the current example in the data source.               */
+    public long getLineNumber() {return stream.getLineNumber();}
+
+   /** Creates out a string containing the information necessary to 
+    *  read the datafile.								*/
+    public String toString() {
+	return "This is a SubsetDataStream, with seed="+seed
+	    +" fraction="+fraction
+	    +" selector="+selector
+	    +" on top of DataStream:\n"+stream;
+    }
+
+   /** Retreives the data specification in a standard internal form.			*/
+    public ExampleDescription getExampleDescription()
+    {return stream.getExampleDescription();}
+
+   /** Gets an array of attributes in a standard textual form that can
+    *  then be transformed into an example by ExampleStream.  */
+    public String[] getExampleText() throws ParseException {
+	String[] a;
+	while(true) {
+	    a =stream.getExampleText();
+	    if(a==null) return null;
+	    int r=Math.abs(generator.nextInt() % 100);
+	    if((selector && (r <  fraction)) ||
+	       (selector && (r >= fraction))) break;
+	} 
+	return a;
+    }
+
+
+   /** Using the same example description use this DataStream on a different data 
+    *  source.										*/
+    public void reset(String data) throws IOException
+    {
+	stream.reset();
+	generator.setSeed(seed);
+    }
+
+   /** Constructor 
+    * @param stream the underlying stream
+    * @param seed a seed number for the random number generator
+    * @param selector a boolean selecting which subset we are now
+    *                 generating
+    * @param fraction an integer specifying the percent (./100) of
+    *                  examples we wish to associate with selector =
+    *                  "true" */
+    public SubsetDataStream(DataStream stream, long seed, 
+			    boolean selector, int fraction) 
+	throws IOException,SpecFileException
+    {
+	this.stream = stream;
+	this.seed = seed;
+	this.selector = selector;
+	this.fraction = fraction;
+
+	generator = new Random(seed);
+    }
+    
+//------------------------------- Accessor Methods ------------------------------------//
+
+//------------------------------- Private Members -------------------------------------//
+
+    private long seed;
+    private int fraction;
+    private boolean selector;
+    private DataStream stream;
+    private Random generator;
+
+//------------------------------- Test Code -------------------------------------------//\
+}
+
+
+
+
+
+

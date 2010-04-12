@@ -1,0 +1,32 @@
+These files are for testing JBoost.  Below is a brief description
+of the datasets.
+
+--------------------------
+UCI FILES
+
+Original files for letter and spambase can be obtained from the UCI
+Machine Learning repository: http://www.ics.uci.edu/~mlearn/MLSummary.html
+
+For documentation, see
+  * http://www.ics.uci.edu/~mlearn/databases/spambase/spambase.DOCUMENTATION
+  * ftp://ftp.ics.uci.edu/pub/machine-learning-databases/spambase/spambase.names
+
+
+---------------------------
+Noisy Line
+
+The noisy line dataset is an artificial construction to test
+BrownBoost's resistance to noisy data.  The function that generated
+the training set is:
+          
+         +1    if x < .5  (w/prob 90%)
+  f(x) = 
+         -1    if x > .5  (w/prob 90%)
+
+The test set is the deterministic version of the function
+          
+         +1    if x < .5
+  f(x) = 
+         -1    if x > .5
+
+

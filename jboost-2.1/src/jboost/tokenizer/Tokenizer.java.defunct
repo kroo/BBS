@@ -1,0 +1,83 @@
+package jboost.tokenizer;
+
+import java.io.*;
+import jboost.examples.*;
+import jboost.monitor.Monitor;
+
+/**
+  Transforms a set of input data files into a stream of memory-based example
+
+  @author: alon orlitsky
+  @version: $Header: /cvsroot/jboost/jboost/src/jboost/tokenizer/Tokenizer.java.defunct,v 1.1.1.1 2007/05/16 04:06:02 aarvey Exp $
+*/
+public class Tokenizer{
+
+    private ExampleDescription ed;
+
+    /**
+       Constructor. Takes spec file, generates example description
+       (which includes attribute descriptions).
+
+       This whole class can be skipped and ExampleDescription called directly
+    */ 
+    public Tokenizer(String specFile) throws Exception {
+
+	ed = new ExampleDescription(true, specFile);
+    }
+
+    public ExampleDescription getExampleDescription() {
+	return ed;
+    }
+
+    /**
+       Opens an Example stream from which examples can be derived using
+       the getExample() method
+       @param datafile name of datafile
+       @return integer identying stream
+    */
+    public ExampleStream openExampleStream(String dataFile) throws IOException{
+
+	return new ExampleStream(ed, dataFile);
+    }
+
+    public static void main(String[] args) throws Exception {
+	try {mainCore(args);}
+	catch (IOException e) {
+	    System.err.println("IO exception: " + e.getMessage());
+	    e.printStackTrace();
+	}
+	catch (RuntimeException e) {
+	    System.err.println("Runtime exception: " + e.getMessage());
+	    e.printStackTrace();
+	}
+    }
+
+    public static void mainCore(String[] args) throws IOException, Exception {
+
+	Example nextExa;
+
+	if (args.length != 1) // wrong number of arguments 
+	    throw new RuntimeException("Usage: ExampleStream <stem>");
+
+	Tokenizer tk = new Tokenizer(args[0] + ".spec");
+	String fileName = args[0] + ".train";
+	ExampleStream es = new ExampleStream(tk.ed, fileName);
+
+	try {
+	    while ((nextExa=es.getExample()) != null)
+		if(Monitor.logLevel>3) Monitor.log(tk.ed.toString(nextExa));
+	}
+	catch (BadDataFileException e) {
+	    System.err.println("BadDataFileException\n" + e.getMessage());
+	} 
+	//	es.finalize;
+
+	// if(Monitor.logLevel>3) Monitor.log("Parsing train file.");
+	    
+	// ExampleStream es = new ExampleStream(ed, args[0] + ".train");
+	// while ( (nextExa=es.getExample()) != null)
+	//    if(Monitor.logLevel>3) Monitor.log(ed.toString(nextExa));
+	//es.finalize;
+    }
+}
+

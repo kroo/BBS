@@ -1,0 +1,209 @@
+% 
+%                 Introduction
+%                 ============
+% 
+% In my work on context-sensitive learning, I used the "Deterding Vowel
+% Recognition Data", but I found it necessary to reformulate the data.
+% Implicit in the original data is contextual information on the
+% speaker's gender and identity. For my work, it was necessary to make
+% this information explicit. The file "vowel-context.data" adds the
+% speaker's sex and identity as new features. The format of the data file
+% is described below.
+% 
+% 
+% Peter Turney
+% peter@ai.iit.nrc.ca
+% 
+% 
+% 
+%                 References
+%                 ==========
+% 
+% P. Turney. "Robust Classification With Context-Sensitive Features."
+% Proceedings of the Sixth International Conference on Industrial
+% and Engineering Applications of Artificial Intelligence and Expert
+% Systems (IEA/AIE-93): 268-276. 1993.
+% 
+% URL: ftp://ai.iit.nrc.ca/pub/ksl-papers/NRC-35074.ps.Z
+% 
+% 
+% P. Turney. "Exploiting Context When Learning to Classify."
+% Proceedings of the European Conference on Machine Learning
+% (ECML-93): 402-407. 1993.
+% 
+% URL: ftp://ai.iit.nrc.ca/pub/ksl-papers/NRC-35058.ps.Z
+% 
+% 
+% 
+%                 File Structure
+%                 ==============
+% 
+% 
+%         Column          Description
+%         -------------------------------
+%         0               Train or Test
+%         1               Speaker Number
+%         2               Sex
+%         3               Feature 0
+%         4               Feature 1
+%         5               Feature 2
+%         6               Feature 3
+%         7               Feature 4
+%         8               Feature 5
+%         9               Feature 6
+%         10              Feature 7
+%         11              Feature 8
+%         12              Feature 9
+%         13              Class
+% 
+% 
+% 
+% 
+%                 Numerical Codes
+%                 ===============
+% 
+% 
+%         Speaker         Code Number
+%         ---------------------------
+%         Andrew          0
+%         Bill            1
+%         David           2
+%         Mark            3
+%         Jo              4
+%         Kate            5
+%         Penny           6
+%         Rose            7
+%         Mike            8
+%         Nick            9
+%         Rich            10
+%         Tim             11
+%         Sarah           12
+%         Sue             13
+%         Wendy           14
+% 
+% 
+% 
+%         Set             Number
+%         ---------------------------
+%         Train           0
+%         Test            1
+% 
+% 
+% 
+%         Sex             Number
+%         ---------------------------
+%         Male            0
+%         Female          1
+% 
+% 
+% 
+%         Class           Number
+%         ---------------------------
+%         hid             0
+%         hId             1
+%         hEd             2
+%         hAd             3
+%         hYd             4
+%         had             5
+%         hOd             6
+%         hod             7
+%         hUd             8
+%         hud             9
+%         hed             10
+% 
+% 
+% 
+% 
+% 
+%         Speaker         Code Number     Sex             Train/Test
+%         ---------------------------------------------------------------
+%         Andrew          0               0               0
+%         Bill            1               0               0
+%         David           2               0               0
+%         Mark            3               0               0
+%         Jo              4               1               0
+%         Kate            5               1               0
+%         Penny           6               1               0
+%         Rose            7               1               0
+%         Mike            8               0               1
+%         Nick            9               0               1
+%         Rich            10              0               1
+%         Tim             11              0               1
+%         Sarah           12              1               1
+%         Sue             13              1               1
+%         Wendy           14              1               1
+% 
+% 
+% Num Instances:  990
+% Num Attributes: 14
+% Num missing:    0 /  0.0%
+%
+%     name                      type enum ints real     missing    distinct  (1)
+%   1 'Train or Test'           Enum 100%   0%   0%     0 /  0%     2 /  0%   0% 
+%   2 'Speaker Number'          Enum   0% 100%   0%     0 /  0%    15 /  2%   0% 
+%   3 'Sex'                     Enum   0% 100%   0%     0 /  0%     2 /  0%   0% 
+%   4 'Feature 0'               Real   0%   0% 100%     0 /  0%   853 / 86%  74% 
+%   5 'Feature 1'               Real   0%   0% 100%     0 /  0%   877 / 89%  78% 
+%   6 'Feature 2'               Real   0%   0% 100%     0 /  0%   815 / 82%  67% 
+%   7 'Feature 3'               Real   0%   0% 100%     0 /  0%   836 / 84%  71% 
+%   8 'Feature 4'               Real   0%   0% 100%     0 /  0%   803 / 81%  66% 
+%   9 'Feature 5'               Real   0%   0% 100%     0 /  0%   798 / 81%  64% 
+%  10 'Feature 6'               Real   0%   0% 100%     0 /  0%   748 / 76%  57% 
+%  11 'Feature 7'               Real   0%   0% 100%     0 /  0%   794 / 80%  64% 
+%  12 'Feature 8'               Real   0%   0% 100%     0 /  0%   788 / 80%  63% 
+%  13 'Feature 9'               Real   0%   0% 100%     0 /  0%   775 / 78%  60% 
+%  14 'Class'                   Enum   0% 100%   0%     0 /  0%    11 /  1%   0% 
+%
+%
+%
+%
+% Relabeled values in attribute 'Speaker Number'
+%    From: 0                       To: Andrew              
+%    From: 1                       To: Bill                
+%    From: 2                       To: David               
+%    From: 3                       To: Mark                
+%    From: 4                       To: Jo                  
+%    From: 5                       To: Kate                
+%    From: 6                       To: Penny               
+%    From: 7                       To: Rose                
+%    From: 8                       To: Mike                
+%    From: 9                       To: Nick                
+%    From: 10                      To: Rich                
+%    From: 11                      To: Tim                 
+%    From: 12                      To: Sarah               
+%    From: 13                      To: Sue                 
+%    From: 14                      To: Wendy               
+%
+%
+% Relabeled values in attribute 'Sex'
+%    From: 0                       To: Male                
+%    From: 1                       To: Female              
+%
+%
+% Relabeled values in attribute 'Class'
+%    From: 0                       To: hid                 
+%    From: 1                       To: hId                 
+%    From: 2                       To: hEd                 
+%    From: 3                       To: hAd                 
+%    From: 4                       To: hYd                 
+%    From: 5                       To: had                 
+%    From: 6                       To: hOd                 
+%    From: 7                       To: hod                 
+%    From: 8                       To: hUd                 
+%    From: 9                       To: hud                 
+%    From: 10                      To: hed                 
+%
+@relation vowel
+@attribute 'Sex' { Male, Female}
+@attribute 'Feature 0' real
+@attribute 'Feature 1' real
+@attribute 'Feature 2' real
+@attribute 'Feature 3' real
+@attribute 'Feature 4' real
+@attribute 'Feature 5' real
+@attribute 'Feature 6' real
+@attribute 'Feature 7' real
+@attribute 'Feature 8' real
+@attribute 'Feature 9' real
+@attribute 'Class' { hid, hId, hEd, hAd, hYd, had, hOd, hod, hUd, hud, hed}
+@data

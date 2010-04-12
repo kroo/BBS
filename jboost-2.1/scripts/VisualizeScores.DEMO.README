@@ -1,0 +1,94 @@
+Score visualization demo using spambase demo data and nfold validation:
+
+Assumptions
+==========
+0. you have java and python installed. 
+
+1. you have downloaded the jboost dist from sourceforge.net and built jboost from source or you downloaded the pre-release. (ie. you have jboost 1.4.1 or greater)
+
+2. You setup your CLASSPATH and JBOOST_DIR environment variables per the install instructions on http://jboost.sourceforge.net/install.html
+
+3. You are running on linux or mac.  Instructions are for BASH shell.  Mod as appropriate for your environment.
+
+The Demo steps:  we are going to do nFold validation on the spambase demo data found in $JOOST_DIR/demo.
+==============
+1.  add some libs to your (existing) java CLASSPATH:
+
+> export CLASSPATH=$CLASSPATH:$JBOOST_DIR/lib/jcommon-1.0.8.jar:$JBOOST_DIR/lib/jfreechart-1.0.10.jar
+
+2. cd to the demo directory
+
+> cd $JBOOST_DIR/demo
+
+3. add an index number to each row of example data and shuffle the examples.   We have a python script to do this for you.
+
+> ls spam*
+
+spambase.data  spambase.test
+spambase.spec  spambase.train
+
+> ../scripts/AddRandomIndex.py spambase
+
+wrote spambase_idx.data.
+wrote spambase_idx.spec.
+
+> ls spam*
+
+spambase.data  spambase.test   spambase_idx.data
+spambase.spec  spambase.train  spambase_idx.spec
+
+4. Now we are going to perform Nfold crossvalidation using these new spambase_idx.* files.  You can look a the nfold.py script to decipher the command line args.  
+
+> ../scripts/nfold.py --booster=LogLossBoost --folds=2 --data=spambase_idx.data --spec=spambase_idx.spec --rounds=50 --tree=ADD_ALL --generate
+
+k: 0 start:0 end:2300
+k: 1 start:2300 end:4600
+*=---------------------------------------------------------------------=-*
+* Fold 0     |
+*============
+java -Xmx1000M -cp :/Users/wbeaver/Documents/workspace/jboost/dist/jboost.jar:/Users/wbeaver/Documents/workspace/jboost/lib/concurrent.jar:/Users/wbeaver/Documents/workspace/jboost/lib/jcommon-1.0.8.jar:/Users/wbeaver/Documents/workspace/jboost/lib/jfreechart-1.0.10.jar:/Users/wbeaver/Documents/workspace/jboost/lib/swing-layout-1.0.jar jboost.controller.Controller -b LogLossBoost -p 3 -a -1 -S trial0 -n trial.spec -ATreeType ADD_ALL -numRounds 50
+Fileloader adding . to path.
+WARNING: configuration file jboost.config not found.  Continuing...
+	Found trial.spec
+	Found trial0.train
+	Found trial.spec
+	Found trial0.test
+Booster type: jboost.booster.LogLossBoost
+Read 100 training examples
+Read 200 training examples	
+Read 300 training examples
+Read 400 training examples
+Read 500 training examples
+Read 600 training examples
+
+[snip] you get the idea.
+
+5. the results are placed in the directory ./spambase_idx.data.folds_2/cvdata-mm-dd-hh-mm-ss/<TREE-TYPE>
+
+6. Now run the visualizer in the scripts. 
+
+> ../scripts/VisualizeScores.py spambase_idx.data.folds_2/cvdata-mm-dd-hh-mm-ss/ADD_ALL/trial
+
+(note, this example output shows the cvdata-mm-dd-hh-mm-ss for my test run)
+
+['spambase_idx.data.folds_2/cvdata-01-16-17-44-23/ADD_ALL/trial0.test.boosting.info', 'spambase_idx.data.folds_2/cvdata-01-16-17-44-23/ADD_ALL/trial1.test.boosting.info']
+spambase_idx.data.folds_2/cvdata-01-16-17-44-23/ADD_ALL/trial0.test.boosting.info
+spambase_idx.data.folds_2/cvdata-01-16-17-44-23/ADD_ALL/trial1.test.boosting.info
+index=0, a.length=4600
+index=1, a.length=4600
+index=2, a.length=4600
+index=3, a.length=4600
+index=4, a.length=4600
+index=5, a.length=4600
+index=6, a.length=4600
+
+[snip]
+
+Assuming all is setup, you will then see the GUI.  
+
+7. Select a range of examples to output for a given iteration using the slider and press the "Print Example Indices" button in the lower left corner.  This will save a file called "SelectedExamples.txt" in to the directory you ran the GUI from (in this case $JBOOST_DIR/demos)
+
+Using this file, you can write a parser to drill back to your original examples.
+
+[end] 
+

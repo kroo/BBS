@@ -1,0 +1,81 @@
+This is a very brief introduction for installing and using JBoost.
+For more documentation, see jboost.sourceforge.org or the ./doc
+directory included in this distribution.
+
+*************** SETTING UP JAVA *************** 
+
+JBoost depends on Java.  Please be sure to have an up to date version
+installed on your machine.  Before beginning, be sure that your
+CLASSPATH environment variable is set correctly.
+
+For bash, this can be accomplished via
+$> export CLASSPATH="JBOOST_HOME/dist/jboost.jar:JBOOST_HOME/lib/concurrent.jar"
+
+For tcsh, this can be accomplished via
+$> setenv CLASSPATH "JBOOST_HOME/dist/jboost.jar:JBOOST_HOME/lib/concurrent.jar"  
+
+
+*************** COMPILING JBOOST *************** 
+
+This distribution is already compiled, but if you wish to compile
+yourself, this is quick how-to.  Be sure to have a current version of
+the Jakarta tool "ant".  
+
+Before compiling, it is usually wise to remove all old files:
+
+$>  ant clean
+
+To compile the jboost code:  
+
+$> ant jar
+
+To create a distro:
+
+$> ant dist
+
+
+*************** GETTING HELP *************** 
+
+If you need to know more about an option, have troubles with JBoost,
+find a bug, or anythign else, you should follow the following steps:
+
+1) Run JBoost with no options to get command line options.  This will
+ensure that you are correctly using the options.
+
+$> java -Xmx100M jboost.controller.Controller
+
+2) Check the ./doc directory or the most up to date documentation at
+jboost.sourceforge.edu.
+
+3) Before sending email, be sure to look through the frequently asked
+questions.  Send email (depending on the question/request/etc) to
+jboost-users@lists.sourceforge.net (mailing list).
+
+
+*************** EXAMPLE USAGE *************** 
+
+A .spec, .train and .test file should be created following the
+formatting specifications given in the formal documentation.  An
+example of such data files is given in the ./demo directory (the files
+stem.*).
+
+You can create a configuration file which contains command line
+options.  This configuration file should then be specified on the
+command line via -CONFIG or in the default file jboost.config.
+Examples of config files can be found in the ./demo directory.
+
+To run jboost on one of the demo files, do the following:
+
+$> cd demo
+$> java -Xmx100M jboost.controller.Controller -S stem <other_options>
+
+The option '-Xmx100M' tells java to use 100 megabytes of memory.  'stem'
+is the name of the data files, and <other_options> can be found by
+running jboost without arguments.
+
+If everything works correctly, jboost will generate two files
+containing information about its run in <stem>.log and <stem>.info.
+The generated tree will be stored in <stem>.output.tree.  If you 
+provide output filenames (described in usage), Java and C
+code representing this tree will be generated in files with those
+names.

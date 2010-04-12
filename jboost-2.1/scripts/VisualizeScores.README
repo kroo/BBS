@@ -1,0 +1,38 @@
+VisualizeScores.py
+
+Visualize margin score distributions from training and test folds.
+
+Requirements
+============
+* Python
+* build of jboost 1.4.1 (NOT JBOOST VERSION 1.4 found on sourceforge)
+* test | train.boosting.info files which are indexed (see AddRandomIndex.py)
+* binary class labels (i.e. no multilabel support at this time)
+
+TERMS:
+$JBOOST_DIR is environment variable pointing to the root of your downloaded jboost dist.
+
+Usage
+=====
+You must add the files from $JBOOST_DIR/lib that are not on your CLASSPATH to your CLASSPATH. If you followed the install instructions from the JBoost website, this would mean adding $JBOOST_DIR/lib/jcommon-1.0.8.jar, $JBOOST_DIR/lib/jfreechart-1.0.10.jar to the existing classpath (see example below).
+
+Once classpath is set, from command line invoke the script:
+
+$JBOOST_DIR/scripts/VisualizeScores.py <path to *.boosting.info files>
+
+Where <path to *.boosting.info files> is the full path to the .boosting.info files stem you would like to process. For example: /Users/jsmith/boostingdata/cvdata/ADD_ALL/trial will glob trial0.train.boosting.info, trial0.test.boosting.info, trial1.train.boosting.info, etc.
+
+Example
+=======
+
+[user@host ~]$ export JBOOST_DIR=/Users/jsmith/workspace/jboost/ (export for a bash shell.  ignore if already done)
+
+[user@host ~]$ export CLASSPATH=$CLASSPATH:$JBOOST_DIR/lib/jcommon-1.0.8.jar:$JBOOST_DIR/lib/jfreechart-1.0.10.jar
+
+(NOTE: ASSUME you have already added jboost.jar and concurrent.jar to your classpath)
+
+[user@host ~]$ $JBOOST_DIR/scripts/VisualizeScores.py /Users/jsmith/boostingdata/<path to specific cvdata>/ADD_ALL/trial
+
+After loading, parsing, and analyzing the boosting.info files, the GUI will launch. Boosting iteration shown in upper right. A histogram showing example count by boosting score for each label is predominate and in the center of the window. Sliders below the histogram allow you select lower and upper score ranges. The region within this range on the ROC curve is shown in the upper left of the window. Pressing the button in the lower left (save selected examples) will write to a file the example index and boosting score for each example within the selected range. This file is saved to the directory indicated in step 1 above.
+
+[end]

@@ -1,0 +1,204 @@
+package jboost.tokenizer;
+
+import java.util.*;
+import jboost.examples.*;
+import jboost.monitor.Monitor;
+
+/** Abstract class for Reading an attribute.
+    Contains the str2Att method which verifies the string
+    attribute and convets it to internal representation.
+    Extended to particular types.
+*/
+abstract class AttReader {
+
+    String name; // attribute name
+    boolean caseSignificant = false; // not used for numberAttribute
+    boolean crucial = false;
+    boolean existence = false;
+    boolean ignoreAttribute = false;
+    boolean order = false;
+    boolean punctuationSignificant = false;  // not used for num Att
+
+    public AttReader(String name) {this.name = name;}
+
+    public void setCaseSignficicant(boolean value) {caseSignificant = value;}
+    public void setCrucial(boolean value) {crucial = value;}
+    public void setExistence(boolean value) {crucial = value;}
+    public void setIgnoreAttribute(boolean value) {ignoreAttribute = value;}
+    public void setOrder(boolean value) {order = value;}
+    public void setPunctuationSignificant(boolean value) {
+	punctuationSignificant = value;
+    }
+    public String getName () {return name;}
+
+    /** convert the string of an attribute to the attribute */
+    public abstract Attribute str2Att(String string);
+}
+
+/** Reads a number attribute  */
+class NumAttReader extends AttReader {
+
+    public NumAttReader(String name) {super(name);}
+
+    /** checks format of string in datafile and converts to float */
+    public Attribute str2Att(String string) {
+
+	double att = 0.; // initialized because try complains otherwise.
+	try {
+	    att = Double.parseDouble(string);
+	    if(Monitor.logLevel>5) 
+		Monitor.log("AttReader read value="+att);
+	}
+	    // Note that 3d etc. are ok. ok? 
+	catch (NumberFormatException e) {
+	    System.err.println(string + "is not a float.");
+	}
+	return new RealAttribute (att);
+    }
+}
+
+/** Reads a string attribute.
+    Main method str2att converts a string to an integer reflecting
+    the order it appeared in data file (starting with 0).
+    For example, if in the 3 first examples a given attribute is: 
+    brown, blue, brown, these strings will be mapped to 0, 1, 0 resp.
+*/
+class StrAttReader extends AttReader {
+    
+    private HashMap map = new HashMap(); // mapping from string to int
+    private int numStr = 0; // # strings seen so far 
+                            // and value of current string (starts with 0)
+    public StrAttReader(String name) {super(name);}
+
+    /** converts string int data file to string in attribute */
+    public Attribute str2Att(String string) {
+	// System.err.println("DIAG: strAttReader.str2Att: string=<" + string + ">");
+	string.trim();
+	string = StringOp.shrinkWhitespace(string); // ok tho' immutable?
+	if (!caseSignificant)
+	    string.toLowerCase();
+	if (!punctuationSignificant)
+	    string= StringOp.removePunctuation(string);
+	// System.err.println("DIAG strAttReader.str2Att: leaving");
+	if (map.containsKey(string)) // string appeared before
+	    return new StringAttribute(((Integer) map.get(string)).intValue(), 
+				       string);
+	else {
+	    map.put(string, new Integer(numStr)); // put new key 
+	    return new StringAttribute(numStr++, string);
+	}
+    }
+}
+
+/** Reads a text attribute.
+    Main method, str2Att, converts text to an arrya of integers. 
+    The integers reflect the order in which the word appeared in
+    the data file. The integers are then compressed so that none 
+    repeats in any given example. For example, if in the first four
+    examples in the data file a given attribute is:
+      it is time, 
+      time is money,
+      money is not all money is set to be
+      to be or not to be
+    The resulting arrays will be:
+      0 1 2
+      2 1 3
+      3 1 4 5 6 7 8
+      7 8 9 4
+
+    Contains three main objects:
+    gloMap - maps every word that appeard in all documents to 
+    an object containing: token - the number of words that preceded it 
+    in all documents (starts at 0); and numApp - the number of times
+    the word appeared int all documents.
+
+    locMap - maps every word that appeared in local document to
+    an object cotaining numApp - the number of times the word appeared
+    in the local document.
+
+    wordList - the unique least that appeared int this document, int order.
+*/
+class TextAttReader extends AttReader {
+
+    private HashMap gloMap = new HashMap(); // mapping from string to int
+    private int numGloWords = 0; // # unique words seen so far (starts with 0)
+    private boolean ignoreCase=true; // convert everything to lower case
+    private boolean shrinkWhitespace=true; // eliminate extra white space
+
+    public TextAttReader(String name) {super(name);}
+
+    /** converts string int data file to string in attribute */
+    public Attribute str2Att(String string) {
+	// System.err.println("DIAG: TextAttReader.str2Att: string=<" + string + ">");
+	string.trim();
+	string = StringOp.shrinkWhitespace(string); // ok tho' immutable?
+	if (!caseSignificant)
+	    string.toLowerCase();
+	if (!punctuationSignificant)
+	    string= StringOp.removePunctuation(string);
+	System.err.println("DIAG TextAttReader.str2Att: string="+string);
+	/* going over words int string and mapping each to an int */
+	HashMap locMap = new HashMap(); 
+	// locMap - maps every word that appeared in local document to an
+	// object cotaining the number of times the word appeared int 
+	// current document.
+	int numLocWords = 0; // Number of words seen so far int text
+	int curInd=0; // first index of text to process
+	String word; // word to process next
+	ArrayList wordList = new ArrayList();
+	// the unique words that appeared int this document, in order.
+
+	try {
+	    while ((word = StringOp.nextWord(string, curInd)) != "") {
+		if(Monitor.logLevel>3) Monitor.log("DIAG TextAttReader.str2Att: word=" +word); 
+		if (locMap.containsKey(word)) { // word appeared in curr text
+		    ((LocWord)locMap.get(word)).inc();
+		}
+		else { // word not in curr text
+		    locMap.put(word, new LocWord()); 
+		    if (!gloMap.containsKey(word)) // string is nowhere
+			gloMap.put(word, new GloWord(numGloWords)); //put new key 
+		    wordList.add(word); 
+		    numGloWords++;
+		    numLocWords++;
+		}
+		((GloWord)gloMap.get(word)).inc();
+		curInd += word.length();
+	    }
+	}
+	catch (Exception e) {if(Monitor.logLevel>3) Monitor.log(e.getMessage());}
+	int[] wordTokenArr = new int[numLocWords];
+	for (int i=0; i<numLocWords; i++)
+	    wordTokenArr[i] =((GloWord)gloMap.get(wordList.get(i))).getToken();
+	// following very ugly, just to catch excetpion, any better way?
+	Attribute temp = null;
+	try {temp = new SetAttribute(wordTokenArr);}
+	catch (Exception e) {System.err.println(e.getMessage());}
+	return temp; 
+	// would much rather have:
+	// return new SetAttribute(wordTokenArr);
+    }
+
+    /** contains the number of times a word appeared in current document*/
+    class LocWord {
+	int numApp; // number of times word appeared
+
+	public LocWord() {this.numApp = 1;}
+
+	public void inc() {numApp++;}	    
+
+	public int getNumApp() {return numApp;}	    
+    }
+
+    /** contains the global token of a word and number of times it appeared
+	in all documents
+    */
+    private class GloWord extends LocWord {
+
+	private int token;
+
+	public GloWord(int token) {this.token = token;}
+
+	public int getToken() {return token;}
+    }
+}

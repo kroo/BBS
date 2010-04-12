@@ -1,0 +1,12 @@
+@relation shuttle
+@attribute F1 NUMERIC
+@attribute F2 NUMERIC
+@attribute F3 NUMERIC
+@attribute F4 NUMERIC
+@attribute F5 NUMERIC
+@attribute F6 NUMERIC
+@attribute F7 NUMERIC
+@attribute F8 NUMERIC
+@attribute F9 NUMERIC
+@attribute class {1,2,3,4,5,6,7}
+@data

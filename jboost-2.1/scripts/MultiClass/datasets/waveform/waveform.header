@@ -1,0 +1,24 @@
+@relation waveform
+@attribute F1 NUMERIC
+@attribute F2 NUMERIC
+@attribute F3 NUMERIC
+@attribute F4 NUMERIC
+@attribute F5 NUMERIC
+@attribute F6 NUMERIC
+@attribute F7 NUMERIC
+@attribute F8 NUMERIC
+@attribute F9 NUMERIC
+@attribute F10 NUMERIC
+@attribute F11 NUMERIC
+@attribute F12 NUMERIC
+@attribute F13 NUMERIC
+@attribute F14 NUMERIC
+@attribute F15 NUMERIC
+@attribute F16 NUMERIC
+@attribute F17 NUMERIC
+@attribute F18 NUMERIC
+@attribute F19 NUMERIC
+@attribute F20 NUMERIC
+@attribute F21 NUMERIC
+@attribute class {0,1,2}
+@data

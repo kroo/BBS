@@ -1,0 +1,47 @@
+<body>
+This package is responsible for obtaining data and converting it into
+a standard internal {@link Example} representation.
+<p>
+This is a two layered process with a {@link DataStream} object
+responsible for reading in a specification file, which describes
+the schema for the data. This {@link DataStream} object then
+extracts a list of attributes in the form of strings with 
+comments and extra white spaces removed.
+
+<p>
+Then an {@link ExampleStream} converts this list of strings into
+actual examples.
+
+<p>
+The process is 2 stage to for reasons of modularity. In particular,
+to add the ability to use a new type of data source does not
+require understanding the internals of examples.
+In addition, the example structure may be too heavy weight for
+final classifier code that is produced.
+A lighter weight version of examples could be implemented for 
+each final classifier and this would not require re-writing 
+the DataStream.
+<p>
+Among the package's responsibilities:
+<ul>
+<li>
+Spot errors in the specification and data files.
+<li>
+Simplify tex (stem words and transform them to lower-case)
+<li>
+Add helpful attributes (attribute's existence, size and word frequency)
+<li>
+Tokenize meaningful words (such as $ amounts), potentially add a numerical
+field.
+<li>
+Transform text into a stream of tokens.
+<li>
+Process n-grams
+<li>
+Generating efficient pre-processing java code for a specific
+classifier (the generated efficient classifiers should include all
+that is needed to process raw information).
+</ul>
+<p>
+{@version $Header: /cvsroot/jboost/jboost/src/jboost/tokenizer/package.html,v 1.1.1.1 2007/05/16 04:06:02 aarvey Exp $}
+</body>

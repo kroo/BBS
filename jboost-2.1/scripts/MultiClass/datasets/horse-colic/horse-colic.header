@@ -1,0 +1,30 @@
+@relation horse-colic
+@attribute surgery {1,2}
+@attribute age NUMERIC
+@attribute hospital NUMERIC
+@attribute rectal_temp NUMERIC
+@attribute pulse NUMERIC
+@attribute resp_rate NUMERIC
+@attribute temp {1,2,3,4}
+@attribute periph_pulse {1,2,3,4}
+@attribute mucous {1,2,3,4,5,6}
+@attribute capillary NUMERIC
+@attribute pain {1,2,3,4,5}
+@attribute peristalsis {1,2,3,4}
+@attribute abdominal {1,2,3,4}
+@attribute nasogastric_tube {1,2,3}
+@attribute nasogastric_reflux {1,2,3}
+@attribute nasogastric_reflux_PH NUMERIC
+@attribute feces {1,2,3,4}
+@attribute abdomen {1,2,3,4,5}
+@attribute cell_vol NUMERIC
+@attribute protein NUMERIC
+@attribute abdomino {1,2,3}
+@attribute abdomcentesis NUMERIC
+@attribute outcome {1,2,3}
+@attribute type1 NUMERIC
+@attribute type2 NUMERIC
+@attribute type3 NUMERIC
+@attribute cp_data {1,2}
+@attribute class {1,2}
+@data

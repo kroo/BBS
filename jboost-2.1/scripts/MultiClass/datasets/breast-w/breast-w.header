@@ -1,0 +1,12 @@
+@relation breast-w
+@attribute Clump_Thickness               {1,2,3,4,5,6,7,8,9,10}
+@attribute Uniformity_of_Cell_Size       {1,2,3,4,5,6,7,8,9,10}
+@attribute Uniformity_of_Cell_Shape      {1,2,3,4,5,6,7,8,9,10}
+@attribute Marginal_Adhesion             {1,2,3,4,5,6,7,8,9,10}
+@attribute Single_Epithelial_Cell_Size   {1,2,3,4,5,6,7,8,9,10}
+@attribute Bare_Nuclei                   {1,2,3,4,5,6,7,8,9,10}
+@attribute Bland_Chromatin               {1,2,3,4,5,6,7,8,9,10}
+@attribute Normal_Nucleoli               {1,2,3,4,5,6,7,8,9,10}
+@attribute Mitoses                       {1,2,3,4,5,6,7,8,9,10}
+@attribute Class                         {2,4}
+@data

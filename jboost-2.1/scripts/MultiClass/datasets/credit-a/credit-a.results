@@ -1,0 +1,26 @@
+***JBoost type=AdaBoost for 1 iterations with 0% noise gives error = 0.14505 +/- 0.04
+***JBoost type=AdaBoost for 1 iterations with 5% noise gives error = 0.14505 +/- 0.04
+***JBoost type=AdaBoost for 1 iterations with 10% noise gives error = 0.14505 +/- 0.04
+***JBoost type=AdaBoost for 1 iterations with 15% noise gives error = 0.14505 +/- 0.04
+***JBoost type=AdaBoost for 1 iterations with 20% noise gives error = 0.14505 +/- 0.04
+***JBoost type=LogLossBoost for 1 iterations with 0% noise gives error = 0.14505 +/- 0.04
+***JBoost type=LogLossBoost for 41 iterations with 5% noise gives error = 0.14361 +/- 0.04
+***JBoost type=LogLossBoost for 1 iterations with 10% noise gives error = 0.14505 +/- 0.04
+***JBoost type=LogLossBoost for 1 iterations with 15% noise gives error = 0.14505 +/- 0.04
+***JBoost type=LogLossBoost for 1 iterations with 20% noise gives error = 0.14505 +/- 0.04
+***Weka type=ADA with 0% noise gives error = 0.136232 +/- 0.04
+***Weka type=ADA with 5% noise gives error = 0.1463769 +/- 0.04
+***Weka type=ADA with 10% noise gives error = 0.189855 +/- 0.04
+***Weka type=ADA with 15% noise gives error = 0.2115943 +/- 0.06
+***Weka type=ADA with 20% noise gives error = 0.2478262 +/- 0.04
+***Weka type=RF with 0% noise gives error = 0.1391305 +/- 0.05
+***Weka type=RF with 5% noise gives error = 0.1478262 +/- 0.05
+***Weka type=RF with 10% noise gives error = 0.1666667 +/- 0.04
+***Weka type=RF with 15% noise gives error = 0.1637683 +/- 0.04
+***Weka type=RF with 20% noise gives error = 0.1869565 +/- 0.06
+***Weka type=BAG with 0% noise gives error = 0.136232 +/- 0.04
+***Weka type=BAG with 5% noise gives error = 0.1405798 +/- 0.04
+***Weka type=BAG with 10% noise gives error = 0.1362321 +/- 0.04
+***Weka type=BAG with 15% noise gives error = 0.147826 +/- 0.05
+***Weka type=BAG with 20% noise gives error = 0.1594203 +/- 0.04
+Elapsed time: 1738.45423698 sec.

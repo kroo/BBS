@@ -1,0 +1,17 @@
+@relation credit-a
+@attribute A1 {0,1}
+@attribute A2 NUMERIC
+@attribute A3 NUMERIC
+@attribute A4 {1,2,3}
+@attribute A5 {1,2,3,4,5,6,7,8,9,10,11,12,13,14}
+@attribute A6 {1,2,3,4,5,6,7,8,9}
+@attribute A7 NUMERIC
+@attribute A8 {0,1}
+@attribute A9 {0,1}
+@attribute A10 NUMERIC
+@attribute A11 {0,1}
+@attribute A12 {1,2,3}
+@attribute A13 NUMERIC
+@attribute A14 NUMERIC
+@attribute Class {0,1}
+@data

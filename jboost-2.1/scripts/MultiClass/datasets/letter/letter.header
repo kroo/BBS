@@ -1,0 +1,19 @@
+@relation letter
+@attribute x-box NUMERIC
+@attribute y-box NUMERIC
+@attribute width NUMERIC
+@attribute height NUMERIC
+@attribute onpix NUMERIC
+@attribute x-bar NUMERIC
+@attribute y-bar NUMERIC
+@attribute x2bar NUMERIC
+@attribute y2bar NUMERIC
+@attribute xybar NUMERIC
+@attribute x2ybr NUMERIC
+@attribute xy2br NUMERIC
+@attribute x-edge NUMERIC
+@attribute xegvy NUMERIC
+@attribute y-edge NUMERIC
+@attribute yegvx NUMERIC
+@attribute class {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}
+@data

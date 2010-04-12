@@ -1,0 +1,9 @@
+@relation krk
+@attribute wk_col {a,b,c,d,e,f,g,h}
+@attribute wk_row {1,2,3,4,5,6,7,8}
+@attribute wr_col {a,b,c,d,e,f,g,h}
+@attribute wr_row {1,2,3,4,5,6,7,8}
+@attribute bk_col {a,b,c,d,e,f,g,h}
+@attribute bk_row {1,2,3,4,5,6,7,8}
+@attribute class {draw,zero,one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen}
+@data

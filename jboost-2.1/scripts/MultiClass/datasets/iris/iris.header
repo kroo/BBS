@@ -1,0 +1,7 @@
+@relation iris
+@attribute sepal_len NUMERIC
+@attribute sepal_width NUMERIC
+@attribute petal_len NUMERIC
+@attribute petal_width NUMERIC
+@attribute class {Iris-setosa,Iris-versicolor,Iris-virginica}
+@data

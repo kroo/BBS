@@ -1,0 +1,12 @@
+@relation glass
+@attribute RI NUMERIC
+@attribute Na NUMERIC
+@attribute Mg NUMERIC
+@attribute Al NUMERIC
+@attribute Si NUMERIC
+@attribute K NUMERIC
+@attribute Ca NUMERIC
+@attribute Ba NUMERIC
+@attribute Fe NUMERIC
+@attribute class {1,2,3,4,5,6,7}
+@data

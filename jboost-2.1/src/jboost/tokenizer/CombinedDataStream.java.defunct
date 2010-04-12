@@ -1,0 +1,83 @@
+package jboost.tokenizer;
+
+import java.util.*;
+import java.io.*;
+import jboost.controller.Configuration;
+import jboost.tokenizer.*;
+import jboost.examples.*;
+import jboost.monitor.Monitor;
+
+/** This extension of DataStream simulates a concatanation of a sequence of 
+    DataStreams.
+    @author Yoav Freund
+ *  @version $Header: /cvsroot/jboost/jboost/src/jboost/tokenizer/CombinedDataStream.java.defunct,v 1.1.1.1 2007/05/16 04:06:02 aarvey Exp $ */
+public class CombinedDataStream extends DataStream{
+   /** Returns the line number of the current example in the data source.               */
+    public long getLineNumber() {return currentStream.getLineNumber();}
+    
+    /** Creates out a string containing the information necessary to
+     *  read the datafile.  */
+    public String toString() {
+	String s="A concatanation of "+streams.length+" dataStreams\n";
+	for(int i=0; i<streams.length; i++) {
+	    s += "Stream "+i+":\n"+streams[i];
+	}
+	return s;
+    }
+    
+    /** Retreives the data specification in a standard internal form.  */
+    public ExampleDescription getExampleDescription() {
+	return currentStream.getExampleDescription();
+    }
+
+   /** Gets an array of attributes in a standard textual form that can then be 
+    *  transformed into an example by ExampleStream.					*/
+    public String[] getExampleText() throws ParseException {
+	String[] a = null;
+	while(a == null) {
+	    a = currentStream.getExampleText();
+	    if(a==null) {	// finished reading this dataStream
+		currentStreamIndex++;
+		if(currentStreamIndex == streams.length) {
+		    return null;
+		} else {
+		    currentStream = streams[currentStreamIndex];
+		}
+	    }
+	}
+	return a;
+    }
+
+   /** reset all the dataStreams and move back to the first one */
+    public void reset(String data) throws IOException {
+	for(int i=0; i<streams.length; i++) {
+	    streams[i].reset();
+	}
+	currentStreamIndex=0;
+	currentStream = streams[0];
+    } 
+
+	
+
+   /** Constructor 
+    * @param streams an array of dataStreams */
+    public CombinedDataStream(DataStream[] streams) throws IOException,SpecFileException {
+	this.streams = streams;
+	currentStream=streams[0];
+	currentStreamIndex=0;
+    }
+//------------------------------- Private Members -------------------------------------//
+
+    private DataStream[] streams;
+    private DataStream currentStream;
+    private int currentStreamIndex;
+    private int lineNo;
+
+//------------------------------- Test Code -------------------------------------------//\
+}
+
+
+
+
+
+

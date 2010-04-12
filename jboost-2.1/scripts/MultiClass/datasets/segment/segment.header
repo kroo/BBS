@@ -1,0 +1,22 @@
+@relation segment
+@attribute region-centroid-col NUMERIC
+@attribute region-centroid-row NUMERIC
+@attribute region-pixel-count NUMERIC
+@attribute short-line-density-5 NUMERIC
+@attribute short-line-density-2 NUMERIC
+@attribute vedge-mean NUMERIC
+@attribute vedge-sd NUMERIC
+@attribute hedge-mean NUMERIC
+@attribute hedge-sd NUMERIC
+@attribute intensity-mean NUMERIC
+@attribute rawred-mean NUMERIC
+@attribute rawblue-mean NUMERIC
+@attribute rawgreen-mean NUMERIC
+@attribute exred-mean NUMERIC
+@attribute exblue-mean NUMERIC
+@attribute exgreen-mean NUMERIC
+@attribute value-mean NUMERIC
+@attribute saturation-mean NUMERIC
+@attribute hue-mean NUMERIC
+@attribute class {BRICKFACE,SKY,FOLIAGE,CEMENT,WINDOW,PATH,GRASS}
+@data

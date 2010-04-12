@@ -1,0 +1,91 @@
+JBoost Release Notes
+--------------------
+
++ Release 2.0 + 
+=================
+ - RobustBoost is implemented
+ - Improved the score visualizer
+ - Deprecated BrownBoost, YadaBoost
+ - Replaced multiclass wrapper in JBoost with a python script
+
+
++ Release 1.4 + 
+=================
+
+ - NormalBoost is implemented
+    - BrownBoost-like update
+    - Asymetric cost
+    - Iteration order evalution of the ADTree
+ - More bugs fixed
+ - Scripts updated and made more general
+
++ Release 1.3.1 + 
+=================
+
+ - BrownBoost now able to handle hypotheses that abstain
+ - Several bug fixes (BrownBoost, Controller, etc)
+
+
++ Release 1.3 + 
+===============
+
+ - BrownBoost released 
+ - Added a few README files
+ - Fixed path bug in jboost wrapper and nfold.py
+ - Minor improvements to margin.py and error.py
+ - Added options outputting serialized trees
+ - Added some more misc documentation
+
+
++ Release 1.2 + 
+===============
+
+ - Added a few README files
+ - Added a lot of documentation
+      - There's now a JBoost website
+      - The website can be downloaded before destribution using the get_doc.sh
+        script found in the /doc directory
+
+
++ Release 1.1 + 
+===============
+
+ - Added command line options 
+      - Type of booster
+      - Print usage help
+      - Print version
+ - Added two new boosting algorithms: BrownBoost and YabaBoost
+ - The project is now on SourceForge
+
+Known Bugs
+ - There are still numerical instabilities in YabaBoost and BrownBoost.
+
+
++ Release 1.0 + 
+===============
+
+New Features and Enhancements
+ - Cdded a configuration option booster_type to select which boosting 
+   algorithm will be used. AdaBoost and LogLossBoost are avaiable.
+ - Changed Booster into an interface and created AbstractBooster as a skeleton
+   implementation
+ - Added FileLoader to support loading data files by searching a collection of
+   directories.
+ - Created several JUnit tests for jboost.controller and jboost.booster packages.
+   Also added an AllTests suite to run all the tests in the jboost project.
+ - Added support for running tests from command-line ant. Most tests can also be
+   run via JUnit support built into eclipse IDE.
+ - Added junit.jar to /lib directory
+ 
+Known Bugs
+ - The FileLoader is not finding data files when using ant-based test target with
+   the eclipse IDE.
+
+ 
++ Release 0.1 +
+===============
+
+Features
+ - Can run the AdaBoost learning algorithm
+ - Produces executable jar that can read and analyze data
+ 

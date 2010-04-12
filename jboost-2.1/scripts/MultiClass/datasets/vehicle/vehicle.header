@@ -1,0 +1,21 @@
+@relation vehicle
+@attribute compactness NUMERIC
+@attribute circularity NUMERIC
+@attribute dist_circularity NUMERIC
+@attribute radius_ratio NUMERIC
+@attribute praxis_aspect NUMERIC
+@attribute maxlen_aspect NUMERIC
+@attribute scatter NUMERIC
+@attribute elongatedness NUMERIC
+@attribute praxis_rectang NUMERIC
+@attribute maxlen_rectang NUMERIC
+@attribute var_major NUMERIC
+@attribute var_minor NUMERIC
+@attribute radius_gyr NUMERIC
+@attribute skewness_major NUMERIC
+@attribute skewness_minor NUMERIC
+@attribute kurtosis_minor NUMERIC
+@attribute kurtosis_major NUMERIC
+@attribute hallows NUMERIC
+@attribute class {opel,saab,bus,van}
+@data
