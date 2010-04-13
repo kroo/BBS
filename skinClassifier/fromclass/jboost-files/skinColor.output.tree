@@ -1,0 +1,302 @@
+0	[R] prediction = BinaryPrediction. p(1)= -0.07186449218242213
+1	[R.0] Splitter = InequalitySplitter. H < 0.14500000000000002
+1	[R.0:0] prediction = BinaryPrediction. p(1)= 1.4677157753599737
+6	[R.0:0.0] Splitter = InequalitySplitter. H < 0.125
+6	[R.0:0.0:0] prediction = BinaryPrediction. p(1)= 0.22116844016705395
+15	[R.0:0.0:0.0] Splitter = InequalitySplitter. H < 0.08499999999999999
+15	[R.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= 0.4493335439866654
+21	[R.0:0.0:0.0:0.0] Splitter = InequalitySplitter. V < 0.725
+21	[R.0:0.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= -0.14943732758893374
+21	[R.0:0.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= 1.350257734665344
+40	[R.0:0.0:0.0:0.0:1.0] Splitter = InequalitySplitter. H < 0.015
+40	[R.0:0.0:0.0:0.0:1.0:0] prediction = BinaryPrediction. p(1)= -1.6665550690509312
+40	[R.0:0.0:0.0:0.0:1.0:1] prediction = BinaryPrediction. p(1)= 1.800363958386938
+47	[R.0:0.0:0.0:0.1] Splitter = InequalitySplitter. V < 0.565
+47	[R.0:0.0:0.0:0.1:0] prediction = BinaryPrediction. p(1)= 0.5246487283064374
+48	[R.0:0.0:0.0:0.1:0.0] Splitter = InequalitySplitter. V < 0.405
+48	[R.0:0.0:0.0:0.1:0.0:0] prediction = BinaryPrediction. p(1)= -0.5883612689109432
+48	[R.0:0.0:0.0:0.1:0.0:1] prediction = BinaryPrediction. p(1)= 1.5824451239599047
+47	[R.0:0.0:0.0:0.1:1] prediction = BinaryPrediction. p(1)= -0.24242510201263756
+71	[R.0:0.0:0.0:0.1:1.0] Splitter = InequalitySplitter. V < 0.625
+71	[R.0:0.0:0.0:0.1:1.0:0] prediction = BinaryPrediction. p(1)= -0.3969709795142376
+95	[R.0:0.0:0.0:0.1:1.0:0.0] Splitter = InequalitySplitter. S < 0.095
+95	[R.0:0.0:0.0:0.1:1.0:0.0:0] prediction = BinaryPrediction. p(1)= 1.8476545082311584
+95	[R.0:0.0:0.0:0.1:1.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.23240284099280223
+71	[R.0:0.0:0.0:0.1:1.0:1] prediction = BinaryPrediction. p(1)= 0.5476008167717772
+72	[R.0:0.0:0.0:0.1:1.0:1.0] Splitter = InequalitySplitter. S < 0.045
+72	[R.0:0.0:0.0:0.1:1.0:1.0:0] prediction = BinaryPrediction. p(1)= -0.5907336970471467
+72	[R.0:0.0:0.0:0.1:1.0:1.0:1] prediction = BinaryPrediction. p(1)= 1.0378020236259213
+80	[R.0:0.0:0.0:0.1:1.0:1.0:1.0] Splitter = InequalitySplitter. S < 0.41
+80	[R.0:0.0:0.0:0.1:1.0:1.0:1.0:0] prediction = BinaryPrediction. p(1)= 1.9135754195263368
+80	[R.0:0.0:0.0:0.1:1.0:1.0:1.0:1] prediction = BinaryPrediction. p(1)= -1.0081487110413105
+15	[R.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.2259074876533607
+29	[R.0:0.0:0.0:1.0] Splitter = InequalitySplitter. V < 0.805
+29	[R.0:0.0:0.0:1.0:0] prediction = BinaryPrediction. p(1)= -0.05504147876227481
+32	[R.0:0.0:0.0:1.0:0.0] Splitter = InequalitySplitter. S < 0.035
+32	[R.0:0.0:0.0:1.0:0.0:0] prediction = BinaryPrediction. p(1)= 2.3689070168839503
+32	[R.0:0.0:0.0:1.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.037771945094561464
+49	[R.0:0.0:0.0:1.0:0.0:1.0] Splitter = InequalitySplitter. S < 0.095
+49	[R.0:0.0:0.0:1.0:0.0:1.0:0] prediction = BinaryPrediction. p(1)= -0.3188030648402143
+49	[R.0:0.0:0.0:1.0:0.0:1.0:1] prediction = BinaryPrediction. p(1)= 0.11551181544085168
+82	[R.0:0.0:0.0:1.0:0.0:1.0:1.0] Splitter = InequalitySplitter. V < 0.795
+82	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0] prediction = BinaryPrediction. p(1)= -0.03328726459174147
+83	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0] Splitter = InequalitySplitter. H < 0.11499999999999999
+83	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0] prediction = BinaryPrediction. p(1)= -0.1113719305856252
+84	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0.0] Splitter = InequalitySplitter. V < 0.695
+84	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= -0.1849573187050409
+86	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0.0:0.0] Splitter = InequalitySplitter. V < 0.635
+86	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= 0.3727544578297486
+86	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.34685707923557896
+84	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= 0.398820693590963
+85	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0.0:1.0] Splitter = InequalitySplitter. V < 0.755
+85	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0.0:1.0:0] prediction = BinaryPrediction. p(1)= 2.767656943422044
+85	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0.0:1.0:1] prediction = BinaryPrediction. p(1)= -0.6494470676283614
+87	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0.0:1.1] Splitter = InequalitySplitter. S < 0.125
+87	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0.0:1.1:0] prediction = BinaryPrediction. p(1)= -0.16409637002553673
+87	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:0.0:1.1:1] prediction = BinaryPrediction. p(1)= 2.108893971932739
+83	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:1] prediction = BinaryPrediction. p(1)= 0.27664275897615703
+88	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:1.0] Splitter = InequalitySplitter. V < 0.715
+88	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:1.0:0] prediction = BinaryPrediction. p(1)= 0.25421858137916314
+89	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:1.0:0.0] Splitter = InequalitySplitter. V < 0.685
+89	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:1.0:0.0:0] prediction = BinaryPrediction. p(1)= -0.1606398165278899
+89	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:1.0:0.0:1] prediction = BinaryPrediction. p(1)= 2.2057766843120636
+88	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:0.0:1.0:1] prediction = BinaryPrediction. p(1)= -0.4759938172341676
+82	[R.0:0.0:0.0:1.0:0.0:1.0:1.0:1] prediction = BinaryPrediction. p(1)= 1.954575090042895
+90	[R.0:0.0:0.0:1.0:0.0:1.1] Splitter = InequalitySplitter. V < 0.515
+90	[R.0:0.0:0.0:1.0:0.0:1.1:0] prediction = BinaryPrediction. p(1)= -0.44811541582354586
+97	[R.0:0.0:0.0:1.0:0.0:1.1:0.0] Splitter = InequalitySplitter. S < 0.175
+97	[R.0:0.0:0.0:1.0:0.0:1.1:0.0:0] prediction = BinaryPrediction. p(1)= -0.131114618166145
+97	[R.0:0.0:0.0:1.0:0.0:1.1:0.0:1] prediction = BinaryPrediction. p(1)= 1.9786495006293883
+90	[R.0:0.0:0.0:1.0:0.0:1.1:1] prediction = BinaryPrediction. p(1)= 0.050888755014533486
+91	[R.0:0.0:0.0:1.0:0.0:1.1:1.0] Splitter = InequalitySplitter. V < 0.595
+91	[R.0:0.0:0.0:1.0:0.0:1.1:1.0:0] prediction = BinaryPrediction. p(1)= 0.9777255860381538
+91	[R.0:0.0:0.0:1.0:0.0:1.1:1.0:1] prediction = BinaryPrediction. p(1)= -0.04847718764831063
+92	[R.0:0.0:0.0:1.0:0.0:1.1:1.1] Splitter = InequalitySplitter. S < 0.175
+92	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0] prediction = BinaryPrediction. p(1)= 0.057608171751299064
+93	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0.0] Splitter = InequalitySplitter. V < 0.605
+93	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0.0:0] prediction = BinaryPrediction. p(1)= 2.2839552684478637
+93	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0.0:1] prediction = BinaryPrediction. p(1)= -0.030681892456005756
+98	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0.1] Splitter = InequalitySplitter. V < 0.635
+98	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0.1:0] prediction = BinaryPrediction. p(1)= 0.45291798391398813
+99	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0.1:0.0] Splitter = InequalitySplitter. S < 0.11499999999999999
+99	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0.1:0.0:0] prediction = BinaryPrediction. p(1)= -0.43327022907691737
+100	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0.1:0.0:0.0] Splitter = InequalitySplitter. S < 0.08499999999999999
+100	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0.1:0.0:0.0:0] prediction = BinaryPrediction. p(1)= 2.1502688379495787
+100	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0.1:0.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.4174563965863046
+99	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0.1:0.0:1] prediction = BinaryPrediction. p(1)= 2.38097674769086
+98	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:0.1:1] prediction = BinaryPrediction. p(1)= -0.08521303867522428
+92	[R.0:0.0:0.0:1.0:0.0:1.1:1.1:1] prediction = BinaryPrediction. p(1)= -0.9513955743408636
+29	[R.0:0.0:0.0:1.0:1] prediction = BinaryPrediction. p(1)= 0.9475961732439071
+37	[R.0:0.0:0.0:1.0:1.0] Splitter = InequalitySplitter. V < 0.835
+37	[R.0:0.0:0.0:1.0:1.0:0] prediction = BinaryPrediction. p(1)= 2.2769047714900243
+37	[R.0:0.0:0.0:1.0:1.0:1] prediction = BinaryPrediction. p(1)= -0.21606556326992468
+24	[R.0:0.0:0.1] Splitter = InequalitySplitter. S < 0.135
+24	[R.0:0.0:0.1:0] prediction = BinaryPrediction. p(1)= -0.14805833596369142
+70	[R.0:0.0:0.1:0.0] Splitter = InequalitySplitter. S < 0.045
+70	[R.0:0.0:0.1:0.0:0] prediction = BinaryPrediction. p(1)= -0.5870815091945538
+70	[R.0:0.0:0.1:0.0:1] prediction = BinaryPrediction. p(1)= 0.06535176589775092
+24	[R.0:0.0:0.1:1] prediction = BinaryPrediction. p(1)= 0.2763322059961915
+25	[R.0:0.0:0.1:1.0] Splitter = InequalitySplitter. H < 0.11499999999999999
+25	[R.0:0.0:0.1:1.0:0] prediction = BinaryPrediction. p(1)= 0.2404050703374243
+26	[R.0:0.0:0.1:1.0:0.0] Splitter = InequalitySplitter. H < 0.095
+26	[R.0:0.0:0.1:1.0:0.0:0] prediction = BinaryPrediction. p(1)= -0.2272293039746912
+41	[R.0:0.0:0.1:1.0:0.0:0.0] Splitter = InequalitySplitter. V < 0.625
+41	[R.0:0.0:0.1:1.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= -0.24112786545912307
+42	[R.0:0.0:0.1:1.0:0.0:0.0:0.0] Splitter = InequalitySplitter. H < 0.065
+42	[R.0:0.0:0.1:1.0:0.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= 1.3976153738670245
+46	[R.0:0.0:0.1:1.0:0.0:0.0:0.0:0.0] Splitter = InequalitySplitter. S < 0.38999999999999996
+46	[R.0:0.0:0.1:1.0:0.0:0.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= 1.904431744648768
+46	[R.0:0.0:0.1:1.0:0.0:0.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= -1.8294842812596983
+42	[R.0:0.0:0.1:1.0:0.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.2603813592463837
+41	[R.0:0.0:0.1:1.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= 0.6366625212569046
+52	[R.0:0.0:0.1:1.0:0.0:0.0:1.0] Splitter = InequalitySplitter. S < 0.155
+52	[R.0:0.0:0.1:1.0:0.0:0.0:1.0:0] prediction = BinaryPrediction. p(1)= -0.6219912504257575
+63	[R.0:0.0:0.1:1.0:0.0:0.0:1.0:0.0] Splitter = InequalitySplitter. H < 0.08499999999999999
+63	[R.0:0.0:0.1:1.0:0.0:0.0:1.0:0.0:0] prediction = BinaryPrediction. p(1)= 1.9784107465070093
+63	[R.0:0.0:0.1:1.0:0.0:0.0:1.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.4588547070728426
+52	[R.0:0.0:0.1:1.0:0.0:0.0:1.0:1] prediction = BinaryPrediction. p(1)= 0.810374267077324
+53	[R.0:0.0:0.1:1.0:0.0:0.0:1.0:1.0] Splitter = InequalitySplitter. H < 0.015
+53	[R.0:0.0:0.1:1.0:0.0:0.0:1.0:1.0:0] prediction = BinaryPrediction. p(1)= -2.063191296645428
+53	[R.0:0.0:0.1:1.0:0.0:0.0:1.0:1.0:1] prediction = BinaryPrediction. p(1)= 2.07761301174542
+94	[R.0:0.0:0.1:1.0:0.0:0.1] Splitter = InequalitySplitter. V < 0.365
+94	[R.0:0.0:0.1:1.0:0.0:0.1:0] prediction = BinaryPrediction. p(1)= -0.8314735608945959
+94	[R.0:0.0:0.1:1.0:0.0:0.1:1] prediction = BinaryPrediction. p(1)= 0.3599724466169721
+96	[R.0:0.0:0.1:1.0:0.0:0.1:1.0] Splitter = InequalitySplitter. S < 0.14500000000000002
+96	[R.0:0.0:0.1:1.0:0.0:0.1:1.0:0] prediction = BinaryPrediction. p(1)= 2.0479550006263394
+96	[R.0:0.0:0.1:1.0:0.0:0.1:1.0:1] prediction = BinaryPrediction. p(1)= 0.01363233026707112
+26	[R.0:0.0:0.1:1.0:0.0:1] prediction = BinaryPrediction. p(1)= 0.9307068414718016
+27	[R.0:0.0:0.1:1.0:0.0:1.0] Splitter = InequalitySplitter. V < 0.845
+27	[R.0:0.0:0.1:1.0:0.0:1.0:0] prediction = BinaryPrediction. p(1)= 2.3666258649578436
+27	[R.0:0.0:0.1:1.0:0.0:1.0:1] prediction = BinaryPrediction. p(1)= -1.1790256705752404
+25	[R.0:0.0:0.1:1.0:1] prediction = BinaryPrediction. p(1)= -0.6548582490896848
+28	[R.0:0.0:0.1:1.0:1.0] Splitter = InequalitySplitter. S < 0.155
+28	[R.0:0.0:0.1:1.0:1.0:0] prediction = BinaryPrediction. p(1)= 0.853309170293751
+31	[R.0:0.0:0.1:1.0:1.0:0.0] Splitter = InequalitySplitter. V < 0.485
+31	[R.0:0.0:0.1:1.0:1.0:0.0:0] prediction = BinaryPrediction. p(1)= -1.2104670615682975
+79	[R.0:0.0:0.1:1.0:1.0:0.0:0.0] Splitter = InequalitySplitter. S < 0.14500000000000002
+79	[R.0:0.0:0.1:1.0:1.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= -1.7800535649180251
+79	[R.0:0.0:0.1:1.0:1.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= 1.5198493482004565
+31	[R.0:0.0:0.1:1.0:1.0:0.0:1] prediction = BinaryPrediction. p(1)= 2.224990669492592
+28	[R.0:0.0:0.1:1.0:1.0:1] prediction = BinaryPrediction. p(1)= -0.6200725156351707
+56	[R.0:0.0:0.1:1.0:1.0:1.0] Splitter = InequalitySplitter. V < 0.555
+56	[R.0:0.0:0.1:1.0:1.0:1.0:0] prediction = BinaryPrediction. p(1)= 1.935044257637808
+56	[R.0:0.0:0.1:1.0:1.0:1.0:1] prediction = BinaryPrediction. p(1)= -0.4895409868678559
+6	[R.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.8432157468585815
+8	[R.0:0.0:1.0] Splitter = InequalitySplitter. S < 0.165
+8	[R.0:0.0:1.0:0] prediction = BinaryPrediction. p(1)= 0.3614471312515362
+8	[R.0:0.0:1.0:1] prediction = BinaryPrediction. p(1)= -3.024027631971718
+68	[R.0:0.0:1.1] Splitter = InequalitySplitter. V < 0.705
+68	[R.0:0.0:1.1:0] prediction = BinaryPrediction. p(1)= 0.22607174966066274
+69	[R.0:0.0:1.1:0.0] Splitter = InequalitySplitter. S < 0.035
+69	[R.0:0.0:1.1:0.0:0] prediction = BinaryPrediction. p(1)= 2.1633216171838083
+69	[R.0:0.0:1.1:0.0:1] prediction = BinaryPrediction. p(1)= -0.07932969642691744
+74	[R.0:0.0:1.1:0.1] Splitter = InequalitySplitter. V < 0.675
+74	[R.0:0.0:1.1:0.1:0] prediction = BinaryPrediction. p(1)= -0.07059156919127084
+74	[R.0:0.0:1.1:0.1:1] prediction = BinaryPrediction. p(1)= 1.9648355838018734
+68	[R.0:0.0:1.1:1] prediction = BinaryPrediction. p(1)= -0.2805087151006142
+30	[R.0:0.1] Splitter = InequalitySplitter. V < 0.875
+30	[R.0:0.1:0] prediction = BinaryPrediction. p(1)= 0.008362984465444177
+30	[R.0:0.1:1] prediction = BinaryPrediction. p(1)= -2.390123381289233
+1	[R.0:1] prediction = BinaryPrediction. p(1)= -0.7063675504968039
+2	[R.0:1.0] Splitter = InequalitySplitter. S < 0.10500000000000001
+2	[R.0:1.0:0] prediction = BinaryPrediction. p(1)= 0.9581939436188567
+3	[R.0:1.0:0.0] Splitter = InequalitySplitter. V < 0.855
+3	[R.0:1.0:0.0:0] prediction = BinaryPrediction. p(1)= 0.6753877207666644
+44	[R.0:1.0:0.0:0.0] Splitter = InequalitySplitter. H < 0.235
+44	[R.0:1.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= 0.2744846896352766
+45	[R.0:1.0:0.0:0.0:0.0] Splitter = InequalitySplitter. S < 0.035
+45	[R.0:1.0:0.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= 2.2757625644387773
+45	[R.0:1.0:0.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.0728197312195079
+81	[R.0:1.0:0.0:0.0:0.1] Splitter = InequalitySplitter. V < 0.835
+81	[R.0:1.0:0.0:0.0:0.1:0] prediction = BinaryPrediction. p(1)= 0.10974004305241386
+81	[R.0:1.0:0.0:0.0:0.1:1] prediction = BinaryPrediction. p(1)= -1.891762089395544
+44	[R.0:1.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.129303608593556
+61	[R.0:1.0:0.0:0.0:1.0] Splitter = InequalitySplitter. H < 0.9
+61	[R.0:1.0:0.0:0.0:1.0:0] prediction = BinaryPrediction. p(1)= -0.10126559442186811
+61	[R.0:1.0:0.0:0.0:1.0:1] prediction = BinaryPrediction. p(1)= 0.5811659747903627
+62	[R.0:1.0:0.0:0.0:1.0:1.0] Splitter = InequalitySplitter. H < 0.95
+62	[R.0:1.0:0.0:0.0:1.0:1.0:0] prediction = BinaryPrediction. p(1)= 2.025836913219383
+62	[R.0:1.0:0.0:0.0:1.0:1.0:1] prediction = BinaryPrediction. p(1)= -0.2823804813026451
+76	[R.0:1.0:0.0:0.0:1.0:1.0:1.0] Splitter = InequalitySplitter. V < 0.525
+76	[R.0:1.0:0.0:0.0:1.0:1.0:1.0:0] prediction = BinaryPrediction. p(1)= -1.4053950438217073
+76	[R.0:1.0:0.0:0.0:1.0:1.0:1.0:1] prediction = BinaryPrediction. p(1)= 0.4682138134901299
+77	[R.0:1.0:0.0:0.0:1.0:1.0:1.0:1.0] Splitter = InequalitySplitter. V < 0.67
+77	[R.0:1.0:0.0:0.0:1.0:1.0:1.0:1.0:0] prediction = BinaryPrediction. p(1)= 1.89599068113167
+77	[R.0:1.0:0.0:0.0:1.0:1.0:1.0:1.0:1] prediction = BinaryPrediction. p(1)= -0.5939751610851118
+78	[R.0:1.0:0.0:0.0:1.0:1.0:1.0:1.0:1.0] Splitter = InequalitySplitter. V < 0.69
+78	[R.0:1.0:0.0:0.0:1.0:1.0:1.0:1.0:1.0:0] prediction = BinaryPrediction. p(1)= -1.766153302704076
+78	[R.0:1.0:0.0:0.0:1.0:1.0:1.0:1.0:1.0:1] prediction = BinaryPrediction. p(1)= 1.7473411604314126
+3	[R.0:1.0:0.0:1] prediction = BinaryPrediction. p(1)= -3.8207115427577767
+9	[R.0:1.0:0.1] Splitter = InequalitySplitter. S < 0.055
+9	[R.0:1.0:0.1:0] prediction = BinaryPrediction. p(1)= 0.3375509930500608
+9	[R.0:1.0:0.1:1] prediction = BinaryPrediction. p(1)= -0.5656366334843755
+20	[R.0:1.0:0.1:1.0] Splitter = InequalitySplitter. V < 0.765
+20	[R.0:1.0:0.1:1.0:0] prediction = BinaryPrediction. p(1)= 0.24178155655603834
+35	[R.0:1.0:0.1:1.0:0.0] Splitter = InequalitySplitter. S < 0.095
+35	[R.0:1.0:0.1:1.0:0.0:0] prediction = BinaryPrediction. p(1)= 0.14010828791631125
+50	[R.0:1.0:0.1:1.0:0.0:0.0] Splitter = InequalitySplitter. V < 0.535
+50	[R.0:1.0:0.1:1.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= 0.9434904068708609
+51	[R.0:1.0:0.1:1.0:0.0:0.0:0.0] Splitter = InequalitySplitter. V < 0.335
+51	[R.0:1.0:0.1:1.0:0.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= -1.4802141943261733
+51	[R.0:1.0:0.1:1.0:0.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= 2.1796597673167915
+50	[R.0:1.0:0.1:1.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.05408519175470874
+35	[R.0:1.0:0.1:1.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.6361065413818195
+20	[R.0:1.0:0.1:1.0:1] prediction = BinaryPrediction. p(1)= -0.6007871038422133
+58	[R.0:1.0:0.1:1.0:1.0] Splitter = InequalitySplitter. H < 0.515
+58	[R.0:1.0:0.1:1.0:1.0:0] prediction = BinaryPrediction. p(1)= 0.12519574956292542
+59	[R.0:1.0:0.1:1.0:1.0:0.0] Splitter = InequalitySplitter. H < 0.235
+59	[R.0:1.0:0.1:1.0:1.0:0.0:0] prediction = BinaryPrediction. p(1)= -0.7616552806493277
+60	[R.0:1.0:0.1:1.0:1.0:0.0:0.0] Splitter = InequalitySplitter. S < 0.065
+60	[R.0:1.0:0.1:1.0:1.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= 0.5357422469640067
+60	[R.0:1.0:0.1:1.0:1.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= -2.0580736818350744
+75	[R.0:1.0:0.1:1.0:1.0:0.0:0.1] Splitter = InequalitySplitter. V < 0.795
+75	[R.0:1.0:0.1:1.0:1.0:0.0:0.1:0] prediction = BinaryPrediction. p(1)= -1.9185550636510342
+75	[R.0:1.0:0.1:1.0:1.0:0.0:0.1:1] prediction = BinaryPrediction. p(1)= 0.5313963878462038
+59	[R.0:1.0:0.1:1.0:1.0:0.0:1] prediction = BinaryPrediction. p(1)= 0.20899369180039107
+58	[R.0:1.0:0.1:1.0:1.0:1] prediction = BinaryPrediction. p(1)= -2.053298369276037
+2	[R.0:1.0:1] prediction = BinaryPrediction. p(1)= -1.1510303423881008
+7	[R.0:1.0:1.0] Splitter = InequalitySplitter. S < 0.165
+7	[R.0:1.0:1.0:0] prediction = BinaryPrediction. p(1)= 0.6526424296652259
+7	[R.0:1.0:1.0:1] prediction = BinaryPrediction. p(1)= -0.33839540685558345
+11	[R.0:1.0:1.0:1.0] Splitter = InequalitySplitter. V < 0.735
+11	[R.0:1.0:1.0:1.0:0] prediction = BinaryPrediction. p(1)= 0.01972110816359346
+11	[R.0:1.0:1.0:1.0:1] prediction = BinaryPrediction. p(1)= -3.008154348575029
+34	[R.0:1.0:1.0:1.1] Splitter = InequalitySplitter. H < 0.555
+34	[R.0:1.0:1.0:1.1:0] prediction = BinaryPrediction. p(1)= 0.02594692424601059
+64	[R.0:1.0:1.0:1.1:0.0] Splitter = InequalitySplitter. H < 0.525
+64	[R.0:1.0:1.0:1.1:0.0:0] prediction = BinaryPrediction. p(1)= -0.5980567017778026
+65	[R.0:1.0:1.0:1.1:0.0:0.0] Splitter = InequalitySplitter. V < 0.495
+65	[R.0:1.0:1.0:1.1:0.0:0.0:0] prediction = BinaryPrediction. p(1)= 1.0175868490894722
+65	[R.0:1.0:1.0:1.1:0.0:0.0:1] prediction = BinaryPrediction. p(1)= -2.4644575804602926
+64	[R.0:1.0:1.0:1.1:0.0:1] prediction = BinaryPrediction. p(1)= 0.10464902659867212
+34	[R.0:1.0:1.0:1.1:1] prediction = BinaryPrediction. p(1)= -2.348872012388651
+10	[R.0:1.0:1.1] Splitter = InequalitySplitter. H < 0.505
+10	[R.0:1.0:1.1:0] prediction = BinaryPrediction. p(1)= -0.55410508496276
+17	[R.0:1.0:1.1:0.0] Splitter = InequalitySplitter. V < 0.695
+17	[R.0:1.0:1.1:0.0:0] prediction = BinaryPrediction. p(1)= 0.3175293784711399
+22	[R.0:1.0:1.1:0.0:0.0] Splitter = InequalitySplitter. S < 0.125
+22	[R.0:1.0:1.1:0.0:0.0:0] prediction = BinaryPrediction. p(1)= 0.804520868301579
+22	[R.0:1.0:1.1:0.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.4852506945776225
+23	[R.0:1.0:1.1:0.0:0.0:1.0] Splitter = InequalitySplitter. V < 0.535
+23	[R.0:1.0:1.1:0.0:0.0:1.0:0] prediction = BinaryPrediction. p(1)= 0.49997053128798696
+23	[R.0:1.0:1.1:0.0:0.0:1.0:1] prediction = BinaryPrediction. p(1)= -2.5526958802042166
+33	[R.0:1.0:1.1:0.0:0.0:1.1] Splitter = InequalitySplitter. H < 0.455
+33	[R.0:1.0:1.1:0.0:0.0:1.1:0] prediction = BinaryPrediction. p(1)= -2.3049080054289672
+33	[R.0:1.0:1.1:0.0:0.0:1.1:1] prediction = BinaryPrediction. p(1)= 0.3526303711315513
+39	[R.0:1.0:1.1:0.0:0.0:1.1:1.0] Splitter = InequalitySplitter. H < 0.475
+39	[R.0:1.0:1.1:0.0:0.0:1.1:1.0:0] prediction = BinaryPrediction. p(1)= 0.4722390543936004
+39	[R.0:1.0:1.1:0.0:0.0:1.1:1.0:1] prediction = BinaryPrediction. p(1)= -2.181974423259136
+66	[R.0:1.0:1.1:0.0:0.1] Splitter = InequalitySplitter. V < 0.46499999999999997
+66	[R.0:1.0:1.1:0.0:0.1:0] prediction = BinaryPrediction. p(1)= -2.06318400092742
+66	[R.0:1.0:1.1:0.0:0.1:1] prediction = BinaryPrediction. p(1)= 0.07376196387856834
+17	[R.0:1.0:1.1:0.0:1] prediction = BinaryPrediction. p(1)= -0.8714158140804125
+18	[R.0:1.0:1.1:0.0:1.0] Splitter = InequalitySplitter. V < 0.925
+18	[R.0:1.0:1.1:0.0:1.0:0] prediction = BinaryPrediction. p(1)= -2.7739008999274093
+18	[R.0:1.0:1.1:0.0:1.0:1] prediction = BinaryPrediction. p(1)= 1.6592481727261839
+36	[R.0:1.0:1.1:0.0:1.1] Splitter = InequalitySplitter. H < 0.495
+36	[R.0:1.0:1.1:0.0:1.1:0] prediction = BinaryPrediction. p(1)= -2.1135753283374656
+36	[R.0:1.0:1.1:0.0:1.1:1] prediction = BinaryPrediction. p(1)= 1.1364687953013495
+10	[R.0:1.0:1.1:1] prediction = BinaryPrediction. p(1)= 0.3962106189296962
+38	[R.0:1.0:1.1:1.0] Splitter = InequalitySplitter. V < 0.605
+38	[R.0:1.0:1.1:1.0:0] prediction = BinaryPrediction. p(1)= -0.3064040718346359
+55	[R.0:1.0:1.1:1.0:0.0] Splitter = InequalitySplitter. H < 0.515
+55	[R.0:1.0:1.1:1.0:0.0:0] prediction = BinaryPrediction. p(1)= -2.1312009877596982
+55	[R.0:1.0:1.1:1.0:0.0:1] prediction = BinaryPrediction. p(1)= 0.1082706110168982
+38	[R.0:1.0:1.1:1.0:1] prediction = BinaryPrediction. p(1)= 0.2855949142199496
+14	[R.0:1.0:1.2] Splitter = InequalitySplitter. S < 0.225
+14	[R.0:1.0:1.2:0] prediction = BinaryPrediction. p(1)= 0.2305931103907346
+14	[R.0:1.0:1.2:1] prediction = BinaryPrediction. p(1)= -2.746981426841648
+4	[R.1] Splitter = InequalitySplitter. S < 0.245
+4	[R.1:0] prediction = BinaryPrediction. p(1)= 0.11416356830462634
+5	[R.1:0.0] Splitter = InequalitySplitter. V < 0.825
+5	[R.1:0.0:0] prediction = BinaryPrediction. p(1)= 0.14727699494600346
+16	[R.1:0.0:0.0] Splitter = InequalitySplitter. V < 0.405
+16	[R.1:0.0:0.0:0] prediction = BinaryPrediction. p(1)= -0.7613828852105161
+43	[R.1:0.0:0.0:0.0] Splitter = InequalitySplitter. V < 0.28500000000000003
+43	[R.1:0.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= -1.0853416723728049
+54	[R.1:0.0:0.0:0.0:0.0] Splitter = InequalitySplitter. H < 0.08
+54	[R.1:0.0:0.0:0.0:0.0:0] prediction = BinaryPrediction. p(1)= 1.857744148442874
+54	[R.1:0.0:0.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= -1.5696904958746305
+43	[R.1:0.0:0.0:0.0:1] prediction = BinaryPrediction. p(1)= 0.27471350851713955
+16	[R.1:0.0:0.0:1] prediction = BinaryPrediction. p(1)= 0.05536779403383643
+19	[R.1:0.0:0.0:1.0] Splitter = InequalitySplitter. S < 0.015
+19	[R.1:0.0:0.0:1.0:0] prediction = BinaryPrediction. p(1)= 2.6684321125708483
+19	[R.1:0.0:0.0:1.0:1] prediction = BinaryPrediction. p(1)= -0.006228045839360264
+57	[R.1:0.0:0.0:1.1] Splitter = InequalitySplitter. H < 0.025
+57	[R.1:0.0:0.0:1.1:0] prediction = BinaryPrediction. p(1)= 2.115232307588796
+57	[R.1:0.0:0.0:1.1:1] prediction = BinaryPrediction. p(1)= 1.384190575154551E-5
+5	[R.1:0.0:1] prediction = BinaryPrediction. p(1)= -0.9735290015931186
+12	[R.1:0.0:1.0] Splitter = InequalitySplitter. V < 0.935
+12	[R.1:0.0:1.0:0] prediction = BinaryPrediction. p(1)= 0.23882080530958708
+13	[R.1:0.0:1.0:0.0] Splitter = InequalitySplitter. H < 0.10500000000000001
+13	[R.1:0.0:1.0:0.0:0] prediction = BinaryPrediction. p(1)= 2.8610717994506447
+13	[R.1:0.0:1.0:0.0:1] prediction = BinaryPrediction. p(1)= -0.3516954541722493
+12	[R.1:0.0:1.0:1] prediction = BinaryPrediction. p(1)= -2.8778954776334835
+67	[R.1:0.0:1.1] Splitter = InequalitySplitter. H < 0.515
+67	[R.1:0.0:1.1:0] prediction = BinaryPrediction. p(1)= 0.09277038258446407
+67	[R.1:0.0:1.1:1] prediction = BinaryPrediction. p(1)= -2.0416565062737515
+4	[R.1:1] prediction = BinaryPrediction. p(1)= -3.7123407631317407
+73	[R.2] Splitter = InequalitySplitter. S < 0.225
+73	[R.2:0] prediction = BinaryPrediction. p(1)= 0.016022917650128133
+73	[R.2:1] prediction = BinaryPrediction. p(1)= -1.876249453337996
+
