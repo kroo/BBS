@@ -1,11 +1,12 @@
-Command line parameters:  asphaltClassifier/asphalt
+Command line parameters:  asphaltClassifier/asphalt asphaltClassifier.m
 
 Configuration parameters:
 serialTreeInput = null
 booster_type = jboost.booster.AdaBoost
-args =  asphaltClassifier/asphalt
+args =  asphaltClassifier/asphalt asphaltClassifier.m
 boostingRuntime = 1.0
 pythonCodeOutputFileName = null
+m = asphaltClassifier.m
 nthreads = null
 cCodeOutputFileName = null
 javaCodeOutputFileName = null
@@ -16,7 +17,7 @@ specFileName = asphaltClassifier/asphalt.spec
 serializationOutputFileName = null
 S = asphaltClassifier/asphalt
 resultOutputFileName = asphaltClassifier/asphalt.output.tree
-matlabCodeOutputFileName = null
+matlabCodeOutputFileName = asphaltClassifier.m
 
 
 FILENAMES
@@ -31,8 +32,8 @@ logOutputFilename = asphaltClassifier/asphalt.log
 Train set size = 115800
 Test set size = 115801
 
-Init  Start time = Mon Apr 12 23:48:58 PDT 2010
-Learn Start time = Mon Apr 12 23:49:04 PDT 2010
+Init  Start time = Tue Apr 13 00:28:14 PDT 2010
+Learn Start time = Tue Apr 13 00:28:21 PDT 2010
 iter 	bound 	train 	test
 0	1.0000	0.4989	0.5009
 1	0.8137	0.2830	0.2843
@@ -135,4 +136,4 @@ iter 	bound 	train 	test
 98	0.5334	0.1317	0.1331
 99	0.5332	0.1317	0.1331
 100	0.5330	0.1318	0.1331
-End time=Mon Apr 12 23:50:07 PDT 2010
+End time=Tue Apr 13 00:29:25 PDT 2010
