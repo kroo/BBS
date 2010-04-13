@@ -1,0 +1,10 @@
+Spec: asphaltClassifier/asphalt.spec, Test: asphaltClassifier/asphalt.test, Train: asphaltClassifier/asphalt.train
+The m_booster is: jboost.booster.AdaBoost. No of examples = 0, m_epsilon = 0.0
+index	margin	weight	old weight	label
+
+The m_booster is: jboost.booster.AdaBoost. No of examples = 0, m_epsilon = 0.0
+index	margin	weight	old weight	label
+
+It took 62.306 seconds to learn.
+Testing rule.
+finished closing output files
