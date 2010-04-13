@@ -1,5 +1,5 @@
-pic = imread('1263253242_0000002.jpg');
-xml = xmlread('0000002.xml');
+pic = imread('../skindata/1263253242_0000002.jpg');
+xml = xmlread('../skindata/0000002.xml');
 
 m = 480; n = 640;
 BW = zeros(m,n);
