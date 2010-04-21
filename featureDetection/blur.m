@@ -1,0 +1,16 @@
+function [ blurred ] = blur( imageV, sigma )
+
+size_G = 2 * sigma + 1;
+
+X = -size_G:size_G;
+Y = -size_G:size_G;
+xys = (X .^ 2);
+G_sigma = exp(-1. * (xys) / (2. * sigma ^ 2.)) / sqrt(2. * pi * sigma ^2.);
+
+G_sigma = G_sigma / sum(G_sigma(:));
+
+blurred = conv2(imageV, G_sigma, 'same');
+blurred = conv2(blurred, G_sigma', 'same');
+
+end
+
