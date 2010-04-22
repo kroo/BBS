@@ -99,8 +99,8 @@ for layer = 1:(size(layers,2)+1);
         bins = zeros(1,36);
         for j = 1:size(gradients,1);
             for i = 1:size(gradients,2);
-                deg = mod((gradients(j,i,2)*180/pi + 360),360);
-                bin = floor(deg/10)+1;
+                deg = 
+                bin = floor(gradients(j,i,2)*180/pi/10)+1;
                 bins(bin) = bins(bin) + gaussgradients(j,i,1);
             end
         end

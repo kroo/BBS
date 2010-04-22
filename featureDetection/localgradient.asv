@@ -1,16 +1,28 @@
 function [ gradient_out ] = localgradient( x, y, img)
 %LOCALGRADIENT Summary of this function goes here
 %   Detailed explanation goes here
-radius = 3;      %8 in the original paper, so we should put 9
+radius = 9      %8 in the original paper, but we chop 1 off
 
-leftmost = max(x - radius, 1);
-rightmost = min(x + radius, size(img, 2));
-topmost = max(y - radius, 1);
-bottommost = min(y + radius, size(img, 1));
+leftmost = max(x - radius, 1)
+rightmost = min(x + radius, size(img, 2))
+topmost = max(y - radius, 1)
+bottommost = min(y + radius, size(img, 1))
 
 COLS = rightmost-leftmost-2;
 ROWS = bottommost-topmost-2;
+
 gradient_out = zeros(COLS,ROWS,2);
+
+X = -((COLS-1)/2):((COLS-1)/2);
+Y = -((ROWS-1)/2):((ROWS-1)/2);
+Y = (fliplr(Y))';
+
+xys = (repmat(X,ROWS,1) .^ 2 + repmat(Y,1,COLS) .^ 2);
+G_sigma = exp(-1. * (xys) / (2. * sigma ^ 2.)) / (2. * pi * sigma ^2.);
+
+G_sigma = G_sigma / sum(G_sigma(:));
+
+
 
 for x = leftmost+1:rightmost-1
     for y = topmost+1:bottommost-1
