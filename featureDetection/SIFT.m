@@ -51,6 +51,7 @@ for layer = layers;
 end
 
 %% now we have an image pyramid.  time to build a featureset
+keyarrowindex = 0; % this is nasty... ><
 
 for layer = 1:(size(layers,2)+1);
     DoG = squeeze(diff(layer,:,:));
@@ -108,6 +109,14 @@ for layer = 1:(size(layers,2)+1);
         [mag,bin_index] = max(bins);
         theta = (bin_index-.5)*10*pi/180;   % ie.10-20 bin set to 15
         % generate keypoint descriptors from mag,theta, and gradients
+        
+        % save for plotting purposes [first orientation only atm]
+        xreal = floor(x / (1/1.5)^(layer-1));
+        yreal = floor(y / (1/1.5)^(layer-1));
+        dxreal = 10 * cos(theta) * (1/1.5)^(layer-1);
+        dyreal = 10 * sin(theta) * (1/1.5)^(layer-1);
+        keyarrow(keyarrowindex+n,:) = [xreal, yreal, dxreal, dyreal];
+        
         bins(bin_index) = 0;
         while (max(bins) >= .8*mag)
             [mag2,bin_index] = max(bins);
@@ -117,9 +126,19 @@ for layer = 1:(size(layers,2)+1);
         end
     end
     
+    keyarrowindex = keyarrowindex + nfeatures;
+    
     figure
     imshow((DoG - min(DoG(:))) / (max(DoG(:) - min(DoG(:)))))
     hold on
     plot(features(:,1,:), features(:, 2, :), 'r+');
     hold off
 end
+
+% after everything, plot all keypoint vectors on imageV
+figure
+imshow(imageV);
+hold on
+quiver(keyarrow(:,1),keyarrow(:,2),keyarrow(:,3),keyarrow(:,4));
+hold off
+
