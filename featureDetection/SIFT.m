@@ -1,4 +1,6 @@
-image = imread('../data/launch1/4535627883_855d92a565_b.jpg');
+% image = imread('../data/launch1/4535627883_855d92a565_b.jpg');
+image = imread('../data/launch1/4535627883_47a24035d3_o.jpg');
+
 
 imageHSV = rgb2hsv(image);
 imageV = imageHSV(:,:,3);
@@ -139,6 +141,8 @@ end
 figure
 imshow(imageV);
 hold on
-quiver(keyarrow(:,1),keyarrow(:,2),keyarrow(:,3),keyarrow(:,4));
+quiver(keyarrow(:,1),keyarrow(:,2),keyarrow(:,3),keyarrow(:,4),'g');
+plot(keyarrow(:,1),keyarrow(:,2),'ro');
+export_fig('orientation_original_t005.jpg','-native');
 hold off
 
