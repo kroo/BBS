@@ -4,28 +4,32 @@ image = imread('../data/launch1/4535627883_47a24035d3_o.jpg');
 
 imageHSV = rgb2hsv(image);
 imageV = imageHSV(:,:,3);
-
+clear imageHSV
+disp('Done reading image.');
 
 layers = 2 : 8;
 
-imageA = zeros(size(layers, 2), size(imageV, 1), size(imageV, 2));
-imageB = zeros(size(layers, 2), size(imageV, 1), size(imageV, 2));
+disp('Allocating imageA, imageB');
+%imageA = zeros(size(layers, 2), size(imageV, 1), size(imageV, 2));
+%imageB = zeros(size(layers, 2), size(imageV, 1), size(imageV, 2));
+
 diff = zeros(size(layers, 2), size(imageV, 1), size(imageV, 2));
 
-imageA(1,:,:) = blur(imageV, sqrt(2));
-imageB(1,:,:) = blur(squeeze(imageA(1,:,:)), sqrt(2));
+firstImageA = blur(imageV, sqrt(2));
+firstImageB = blur(firstImageA, sqrt(2));
 
-diffImg = squeeze(imageA(1,:,:) - imageB(1,:,:));
+diffImg = firstImageA - firstImageB; % squeeze(imageA(1,:,:) - imageB(1,:,:));
 diff(1,:,:) = diffImg;
 %imtool((diffImg - diffmin) / (diffmax - diffmin));
 disp('Layer 1 complete, cap`n!');
 
-imgsize = size(squeeze(imageA(1,:,:)));
+imgsize = size(firstImageA);
+oldImageB = firstImageB;
 for layer = layers;
    disp('starting next layer');
    
    % save the old imageB as the "last image"
-   lastImage = squeeze(imageB(layer - 1,:,:));
+   lastImage = oldImageB;%squeeze(imageB(layer - 1,:,:));
    
    % calculate new image size, save the old size.
    oldsize = imgsize;
@@ -34,12 +38,12 @@ for layer = layers;
    
    % calculate the resized oldImageB for the newImageA
    newImageA = imgrescale(lastImage(1:oldsize(1), 1:oldsize(2)), newsize);
-   imageA(layer,:,:) = padarray(newImageA(:,:), (size(imageV) - newsize), 0.0, 'post');
+   %imageA(layer,:,:) = padarray(newImageA(:,:), (size(imageV) - newsize), 0.0, 'post');
    disp('Image A complete, cap`n!');
    
    % calculate the newImageB as a blurred imageA
    newImageB = blur(newImageA, sqrt(2));
-   imageB(layer,:,:) = squeeze(padarray(newImageB, (size(imageV) - newsize), 0.0, 'post'));
+   %imageB(layer,:,:) = squeeze(padarray(newImageB, (size(imageV) - newsize), 0.0, 'post'));
    disp('Image B complete, cap`n!');
    
    % calculate DoGs
@@ -48,8 +52,9 @@ for layer = layers;
    diffmin = min(diffImg(:));
    diffmax = max(diffImg(:));
 
-   imtool((diffImg - diffmin) / (diffmax - diffmin));
+   %imtool((diffImg - diffmin) / (diffmax - diffmin));
    disp('Layer complete!');
+   oldImageB = newImageB;
 end
 
 %% now we have an image pyramid.  time to build a featureset
