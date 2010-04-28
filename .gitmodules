@@ -1,0 +1,6 @@
+[submodule "labelme_grabber/node"]
+	path = labelme_grabber/node
+	url = http://github.com/ry/node.git
+[submodule "labelme_grabber/libxmljs"]
+	path = labelme_grabber/libxmljs
+	url = http://github.com/sprsquish/libxmljs.git
