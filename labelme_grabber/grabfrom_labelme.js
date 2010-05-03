@@ -56,10 +56,7 @@ function handleMovie(movie, folder_name) {
     var name = image_name.split(".")[0];
 
     var image_url = ("http://seed.ucsd.edu/labelme/Images/" + folder_name + "/" + image_name);
-    var path_url = ("http://seed.ucsd.edu/labelme/Annotations/" + folder_name + "/" +
-                        name + ".xml");
     save_from_url(folder_name, name, image_url);
-    save_from_url(folder_name, name, path_url);
 
   });
   sys.debug("Statistics for folder_name " + folder_name + ":");
