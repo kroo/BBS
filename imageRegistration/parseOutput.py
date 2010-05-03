@@ -1,4 +1,5 @@
 import numpy as np
+from struct import *
 import cairo
 
 iwidth = 1280 * 2.
@@ -8,6 +9,8 @@ filename = "output.txt"
 contents = open(filename)
 surface = cairo.SVGSurface(filename + '.svg', iwidth, iheight)
 cr = cairo.Context(surface)
+outfilename = "imageindex.bin"
+bout = open(outfilename, 'w');
 
 cr.set_line_width(2.0)
 cr.set_source_rgb(0, 0, 0)
@@ -43,4 +46,13 @@ for obj in objects:
   cr.line_to(currentRect[3][0], currentRect[3][1])
   cr.close_path()
   cr.stroke()
+  
+  output = pack("32s9f", obj['name'], currentTransform[0],currentTransform[1],currentTransform[2],
+                                      currentTransform[3],currentTransform[3],currentTransform[5],
+                                      currentTransform[6],currentTransform[7],currentTransform[8]);
+  bout.write(output);
+  
   currentRect = [np.array([0.,0.,1.]), np.array([0.,720.,1.]), np.array([1280.,720.,1.]), np.array([1280.,0.,1.])];
+
+bout.flush();
+bout.close();
