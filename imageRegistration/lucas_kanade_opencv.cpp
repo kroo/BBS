@@ -47,10 +47,12 @@ void processImagePair(const char *file1, const char *file2, const char *out) {
 	CvPoint2D32f* cornersA = new CvPoint2D32f[ MAX_CORNERS ];
  
 	cvGoodFeaturesToTrack( imgA, eig_image, tmp_image, cornersA, &corner_count,
-		0.05, 5.0, 0, 3, 0, 0.04 );
+		0.05, 3.0, 0, 3, 0, 0.04 );
+ 
+  fprintf(stderr, "Corner count = %d\n", corner_count);
  
 	cvFindCornerSubPix( imgA, cornersA, corner_count, cvSize( win_size, win_size ),
-		cvSize( -1, -1 ), cvTermCriteria( CV_TERMCRIT_ITER | CV_TERMCRIT_EPS, 20, 0.03 ) );
+		cvSize( -1, -1 ), cvTermCriteria( CV_TERMCRIT_ITER | CV_TERMCRIT_EPS, 50, 0.03 ) );
  
 	// Call Lucas Kanade algorithm
 	char features_found[ MAX_CORNERS ];
@@ -71,7 +73,7 @@ void processImagePair(const char *file1, const char *file2, const char *out) {
 	// Find a homography based on the gradient
    CvMat cornersAMat = cvMat(1, corner_count, CV_32FC2, cornersA);
    CvMat cornersBMat = cvMat(1, corner_count, CV_32FC2, cornersB);
-   cvFindHomography(&cornersAMat, &cornersBMat, transform, CV_LMEDS, 0, NULL);
+   cvFindHomography(&cornersAMat, &cornersBMat, transform, CV_RANSAC, 15, NULL);
 
    // save the translated image
  	 IplImage* trans_image = cvCloneImage(imgBcolor);
@@ -81,6 +83,21 @@ void processImagePair(const char *file1, const char *file2, const char *out) {
    PrintMat(transform);
 
   cvSaveImage(out, trans_image);
+
+  cvReleaseImage(&eig_image);
+  cvReleaseImage(&tmp_image);  
+  cvReleaseImage(&trans_image);
+  cvReleaseImage(&imgA);
+  cvReleaseImage(&imgB);
+  cvReleaseImage(&imgBcolor);
+  cvReleaseImage(&pyrA);
+  cvReleaseImage(&pyrB);
+  
+  cvReleaseData(transform);
+  delete [] cornersA;
+  delete [] cornersB;
+  
+  
 }
 
  
@@ -89,7 +106,7 @@ int main(int argc, char* argv[])
 
   int frame = 11;
   
-  for(frame = 11; frame<100; frame++) {
+  for(frame = 751; frame<1000; frame++) {
     char firstImage  [32];
     char secondImage [32];
     char outImage    [64];

@@ -210,9 +210,9 @@ int main(int argc, char *argv[])
                 pFrameRGB->data, pFrameRGB->linesize);
 
         // Save the frame to disk
-        if(++i<=100 && i>10)
+        if(++i<=1000 && i>750)
             SaveFrame(pFrameRGB, pCodecCtx->width, pCodecCtx->height, i);
-        else if(i>100) break;
+        else if(i>750) break;
     }
 
     // Free the RGB image
