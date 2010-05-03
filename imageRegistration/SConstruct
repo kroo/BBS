@@ -1,0 +1,38 @@
+import os
+env = Environment(ENV = {'PATH' : os.environ['PATH']})
+
+# compile the avcodec example program (this grabs frames from an h264 movie, and
+# churns out the individual frames)
+env.Program(
+  'avcodec_sample', 
+  'avcodec_sample.cpp', 
+  LIBS = [
+    'avformat', 
+    'avcodec', 
+    'avutil', 
+    'swscale', 
+    'z'
+  ],
+  LIBPATH = "/opt/local/lib",
+  CPPPATH = "/opt/local/include"
+)
+
+# compile the lucas-kanade example application.  It calls into OpenCV for the
+# actual implementation of the algorithm.
+env.Program(
+  'lkopencv',
+  'lucas_kanade_opencv.cpp',
+  LIBS = [
+    'm',
+    'cv',
+    'highgui',
+    'cvaux',
+    'stdc++',
+    'cxcore'
+  ],
+  LIBPATH = "/usr/lib",
+  CPPPATH = "/usr/include/opencv",
+  CCFLAGS = "-arch i386",
+  LINKFLAGS = "-arch i386"
+)
+
