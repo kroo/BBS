@@ -1,0 +1,15 @@
+TODO:
+-----
+
+- Implement a comment overlay
+  (code to extract the comment is already written, but not in a clean way)
+
+- Testing
+  (works for me with my images)
+
+- Enable some kind of configuration for enabling/disabling gamma for PFM files
+
+- Using HTML-Rendering instead of direct image rendering. The image can be embedded into
+  the html code:
+    html e.g.http://code.google.com/p/quicklook-csv/source/browse/trunk/GeneratePreviewForURL.m
+    image http://aktuell.de.selfhtml.org/artikel/grafik/inline-images/

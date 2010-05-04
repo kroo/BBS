@@ -10,10 +10,30 @@
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* AerialDataViewerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* AerialDataViewerAppDelegate.m */; };
 		8BC2C60C118ED172003F2295 /* AerialDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2C60B118ED172003F2295 /* AerialDataView.m */; };
+		8BCD1FB8118F6FA100371703 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BCD1FB7118F6FA100371703 /* QuartzCore.framework */; };
+		8BCD1FD2118F7D1F00371703 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BCD1FD1118F7D1F00371703 /* BWToolkitFramework.framework */; };
+		8BCD203F118F830400371703 /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8BCD1FD1118F7D1F00371703 /* BWToolkitFramework.framework */; };
+		8BCD207F118F835000371703 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BCD207E118F835000371703 /* Quartz.framework */; };
+		8BCD2129118F8EB200371703 /* AerialDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD2128118F8EB200371703 /* AerialDataViewController.m */; };
+		8BCD2150118FA31700371703 /* PPMImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD214F118FA31700371703 /* PPMImageRep.m */; };
+		8BCD2282118FB3B600371703 /* AerialPhotograph.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BCD2281118FB3B600371703 /* AerialPhotograph.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8BCD203D118F82E600371703 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8BCD203F118F830400371703 /* BWToolkitFramework.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -28,6 +48,15 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8BC2C60A118ED172003F2295 /* AerialDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AerialDataView.h; sourceTree = "<group>"; };
 		8BC2C60B118ED172003F2295 /* AerialDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AerialDataView.m; sourceTree = "<group>"; };
+		8BCD1FB7118F6FA100371703 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8BCD1FD1118F7D1F00371703 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = /Users/elliot/Documents/BWToolkitFramework.framework; sourceTree = "<absolute>"; };
+		8BCD207E118F835000371703 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		8BCD2127118F8EB200371703 /* AerialDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AerialDataViewController.h; sourceTree = "<group>"; };
+		8BCD2128118F8EB200371703 /* AerialDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AerialDataViewController.m; sourceTree = "<group>"; };
+		8BCD214E118FA31700371703 /* PPMImageRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMImageRep.h; sourceTree = "<group>"; };
+		8BCD214F118FA31700371703 /* PPMImageRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPMImageRep.m; sourceTree = "<group>"; };
+		8BCD2280118FB3B600371703 /* AerialPhotograph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AerialPhotograph.h; sourceTree = "<group>"; };
+		8BCD2281118FB3B600371703 /* AerialPhotograph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AerialPhotograph.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* AerialDataViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AerialDataViewer-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* AerialDataViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AerialDataViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -38,6 +67,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				8BCD1FB8118F6FA100371703 /* QuartzCore.framework in Frameworks */,
+				8BCD1FD2118F7D1F00371703 /* BWToolkitFramework.framework in Frameworks */,
+				8BCD207F118F835000371703 /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,10 +79,16 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8BCD214E118FA31700371703 /* PPMImageRep.h */,
+				8BCD214F118FA31700371703 /* PPMImageRep.m */,
 				256AC3D80F4B6AC300CF3369 /* AerialDataViewerAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* AerialDataViewerAppDelegate.m */,
 				8BC2C60A118ED172003F2295 /* AerialDataView.h */,
 				8BC2C60B118ED172003F2295 /* AerialDataView.m */,
+				8BCD2127118F8EB200371703 /* AerialDataViewController.h */,
+				8BCD2128118F8EB200371703 /* AerialDataViewController.m */,
+				8BCD2280118FB3B600371703 /* AerialPhotograph.h */,
+				8BCD2281118FB3B600371703 /* AerialPhotograph.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -58,6 +96,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BCD1FD1118F7D1F00371703 /* BWToolkitFramework.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -66,9 +105,11 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BCD1FB7118F6FA100371703 /* QuartzCore.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				8BCD207E118F835000371703 /* Quartz.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -131,6 +172,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				8BCD203D118F82E600371703 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -179,6 +221,9 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* AerialDataViewerAppDelegate.m in Sources */,
 				8BC2C60C118ED172003F2295 /* AerialDataView.m in Sources */,
+				8BCD2129118F8EB200371703 /* AerialDataViewController.m in Sources */,
+				8BCD2150118FA31700371703 /* PPMImageRep.m in Sources */,
+				8BCD2282118FB3B600371703 /* AerialPhotograph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,12 +254,17 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../..\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AerialDataViewer_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "AerialDataViewer-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = AerialDataViewer;
@@ -226,6 +276,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../..\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AerialDataViewer_Prefix.pch;

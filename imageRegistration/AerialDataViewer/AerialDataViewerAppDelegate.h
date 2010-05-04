@@ -7,13 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "AerialDataViewController.h"
 
 @interface AerialDataViewerAppDelegate : NSObject <NSApplicationDelegate> {
   NSWindow *window;
-  AerialDataView *view;
+  AerialDataViewController *viewController;
+  NSString *datafilePath;
 }
 
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet AerialDataView *view;
+@property (assign) IBOutlet AerialDataViewController *viewController;
 
 @end

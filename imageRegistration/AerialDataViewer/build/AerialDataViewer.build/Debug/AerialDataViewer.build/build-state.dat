@@ -1,14 +1,19 @@
 TAerialDataViewer
 v7
 r0
-t294558741.956611
+t294637060.717180
 cCheck dependencies
 cProcessInfoPlistFile /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Info.plist AerialDataViewer-Info.plist
 cCopyStringsFile /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
 cCompileXIB /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/English.lproj/MainMenu.xib
-cDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/main.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-cDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewerAppDelegate.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/main.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
+cDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewerAppDelegate.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
+cDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataView.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
+cDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewController.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewController.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
+cDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/PPMImageRep.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/PPMImageRep.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
+cDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialPhotograph.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialPhotograph.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
 cLd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/MacOS/AerialDataViewer normal x86_64
+cPBXCp build/Debug/AerialDataViewer.app/Contents/Frameworks/BWToolkitFramework.framework /Users/elliot/Documents/BWToolkitFramework.framework
 cTouch /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app
 
 N/Developer/SDKs/MacOSX10.6.sdk
@@ -16,33 +21,179 @@ c000000004BA713D600000000000000EE
 t1269240790
 s238
 
+N/Developer/SDKs/MacOSX10.6.sdk/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include/limits.h
+c000000004B99CADC0000000000000D03
+t1268370140
+s3331
+
+N/Developer/SDKs/MacOSX10.6.sdk/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include/stdarg.h
+c000000004B99CADC00000000000010DD
+t1268370140
+s4317
+
 N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
 c0000000040C4AA6800000000000001E5
 t1086630504
 s485
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Quartz.framework/Quartz
+c000000004BA713C800000000000036E0
+t1269240776
+s14048
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004BA3A7B100000000000000BF
+t1269016497
+s191
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004BA713C800000000000A2AAC
+t1269240776
+s666284
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/assert.h
+c000000004AC59C810000000000000DCB
+t1254464641
+s3531
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/ctype.h
+c000000004AC59C810000000000002C18
+t1254464641
+s11288
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/errno.h
+c000000004AC59C8100000000000003EB
+t1254464641
+s1003
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/fcntl.h
+c000000004AC59C8100000000000003EA
+t1254464641
+s1002
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/math.h
+c000000004AC599B500000000000004F1
+t1254463925
+s1265
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/setjmp.h
+c000000004AC59C810000000000000438
+t1254464641
+s1080
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/signal.h
+c000000004AC59C8200000000000014F0
+t1254464642
+s5360
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
+c000000004AC59C820000000000004174
+t1254464642
+s16756
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdlib.h
+c000000004AC59C820000000000002DF5
+t1254464642
+s11765
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/string.h
+c000000004AC59C820000000000001731
+t1254464642
+s5937
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/stat.h
+c000000004B90BBAA0000000000004A1D
+t1267776426
+s18973
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/types.h
+c000000004B90BBAB0000000000002905
+t1267776427
+s10501
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/wait.h
+c000000004B90BBAB000000000000273C
+t1267776427
+s10044
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/unistd.h
+c000000004AC59C82000000000000563E
+t1254464642
+s22078
 
 N/System/Library/Frameworks/Cocoa.framework/Cocoa
 c000000004A1F2D63000000000000A5E0
 t1243557219
 s42464
 
-N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.h
-c000000004BDE645E0000000000000154
-t1272865886
-s340
+N/Users/elliot/Documents/BWToolkitFramework.framework
+c000000004BDF451C00000000000000CC
+t1272923420
+s204
+
+N/Users/elliot/Documents/BWToolkitFramework.framework/BWToolkitFramework
+c000000004B596EAB00000000000E843C
+t1264152235
+s951356
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.h
+c000000004BDF948D00000000000001D5
+t1272943757
+s469
 i<Cocoa/Cocoa.h>
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m
+c000000004BDF967B00000000000010D9
+t1272944251
+s4313
+i"AerialDataView.h"
+i"AerialPhotograph.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewController.h
+c000000004BDF7F9600000000000001E9
+t1272938390
+s489
+i<Cocoa/Cocoa.h>
+i"AerialDataView.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewController.m
+c000000004BDF827400000000000007D2
+t1272939124
+s2002
+i"AerialDataViewController.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.h
+c000000004BDF762F0000000000000203
+t1272935983
+s515
+i<Cocoa/Cocoa.h>
+i"AerialDataViewController.h"
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m
-c000000004BDE645E0000000000000192
-t1272865886
-s402
+c000000004BDF76700000000000000366
+t1272936048
+s870
 i"AerialDataViewerAppDelegate.h"
+i"PPMImageRep.h"
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch
-c000000004BDE645F00000000000000A3
-t1272865887
-s163
+c000000004BDF383900000000000000C9
+t1272920121
+s201
 i<Cocoa/Cocoa.h>
+i<QuartzCore/QuartzCore.h>
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialPhotograph.h
+c000000004BDF7C840000000000000127
+t1272937604
+s295
+i<Cocoa/Cocoa.h>
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialPhotograph.m
+c000000004BDF7C6100000000000000F4
+t1272937569
+s244
+i"AerialPhotograph.h"
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/English.lproj/InfoPlist.strings
 c000000004BDE645E000000000000002D
@@ -50,46 +201,887 @@ t1272865886
 s45
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/English.lproj/MainMenu.xib
-c000000004BDE645E000000000002BBCE
-t1272865886
-s179150
+c000000004BDF843F00000000000377DB
+t1272939583
+s227291
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/PPMImageRep.h
+c000000004BDF740E00000000000000EC
+t1272935438
+s236
+i<Cocoa/Cocoa.h>
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/PPMImageRep.m
+c000000004BDF757F0000000000000D17
+t1272935807
+s3351
+i"PPMImageRep.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataView.o
+t1272944258
+s35552
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewController.o
+t1272943773
+s37560
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewer.LinkFileList
-c000000004BDE64670000000000000163
-t1272865895
-s355
+c000000004BDF7C64000000000000042C
+t1272937572
+s1068
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewerAppDelegate.o
-t1272865940
-s21408
+t1272943773
+s33432
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialPhotograph.o
+t1272937707
+s8028
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/PPMImageRep.o
+t1272935862
+s23816
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/bitio.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/colorname.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/fileio.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/filename.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/image.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpam.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpamcolor.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpammap.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpamn.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpamread.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpamwrite.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpbm1.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpbm2.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpbm3.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpbmfont.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpbmvms.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpgm1.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpgm2.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpm.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpnm1.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpnm2.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpnm3.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppm1.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppm2.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppmcmap.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppmcolor.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppmd.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppmfloyd.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppmfuzzy.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libsystem.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libsystem_dummy.o
+t2
+s0
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/main.o
-t1272865940
-s5072
+t1272924871
+s2480
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/mkstemp.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/nstring.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/path.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/ppmdfont.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/shhopt.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/standardppmdfont.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/testnstring.o
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/StaticAnalyzer/normal/x86_64/AerialDataView.plist
+t1272924821
+s5641
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/StaticAnalyzer/normal/x86_64/AerialDataViewerAppDelegate.plist
+t1272924747
+s276
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/StaticAnalyzer/normal/x86_64/main.plist
+t1272924747
+s276
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app
-t1272865941
+t1272944260
 s102
 
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Frameworks/BWToolkitFramework.framework
+t1272925066
+s204
+
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Info.plist
-t1272865895
+t1272924866
 s913
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/MacOS/AerialDataViewer
-t1272865941
-s14856
+t1272944260
+s47920
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/PkgInfo
-t1272865895
+t1272924866
 s8
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/English.lproj/InfoPlist.strings
-t1272865897
+t1272924867
 s92
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/English.lproj/MainMenu.nib
-t1272865899
-s34521
+t1272939619
+s43404
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/LICENSE.txt
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/lexheader
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/rgb.txt
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/shhopt-1.1.6.lsm
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/shhopt.README
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/standard.ppmdfont
+t2
+s0
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/bitio.c
+c0000000044E6819C00000000000010CE
+t1155957148
+s4302
+i<string.h>
+i"bitio.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/bitio.h
+c0000000044E6819C00000000000007E2
+t1155957148
+s2018
+i"pm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/colorname.c
+c0000000044E6819C0000000000001AEE
+t1155957148
+s6894
+i"pm_c_util.h"
+i<ctype.h>
+i<string.h>
+i<stdlib.h>
+i<errno.h>
+i"nstring.h"
+i"colorname.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/colorname.h
+c0000000044E6819C0000000000000313
+t1155957148
+s787
+i<string.h>
+i<stdio.h>
+i"ppm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/fileio.c
+c0000000044E6819C00000000000012BF
+t1155957148
+s4799
+i<stdio.h>
+i<limits.h>
+i"pm.h"
+i"fileio.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/fileio.h
+c0000000044E6819C0000000000000187
+t1155957148
+s391
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpam.c
+c000000004905368A0000000000008435
+t1225078410
+s33845
+i<string.h>
+i<limits.h>
+i<assert.h>
+i<stdio.h>
+i<math.h>
+i"pm_c_util.h"
+i"mallocvar.h"
+i"nstring.h"
+i"pam.h"
+i"ppm.h"
+i"libpbm.h"
+i"libpgm.h"
+i"libppm.h"
+i"colorname.h"
+i"fileio.h"
+i"libpam.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpam.h
+c0000000044E6819C0000000000000184
+t1155957148
+s388
+i"pam.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpamcolor.c
+c0000000044E6819C0000000000000BC3
+t1155957148
+s3011
+i<limits.h>
+i"pm_c_util.h"
+i"pam.h"
+i"ppm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpammap.c
+c00000000499718B300000000000056D5
+t1234639027
+s22229
+i<assert.h>
+i"pm_c_util.h"
+i"mallocvar.h"
+i"nstring.h"
+i"pam.h"
+i"pammap.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpamn.c
+c0000000044E6819C0000000000003E41
+t1155957148
+s15937
+i<assert.h>
+i"pm_c_util.h"
+i"mallocvar.h"
+i"pam.h"
+i"fileio.h"
+i"pm_gamma.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpamread.c
+c000000004B3A6AAA0000000000001E9A
+t1262119594
+s7834
+i<string.h>
+i<limits.h>
+i<assert.h>
+i"pam.h"
+i"fileio.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpamwrite.c
+c0000000044E6819C000000000000312D
+t1155957148
+s12589
+i<string.h>
+i<stdio.h>
+i<limits.h>
+i<assert.h>
+i<math.h>
+i"pam.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpbm.h
+c0000000044E6819C00000000000000EF
+t1155957148
+s239
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpbm1.c
+c0000000044E6819C00000000000006EE
+t1155957148
+s1774
+i<stdio.h>
+i"pbm.h"
+i"libpbm.h"
+i"shhopt.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpbm2.c
+c0000000044E6819C000000000000122C
+t1155957148
+s4652
+i"pbm.h"
+i"libpbm.h"
+i"fileio.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpbm3.c
+c0000000047ED3FBE0000000000002182
+t1206730686
+s8578
+i"pbm.h"
+i"libpbm.h"
+i"bitreverse.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpbmfont.c
+c000000004BA973B1000000000000C234
+t1269396401
+s49716
+i<string.h>
+i"pm_c_util.h"
+i"nstring.h"
+i"pbm.h"
+i"pbmfont.h"
+i"mallocvar.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpbmvms.c
+c0000000044E6819C00000000000049AD
+t1155957148
+s18861
+i"includes.h"
+i<syidef>
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpgm.h
+c0000000044E6819C000000000000020C
+t1155957148
+s524
+i"pgm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpgm1.c
+c0000000044E6819C0000000000002453
+t1155957148
+s9299
+i<string.h>
+i<stdio.h>
+i<errno.h>
+i"pgm.h"
+i"libpgm.h"
+i"pbm.h"
+i"libpbm.h"
+i"pam.h"
+i"libpam.h"
+i"fileio.h"
+i"mallocvar.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpgm2.c
+c0000000044E6819C0000000000001697
+t1155957148
+s5783
+i<string.h>
+i<errno.h>
+i"pm_c_util.h"
+i"mallocvar.h"
+i"pgm.h"
+i"libpgm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpm.c
+c0000000044E6819C0000000000009F1E
+t1155957148
+s40734
+i<stdio.h>
+i<stdarg.h>
+i<string.h>
+i<errno.h>
+i<setjmp.h>
+i<io.h>
+i"pm_c_util.h"
+i"version.h"
+i"compile.h"
+i"nstring.h"
+i"shhopt.h"
+i"mallocvar.h"
+i"pm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpnm1.c
+c0000000044E6819C0000000000001585
+t1155957148
+s5509
+i<string.h>
+i<errno.h>
+i"pnm.h"
+i"ppm.h"
+i"libppm.h"
+i"pgm.h"
+i"libpgm.h"
+i"pbm.h"
+i"libpbm.h"
+i"pam.h"
+i"libpam.h"
+i"mallocvar.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpnm2.c
+c0000000044E6819C0000000000000D0D
+t1155957148
+s3341
+i"pm_c_util.h"
+i"pnm.h"
+i"ppm.h"
+i"libppm.h"
+i"pgm.h"
+i"libpgm.h"
+i"pbm.h"
+i"libpbm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpnm3.c
+c0000000048B8525400000000000028D5
+t1220039252
+s10453
+i"pnm.h"
+i"ppm.h"
+i"libppm.h"
+i"pgm.h"
+i"libpgm.h"
+i"pbm.h"
+i"libpbm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppm.h
+c0000000044E6819C0000000000000148
+t1155957148
+s328
+i"ppm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppm1.c
+c0000000044E6819C0000000000002529
+t1155957148
+s9513
+i<string.h>
+i<stdio.h>
+i<errno.h>
+i"ppm.h"
+i"libppm.h"
+i"pgm.h"
+i"libpgm.h"
+i"pbm.h"
+i"libpbm.h"
+i"pam.h"
+i"libpam.h"
+i"fileio.h"
+i"mallocvar.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppm2.c
+c0000000044E6819C0000000000001531
+t1155957148
+s5425
+i<string.h>
+i<errno.h>
+i"pm_c_util.h"
+i"mallocvar.h"
+i"ppm.h"
+i"libppm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppmcmap.c
+c0000000044E6819C00000000000047B4
+t1155957148
+s18356
+i"ppm.h"
+i"libppm.h"
+i"mallocvar.h"
+i"ppmcmap.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppmcolor.c
+c000000004B2065F500000000000057E0
+t1260414453
+s22496
+i<assert.h>
+i<stdlib.h>
+i<string.h>
+i<math.h>
+i"pm_c_util.h"
+i"mallocvar.h"
+i"ppm.h"
+i"colorname.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppmd.c
+c000000004A0F4A540000000000008E84
+t1242516052
+s36484
+i<assert.h>
+i<stdlib.h>
+i"pm_config.h"
+i"pm_c_util.h"
+i"mallocvar.h"
+i"ppm.h"
+i"ppmdfont.h"
+i"ppmdraw.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppmfloyd.c
+c0000000044E6819C0000000000001E0D
+t1155957148
+s7693
+i"ppm.h"
+i"ppmfloyd.h"
+i"mallocvar.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppmfuzzy.c
+c0000000044E6819C0000000000002313
+t1155957148
+s8979
+i"pm_c_util.h"
+i"nstring.h"
+i"ppm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libsystem.c
+c000000004BA973B1000000000000327A
+t1269396401
+s12922
+i<unistd.h>
+i<stdlib.h>
+i<stdio.h>
+i<string.h>
+i<errno.h>
+i<signal.h>
+i<sys/wait.h>
+i"pm.h"
+i"pm_system.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libsystem_dummy.c
+c0000000044E6819C000000000000063F
+t1155957148
+s1599
+i<assert.h>
+i"pm.h"
+i"pm_system.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/mkstemp.c
+c0000000044E6819C0000000000000055
+t1155957148
+s85
+i<stdlib.h>
+i<stdio.h>
+i<fcntl.h>
+i"pm_c_util.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/pam.h
+c00000000468072E700000000000040A9
+t1182823143
+s16553
+i"pm.h"
+i"pnm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/pammap.h
+c0000000044E6819C0000000000000E5D
+t1155957148
+s3677
+i"colorname.h"
+i"pam.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/path.c
+c0000000044E6819C000000000000378E
+t1155957148
+s14222
+i<assert.h>
+i"pm_c_util.h"
+i"mallocvar.h"
+i"ppm.h"
+i"ppmdfont.h"
+i"ppmdraw.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/pbm.h
+c0000000044E6819C0000000000000B02
+t1155957148
+s2818
+i"pm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/pbmfont.h
+c0000000044E6819C0000000000000A1A
+t1155957148
+s2586
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/pgm.h
+c0000000044E6819C0000000000000FAF
+t1155957148
+s4015
+i"pbm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/pm.h
+c00000000451FF70A0000000000001E77
+t1159722762
+s7799
+i"pm_config.h"
+i<sys/types.h>
+i<ctype.h>
+i<stdio.h>
+i<errno.h>
+i<setjmp.h>
+i<sys/stat.h>
+i<perror.h>
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/pm_gamma.h
+c0000000044E6819C0000000000000689
+t1155957148
+s1673
+i"pm_config.h"
+i<math.h>
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/pm_system.h
+c0000000044E6819C00000000000003A6
+t1155957148
+s934
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/pnm.h
+c000000004572F6600000000000000D41
+t1165162080
+s3393
+i"ppm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/ppm.h
+c0000000044E6819C00000000000021B9
+t1155957148
+s8633
+i"pgm.h"
+i"ppmcmap.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/ppmcmap.h
+c0000000044E6819C0000000000000CDB
+t1155957148
+s3291
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/ppmdfont.c
+c0000000049F65F510000000000000D1A
+t1240883025
+s3354
+i<stdio.h>
+i<assert.h>
+i<errno.h>
+i<string.h>
+i"pm.h"
+i"mallocvar.h"
+i"ppmdfont.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/ppmdfont.h
+c0000000044E6819C00000000000006AA
+t1155957148
+s1706
+i<stdio.h>
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/ppmdraw.h
+c0000000048387C3900000000000028EE
+t1211661369
+s10478
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/ppmfloyd.h
+c0000000044E6819C0000000000000555
+t1155957148
+s1365
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/rgb.txt
+c0000000044E6819C0000000000004E06
+t1155957148
+s19974
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/standard.ppmdfont
+c0000000044E6819C0000000000000F3B
+t1155957148
+s3899
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/standardppmdfont.c
+c0000000044E6819C0000000000012518
+t1155957148
+s75032
+i"ppmdfont.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/LICENSE.txt
+c0000000044E6819C00000000000014F2
+t1155957148
+s5362
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/bitreverse.h
+c0000000044E6819C000000000000095A
+t1155957148
+s2394
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/filename.c
+c0000000044E6819C00000000000002C0
+t1155957148
+s704
+i"nstring.h"
+i"filename.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/filename.h
+c0000000044E6819C0000000000000078
+t1155957148
+s120
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/lexheader
+c0000000044E6819C000000000000014F
+t1155957148
+s335
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/mallocvar.h
+c0000000044E6819C0000000000000BB0
+t1155957148
+s2992
+i"pm_config.h"
+i<limits.h>
+i<stdlib.h>
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/nstring.c
+c0000000044E6819C0000000000008956
+t1155957148
+s35158
+i<sys/types.h>
+i<limits.h>
+i<string.h>
+i<stdlib.h>
+i<stdio.h>
+i<stdarg.h>
+i<assert.h>
+i<errno.h>
+i"pm.h"
+i"pm_c_util.h"
+i"nstring.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/nstring.h
+c0000000044E6819C0000000000001298
+t1155957148
+s4760
+i<stdarg.h>
+i<string.h>
+i<ctype.h>
+i"pm.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/pm_c_util.h
+c0000000044E6819C00000000000007A3
+t1155957148
+s1955
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/shhopt-1.1.6.lsm
+c0000000044E6819C000000000000026F
+t1155957148
+s623
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/shhopt.README
+c0000000044E6819C00000000000019EC
+t1155957148
+s6636
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/shhopt.c
+c0000000044E6819C000000000000752C
+t1155957148
+s29996
+i<stdio.h>
+i<stdlib.h>
+i<stdarg.h>
+i<string.h>
+i<ctype.h>
+i<limits.h>
+i<errno.h>
+i<assert.h>
+i"mallocvar.h"
+i"nstring.h"
+i"shhopt.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/shhopt.h
+c0000000044E6819C0000000000001FBF
+t1155957148
+s8127
+i<shhopt.h>
+i"pm_c_util.h"
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/testnstring.c
+c0000000044E6819C0000000000000253
+t1155957148
+s595
+i<string.h>
+i<unistd.h>
+i<stdlib.h>
+i<stdio.h>
+i"nstring.h"
 
 N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m
 c000000004BDE645F0000000000000104
@@ -97,35 +1089,133 @@ t1272865887
 s260
 i<Cocoa/Cocoa.h>
 
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/quicklook-pfm-read-only/src/image.h
+c000000004BDF6A2200000000000002F3
+t1272932898
+s755
+i<Cocoa/Cocoa.h>
+
+N/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/quicklook-pfm-read-only/src/image.m
+c000000004BDF6A2200000000000020F5
+t1272932898
+s8437
+i"image.h"
+i<stdio.h>
+
 NAerialDataViewer-Info.plist
 c000000004BDE645E00000000000003EA
 t1272865886
 s1002
 
+CAnalyze /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m
+s294617619.284438
+e294617622.050089
+r1
+xAnalyze
+x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m
+o/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m:43:18: warning: Potential leak of an object allocated on line 43
+o   [img setImage: [[NSImage alloc] initWithContentsOfFile: path]];
+o                  ^
+o1 diagnostic generated.
+lSLF07#2@103"Analyze /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617619#294617622#0(272"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m:43:18: warning: Potential leak of an object allocated on line 43   [img setImage: [[NSImage alloc] initWithContentsOfFile: path]];                  ^1 diagnostic generated.1(0@48"Potential leak of an object allocated on line 43294617622#18446744073709551615#0#5(17@0"294617622#18446744073709551615#0#0(6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#0#0#0#0#0"0(6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#0#0#0#0#1(3@6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#42#3#42#3#6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#43#3#43#3#17@0"294617622#18446744073709551615#0#0(6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#0#0#0#0#0"0(6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#0#0#0#0#1(3@6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#43#3#43#3#6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#43#18#43#63#21@78"Method returns an Objective-C object with a +1 retain count (owning reference)294617622#18446744073709551615#0#0(6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#43#18#0#0#0"1(6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#43#18#43#63#78"Method returns an Objective-C object with a +1 retain count (owning reference)17@0"294617622#18446744073709551615#0#0(6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#0#0#0#0#0"0(6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#0#0#0#0#1(3@6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#43#18#43#63#6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#46#1#46#1#21@113"Object allocated on line 43 is no longer referenced after this point and has a retain count of +1 (object leaked)294617622#18446744073709551615#0#0(6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#46#1#0#0#0"1(6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#46#1#46#1#113"Object allocated on line 43 is no longer referenced after this point and has a retain count of +1 (object leaked)6@95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617605#46#1#0#0#36"Memory (Core Foundation/Objective-C)0(23"Leak of returned object0#0#95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m4300739032#2572"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "Apple clang version 1.1 (tags/Apple/clang-55.2)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.6Hqfsk    setenv INCLUDE_SERVER_PID 3520    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.6Hqfsk/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch --analyze /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/StaticAnalyzer/normal/x86_64/AerialDataView.plist0#
+
+CAnalyze /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m
+s294617546.520120
+e294617547.751701
+r1
+xAnalyze
+x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m
+lSLF07#2@116"Analyze /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m294617546#294617547#0(0"0(0#0#108"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m4300739032#2598"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "Apple clang version 1.1 (tags/Apple/clang-55.2)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.TjV6Az    setenv INCLUDE_SERVER_PID 3421    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.TjV6Az/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch --analyze /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/StaticAnalyzer/normal/x86_64/AerialDataViewerAppDelegate.plist0#
+
+CAnalyze /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m
+s294617546.518150
+e294617547.747630
+r1
+xAnalyze
+x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m
+lSLF07#2@93"Analyze /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m294617546#294617547#0(0"0(0#0#85"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m4300739032#2552"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "Apple clang version 1.1 (tags/Apple/clang-55.2)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.TjV6Az    setenv INCLUDE_SERVER_PID 3421    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.TjV6Az/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch --analyze /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/StaticAnalyzer/normal/x86_64/main.plist0#
+
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies294558694#294558695#0(0"0(0#1#0"31243859861307492#0"0#
+lSLF07#2@18"Check dependencies294637055#294637055#0(0"0(0#1#0"4300739032#0"0#
 
 CCompileXIB /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/English.lproj/MainMenu.xib
-s294558695.406633
-e294558700.016758
+s294632417.305442
+e294632419.827750
 r1
 xCompileXIB
 x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/English.lproj/MainMenu.xib
-lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib294558695#294558700#0(0"0(0#0#105"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/English.lproj/MainMenu.xib4300739032#728"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_HOSTS localhost,lzo,cpp/0    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.XR1MBa    setenv INCLUDE_SERVER_PID 36603    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.XR1MBa/socket    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/English.lproj/MainMenu.nib /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/English.lproj/MainMenu.xib0#
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib294632417#294632419#0(0"0(0#0#105"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/English.lproj/MainMenu.xib4300739032#728"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_HOSTS localhost,lzo,cpp/0    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.TraviL    setenv INCLUDE_SERVER_PID 10383    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.TraviL/socket    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/English.lproj/MainMenu.nib /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/English.lproj/MainMenu.xib0#
 
 CCopyStringsFile /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-s294558695.367318
-e294558697.191396
+s294617666.135688
+e294617667.881752
 r1
 xCopyStringsFile
 x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/English.lproj/InfoPlist.strings
 xEnglish.lproj/InfoPlist.strings
-lSLF07#2@36"Copy English.lproj/InfoPlist.strings294558695#294558697#0(0"0(0#0#110"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/English.lproj/InfoPlist.strings29555336416329840#726"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_HOSTS localhost,lzo,cpp/0    setenv ICONV /usr/bin/iconv    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.XR1MBa    setenv INCLUDE_SERVER_PID 36603    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.XR1MBa/socket    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/English.lproj0#
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings294617666#294617667#0(0"0(0#0#110"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/English.lproj/InfoPlist.strings4300739032#725"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_HOSTS localhost,lzo,cpp/0    setenv ICONV /usr/bin/iconv    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.7x4IoA    setenv INCLUDE_SERVER_PID 3627    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.7x4IoA/socket    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Resources/English.lproj0#
+
+CCpResource build/Debug/AerialDataViewer.app/Contents/Resources/LICENSE.txt lib/util/LICENSE.txt
+r0
+
+CCpResource build/Debug/AerialDataViewer.app/Contents/Resources/lexheader lib/util/lexheader
+r0
+
+CCpResource build/Debug/AerialDataViewer.app/Contents/Resources/rgb.txt lib/rgb.txt
+r0
+
+CCpResource build/Debug/AerialDataViewer.app/Contents/Resources/shhopt-1.1.6.lsm lib/util/shhopt-1.1.6.lsm
+r0
+
+CCpResource build/Debug/AerialDataViewer.app/Contents/Resources/shhopt.README lib/util/shhopt.README
+r0
+
+CCpResource build/Debug/AerialDataViewer.app/Contents/Resources/standard.ppmdfont lib/standard.ppmdfont
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataView.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s294617390.858037
+e294617391.872568
+r1
+xDistributed-CompileC
+xbuild/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataView.o
+x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@121"Distribute compilation of /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294617390#294617396#0(0"0(0#0#95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m4300739032#2538"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "gcc version 4.2.1 (Apple Inc. build 5659)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.IJULOI    setenv INCLUDE_SERVER_PID 3087    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.IJULOI/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/distcc /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataView.o0#
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataView.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
+s294637055.191352
+e294637058.046813
+r1
+xDistributed-CompileC
+xbuild/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataView.o
+x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@121"Distribute compilation of /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m294637055#294637058#0(0"0(0#0#95"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m4300739032#2614"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "gcc version 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2324.11)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.YJ4f0t    setenv INCLUDE_SERVER_PID 3483    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.YJ4f0t/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/distcc /Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -isysroot /Developer/SDKs/MacOSX10.6.sdk -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataView.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataView.o0#
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewController.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewController.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
+s294636572.870587
+e294636573.737453
+r1
+xDistributed-CompileC
+xbuild/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewController.o
+x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@131"Distribute compilation of /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewController.m294636572#294636573#0(0"0(0#0#105"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewController.m4300739032#2634"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "gcc version 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2324.11)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.jgQeNV    setenv INCLUDE_SERVER_PID 4210    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.jgQeNV/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/distcc /Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -isysroot /Developer/SDKs/MacOSX10.6.sdk -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewController.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewController.o0#
 
 CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewerAppDelegate.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s294558700.018600
-e294558740.363076
+s294617376.329824
+e294617390.897302
 r1
 xDistributed-CompileC
 xbuild/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewerAppDelegate.o
@@ -134,11 +1224,143 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@134"Distribute compilation of /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m294558700#294558740#0(0"0(0#0#108"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m4300739032#2469"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "gcc version 4.2.1 (Apple Inc. build 5659)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.XR1MBa    setenv INCLUDE_SERVER_PID 36603    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.XR1MBa/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/distcc /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewerAppDelegate.o0#
+lSLF07#2@134"Distribute compilation of /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m294617376#294617396#0(0"0(0#0#108"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m4300739032#2564"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "gcc version 4.2.1 (Apple Inc. build 5659)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.IJULOI    setenv INCLUDE_SERVER_PID 3087    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.IJULOI/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/distcc /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewerAppDelegate.o0#
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewerAppDelegate.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
+s294636571.917320
+e294636573.531319
+r1
+xDistributed-CompileC
+xbuild/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewerAppDelegate.o
+x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@134"Distribute compilation of /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m294636571#294636573#0(0"0(0#0#108"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m3410142194880050688#2640"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "gcc version 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2324.11)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.jgQeNV    setenv INCLUDE_SERVER_PID 4210    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.jgQeNV/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/distcc /Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -isysroot /Developer/SDKs/MacOSX10.6.sdk -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewerAppDelegate.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewerAppDelegate.o0#
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialPhotograph.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialPhotograph.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
+s294630506.715406
+e294630507.727201
+r1
+xDistributed-CompileC
+xbuild/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialPhotograph.o
+x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialPhotograph.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@123"Distribute compilation of /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialPhotograph.m294630506#294630507#0(0"0(0#0#97"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialPhotograph.m4300739032#2618"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "gcc version 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2324.11)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.utTqmo    setenv INCLUDE_SERVER_PID 9554    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.utTqmo/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/distcc /Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -isysroot /Developer/SDKs/MacOSX10.6.sdk -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialPhotograph.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialPhotograph.o0#
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/PPMImageRep.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/PPMImageRep.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
+s294628661.928169
+e294628662.873290
+r1
+xDistributed-CompileC
+xbuild/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/PPMImageRep.o
+x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/PPMImageRep.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@118"Distribute compilation of /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/PPMImageRep.m294628661#294628662#0(0"0(0#0#92"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/PPMImageRep.m4300739032#2608"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "gcc version 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2324.11)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.YlunoS    setenv INCLUDE_SERVER_PID 7581    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.YlunoS/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/distcc /Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -isysroot /Developer/SDKs/MacOSX10.6.sdk -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/PPMImageRep.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/PPMImageRep.o0#
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/bitio.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/bitio.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/colorname.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/colorname.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/fileio.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/fileio.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/filename.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/filename.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/image.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/quicklook-pfm-read-only/src/image.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpam.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpam.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpamcolor.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpamcolor.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpammap.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpammap.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpamn.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpamn.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpamread.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpamread.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpamwrite.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpamwrite.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpbm1.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpbm1.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpbm2.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpbm2.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpbm3.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpbm3.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpbmfont.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpbmfont.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpbmvms.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpbmvms.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpgm1.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpgm1.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpgm2.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpgm2.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpm.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpm.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpnm1.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpnm1.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpnm2.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpnm2.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libpnm3.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libpnm3.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppm1.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppm1.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppm2.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppm2.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppmcmap.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppmcmap.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppmcolor.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppmcolor.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppmd.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppmd.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppmfloyd.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppmfloyd.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libppmfuzzy.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libppmfuzzy.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libsystem.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libsystem.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/libsystem_dummy.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/libsystem_dummy.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
 
 CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/main.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s294558700.016971
-e294558740.362684
+s294617376.328155
+e294617390.857828
 r1
 xDistributed-CompileC
 xbuild/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/main.o
@@ -147,32 +1369,75 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@111"Distribute compilation of /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m294558700#294558740#0(0"0(0#0#85"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m4300739032#2423"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "gcc version 4.2.1 (Apple Inc. build 5659)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.XR1MBa    setenv INCLUDE_SERVER_PID 36603    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.XR1MBa/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/distcc /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/main.o0#
+lSLF07#2@111"Distribute compilation of /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m294617376#294617396#0(0"0(0#0#85"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m4300739032#2518"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "gcc version 4.2.1 (Apple Inc. build 5659)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.IJULOI    setenv INCLUDE_SERVER_PID 3087    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.IJULOI/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/distcc /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/main.o0#
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/main.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m normal x86_64 objective-c com.apple.compilers.llvmgcc42
+s294617670.982560
+e294617671.865824
+r1
+xDistributed-CompileC
+xbuild/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/main.o
+x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@111"Distribute compilation of /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m294617670#294617671#0(0"0(0#0#85"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m4300739032#2594"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_COMPILER "gcc version 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2324.11)"    setenv DISTCC_HOSTS localhost    setenv DISTCC_SYSTEM "10.6.2 (10C540, i386)"    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.7x4IoA    setenv INCLUDE_SERVER_PID 3627    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.7x4IoA/socket    setenv LANG en_US.US-ASCII    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/distcc /Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-generated-files.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-own-target-headers.hmap -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-all-target-headers.hmap -iquote /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/AerialDataViewer-project-headers.hmap -fpch-preprocess -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/include -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources/x86_64 -I/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/DerivedSources -isysroot /Developer/SDKs/MacOSX10.6.sdk -include /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer_Prefix.pch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/main.m -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/main.o0#
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/mkstemp.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/mkstemp.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/nstring.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/nstring.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/path.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/path.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/ppmdfont.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/ppmdfont.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/shhopt.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/shhopt.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/standardppmdfont.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/standardppmdfont.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
+
+CDistributed-CompileC build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/testnstring.o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/lib/util/testnstring.c normal x86_64 c com.apple.compilers.llvmgcc42
+r0
 
 CLd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/MacOS/AerialDataViewer normal x86_64
-s294558740.363174
-e294558741.883107
+s294637058.047035
+e294637060.618247
 r1
 xLd
 x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/MacOS/AerialDataViewer
 xnormal
 xx86_64
-lSLF07#2@148"Link /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/MacOS/AerialDataViewer294558740#294558741#0(0"0(0#0#0"4300739032#1059"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_HOSTS localhost,lzo,cpp/0    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.XR1MBa    setenv INCLUDE_SERVER_PID 36603    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.XR1MBa/socket    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -filelist /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewer.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/MacOS/AerialDataViewer0#
+lSLF07#2@148"Link /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/MacOS/AerialDataViewer294637058#294637060#0(0"0(0#0#0"4300739032#1229"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_HOSTS localhost,lzo,cpp/0    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.YJ4f0t    setenv INCLUDE_SERVER_PID 3483    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.YJ4f0t/socket    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/llvm-gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug -F/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/../../../../.. -filelist /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/AerialDataViewer.build/Debug/AerialDataViewer.build/Objects-normal/x86_64/AerialDataViewer.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -framework QuartzCore -framework BWToolkitFramework -framework Quartz -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/MacOS/AerialDataViewer0#
+
+CPBXCp build/Debug/AerialDataViewer.app/Contents/Frameworks/BWToolkitFramework.framework /Users/elliot/Documents/BWToolkitFramework.framework
+s294617866.593944
+e294617868.348955
+r1
+xPBXCp
+xbuild/Debug/AerialDataViewer.app/Contents/Frameworks/BWToolkitFramework.framework
+x/Users/elliot/Documents/BWToolkitFramework.framework
+lSLF07#2@57"Copy /Users/elliot/Documents/BWToolkitFramework.framework294617866#294617868#0(0"0(0#0#52"/Users/elliot/Documents/BWToolkitFramework.framework4300739032#690"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_HOSTS localhost,lzo,cpp/0    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.wZFQK2    setenv INCLUDE_SERVER_PID 3734    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.wZFQK2/socket    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/elliot/Documents/BWToolkitFramework.framework /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Frameworks0#
 
 CProcessInfoPlistFile /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Info.plist AerialDataViewer-Info.plist
-s294558695.295907
-e294558695.367188
+s294617666.083390
+e294617666.135576
 r1
 xProcessInfoPlistFile
 x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Info.plist
 xAerialDataViewer-Info.plist
-lSLF07#2@35"Process AerialDataViewer-Info.plist294558695#294558695#0(0"0(0#0#106"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer-Info.plist30962724183932976#729"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_HOSTS localhost,lzo,cpp/0    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.XR1MBa    setenv INCLUDE_SERVER_PID 36603    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.XR1MBa/socket    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility AerialDataViewer-Info.plist -genpkginfo /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Info.plist0#
+lSLF07#2@35"Process AerialDataViewer-Info.plist294617666#294617666#0(0"0(0#0#106"/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/AerialDataViewer-Info.plist4300739032#728"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_HOSTS localhost,lzo,cpp/0    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.7x4IoA    setenv INCLUDE_SERVER_PID 3627    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.7x4IoA/socket    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility AerialDataViewer-Info.plist -genpkginfo /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app/Contents/Info.plist0#
 
 CTouch /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app
-s294558741.883297
-e294558741.956405
+s294637060.618552
+e294637060.717116
 r1
 xTouch
 x/Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app
-lSLF07#2@117"Touch /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app294558741#294558741#0(0"0(0#0#0"4300739032#492"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_HOSTS localhost,lzo,cpp/0    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.XR1MBa    setenv INCLUDE_SERVER_PID 36603    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.XR1MBa/socket    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app0#
+lSLF07#2@117"Touch /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app294637060#294637060#0(0"0(0#0#0"4300739032#491"    cd /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer    setenv DISTCC_HOSTS localhost,lzo,cpp/0    setenv INCLUDE_SERVER_DIR /tmp/distcc-pump.YJ4f0t    setenv INCLUDE_SERVER_PID 3483    setenv INCLUDE_SERVER_PORT /tmp/distcc-pump.YJ4f0t/socket    setenv PATH "/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/elliot/Documents/Projects/active/BBS/imageRegistration/AerialDataViewer/build/Debug/AerialDataViewer.app0#
 
