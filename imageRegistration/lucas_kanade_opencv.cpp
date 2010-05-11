@@ -30,7 +30,7 @@ void PrintMat(CvMat *A)
 }
 
 const int MAX_CORNERS = 500;
-void processImagePair(const char *file1, const char *file2, const char *out) {
+void processImagePair(const char *file1, const char *file2, CvVideoWriter *out, struct CvMat *currentOrientation) {
   // Load two images and allocate other structures
 	IplImage* imgA = cvLoadImage(file1, CV_LOAD_IMAGE_GRAYSCALE);
 	IplImage* imgB = cvLoadImage(file2, CV_LOAD_IMAGE_GRAYSCALE);
@@ -49,7 +49,7 @@ void processImagePair(const char *file1, const char *file2, const char *out) {
 	cvGoodFeaturesToTrack( imgA, eig_image, tmp_image, cornersA, &corner_count,
 		0.05, 3.0, 0, 3, 0, 0.04 );
  
-  fprintf(stderr, "Corner count = %d\n", corner_count);
+  fprintf(stderr, "%s: Corner count = %d\n", file1, corner_count);
  
 	cvFindCornerSubPix( imgA, cornersA, corner_count, cvSize( win_size, win_size ),
 		cvSize( -1, -1 ), cvTermCriteria( CV_TERMCRIT_ITER | CV_TERMCRIT_EPS, 50, 0.03 ) );
@@ -70,19 +70,23 @@ void processImagePair(const char *file1, const char *file2, const char *out) {
 		 cvTermCriteria( CV_TERMCRIT_ITER | CV_TERMCRIT_EPS, 20, 0.3 ), 0 );
  
    CvMat *transform = cvCreateMat(3,3, CV_32FC1);
+   CvMat *invTransform = cvCreateMat(3,3, CV_32FC1);
 	// Find a homography based on the gradient
    CvMat cornersAMat = cvMat(1, corner_count, CV_32FC2, cornersA);
    CvMat cornersBMat = cvMat(1, corner_count, CV_32FC2, cornersB);
    cvFindHomography(&cornersAMat, &cornersBMat, transform, CV_RANSAC, 15, NULL);
 
+   cvInvert(transform, invTransform);
+   cvMatMul(currentOrientation, invTransform, currentOrientation);
    // save the translated image
  	 IplImage* trans_image = cvCloneImage(imgBcolor);
-   cvWarpPerspective(imgBcolor, trans_image, transform, CV_WARP_INVERSE_MAP+CV_WARP_FILL_OUTLIERS);
+   cvWarpPerspective(imgBcolor, trans_image, currentOrientation, CV_INTER_CUBIC+CV_WARP_FILL_OUTLIERS);
 
-   printf("%s:\n", out);
-   PrintMat(transform);
+   printf("%s:\n", file1);
+   PrintMat(currentOrientation);
 
-  cvSaveImage(out, trans_image);
+  // cvSaveImage(out, trans_image);
+  cvWriteFrame(out, trans_image);
 
   cvReleaseImage(&eig_image);
   cvReleaseImage(&tmp_image);  
@@ -105,16 +109,31 @@ int main(int argc, char* argv[])
 {
 
   int frame = 11;
+  CvMat *orientation = cvCreateMat(3,3,CV_32FC1);
+  cvSetIdentity(orientation);
+  CvVideoWriter *writer = 0;
+  int isColor = 1;
+  int fps     = 30;
+  int frameW  = 1280;
+  int frameH  = 720;
+  writer=cvCreateVideoWriter("/Users/kroo/Desktop/out.avi",-1,
+    fps,cvSize(frameW,frameH),isColor);
+ 
+ 
+  int firstFrame = 22560;
+  int lastFrame = 26640;
   
-  for(frame = 751; frame<1000; frame++) {
+  for(frame = firstFrame+1; frame<lastFrame-1; frame++) {
     char firstImage  [32];
     char secondImage [32];
-    char outImage    [64];
+    // char outImage    [64];
     sprintf(firstImage, "frame%d.ppm", frame);
     sprintf(secondImage, "frame%d.ppm", frame+1);
-    sprintf(outImage, "frame%d-%d.png", frame, frame+1);
-    processImagePair(firstImage, secondImage, outImage);
+    // sprintf(outImage, "global_frame%d.png", frame+1);
+    processImagePair(firstImage, secondImage, writer, orientation);
   }
+ 
+  cvReleaseVideoWriter(&writer);
  
 	return 0;
 }

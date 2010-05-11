@@ -5,11 +5,11 @@ import cairo
 iwidth = 1280 * 2.
 iheight = 720 * 2.
 
-filename = "output.txt"
+filename = "output3.txt"
 contents = open(filename)
 surface = cairo.SVGSurface(filename + '.svg', iwidth, iheight)
 cr = cairo.Context(surface)
-outfilename = "imageindex.bin"
+outfilename = "images/imageindex.bin"
 bout = open(outfilename, 'w');
 
 cr.set_line_width(2.0)
@@ -33,13 +33,20 @@ for line in contents.readlines():
 currentTransform = np.identity(3);
 currentRect = [np.array([0.,0.,1.]), np.array([0.,720.,1.]), np.array([1280.,720.,1.]), np.array([1280.,0.,1.])];
 for obj in objects:
-  obj['mat'] = np.linalg.inv(np.array(obj['matrixElems']).reshape((3,3)).T);
+  obj['mat'] = (np.array(obj['matrixElems']).reshape((3,3)));
+  currentTransform = obj['mat']
   # apply the transform
-  currentRect = map(lambda x: np.inner(x, currentTransform), currentRect);
+  currentRect = map(lambda x: np.inner(x, obj['mat']), currentRect);
   # normalize (de-homogenize :))
   currentRect = map(lambda x: np.array([x[0]/x[2], x[1]/x[2], 1.0]), currentRect);
-  currentTransform = np.inner(currentTransform, obj['mat']);
-  print currentRect
+
+  output = pack("32s9f", obj['name'], currentTransform[0,0],currentTransform[0,1],currentTransform[0,2],
+                                      currentTransform[1,0],currentTransform[1,1],currentTransform[1,2],
+                                      currentTransform[2,0],currentTransform[2,1],currentTransform[2,2]);
+
+
+  print currentTransform
+
   cr.move_to(currentRect[0][0], currentRect[0][1])
   cr.line_to(currentRect[1][0], currentRect[1][1])
   cr.line_to(currentRect[2][0], currentRect[2][1])
@@ -47,9 +54,6 @@ for obj in objects:
   cr.close_path()
   cr.stroke()
   
-  output = pack("32s9f", obj['name'], currentTransform[0],currentTransform[1],currentTransform[2],
-                                      currentTransform[3],currentTransform[3],currentTransform[5],
-                                      currentTransform[6],currentTransform[7],currentTransform[8]);
   bout.write(output);
   
   currentRect = [np.array([0.,0.,1.]), np.array([0.,720.,1.]), np.array([1280.,720.,1.]), np.array([1280.,0.,1.])];

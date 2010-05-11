@@ -28,7 +28,7 @@
     [[self layer] setBackgroundColor: color];
     self.images = [[NSMutableArray alloc] initWithCapacity:500];
 //    [layer setTransform:CATransform3DTranslate(CATransform3DMakeScale(0.5, 0.5, 1.0), 0, 0, 0)];
-    [layer setSublayerTransform:CATransform3DScale(CATransform3DMakeTranslation(offset.x, offset.y, 0), scale, scale, 1.0)];
+    [layer setSublayerTransform:CATransform3DScale(CATransform3DMakeTranslation(offset.x, offset.y, 0), scale, -scale, 1.0)];
     [self setLayer:layer];
     CFRelease(color);
   }
@@ -44,7 +44,7 @@
 - (void)mouseDragged:(NSEvent *)theEvent {
   float x = offset.x + ([theEvent locationInWindow].x - mouseDown.x), 
         y = offset.y + ([theEvent locationInWindow].y - mouseDown.y);
-  [self.layer setSublayerTransform:CATransform3DScale(CATransform3DMakeTranslation(x, y, 0), scale, scale, 1.0)];
+  [self.layer setSublayerTransform:CATransform3DScale(CATransform3DMakeTranslation(x, y, 0), scale, -scale, 1.0)];
 }
 
 - (void)mouseUp:(NSEvent *)theEvent {
@@ -54,6 +54,7 @@
 
 
 - (void)showImage:(NSInteger)row {
+	NSLog(@"showing image: %d", row);
   NSImageView *img = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, 1280, 720)];
   AerialPhotograph *image = [images objectAtIndex:row];
   
@@ -61,12 +62,11 @@
   [self addSubview: img];
   [img setWantsLayer: YES];
   
-  CALayer *sublayer = [img layer];// [[CALayer alloc] init];
-//  ////  [[self layer] addSublayer:sublayer];
-////  sublayer.transform = image.transform;
-  sublayer.transform = CATransform3DTranslate(image.transform, 0, 0, 0);
-////  [sublayer setSublayerTransform: CATransform3DIdentity];
-//  //  sublayer.frame = CGRectMake(0,0,[image size].width, [image size].height);
+	NSLog(@"transform: %f %f", image.transform.m13, image.transform.m23);
+	img.frame = CGRectMake(0,0, img.frame.size.width, img.frame.size.height);
+	CATransform3D transform = image.transform;
+  [img layer].transform = transform;
+
 //  ////  sublayer.contents = (id)[image CGImageForProposedRect:nil context:nil hints:nil];
 //  [img setLayer:sublayer];
 //  [sublayer setFrame: CGRectMake(0,0, 1280, 720)];
@@ -105,7 +105,7 @@
 
 - (void)addImage:(NSString *)path transform:(CATransform3D)transform {
   AerialPhotograph *image = [[[AerialPhotograph alloc] initWithContentsOfFile: path] autorelease];
-  image.transform = transform;
+  image.transform = (transform);
   
   [images addObject: image];
 //  NSImageView *img = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, 1280, 720)];

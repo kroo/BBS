@@ -209,10 +209,13 @@ int main(int argc, char *argv[])
                 pFrame->data, pFrame->linesize, 0, pCodecCtx->height, 
                 pFrameRGB->data, pFrameRGB->linesize);
 
+        if(i%100 == 0) printf("frame %d reached\n", i);
         // Save the frame to disk
-        if(++i<=1000 && i>750)
+        int firstFrame = 4800;
+        int lastFrame = 6600;
+        if(++i<=lastFrame && i>firstFrame)
             SaveFrame(pFrameRGB, pCodecCtx->width, pCodecCtx->height, i);
-        else if(i>750) break;
+        else if(i>lastFrame) break;
     }
 
     // Free the RGB image

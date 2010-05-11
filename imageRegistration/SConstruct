@@ -36,3 +36,22 @@ env.Program(
   LINKFLAGS = "-arch i386"
 )
 
+
+# compile some example code that writes out avi files using opencv:
+env.Program(
+  'movie_writer_opencv',
+  'movie_writer_opencv.cpp',
+  LIBS = [
+    'm',
+    'cv',
+    'highgui',
+    'cvaux',
+    'stdc++',
+    'cxcore'
+  ],
+  LIBPATH = "/usr/lib",
+  CPPPATH = "/usr/include/opencv",
+  CCFLAGS = "-arch i386",
+  LINKFLAGS = "-arch i386"
+)
+

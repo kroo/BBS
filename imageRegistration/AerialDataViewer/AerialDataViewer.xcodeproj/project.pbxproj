@@ -49,7 +49,7 @@
 		8BC2C60A118ED172003F2295 /* AerialDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AerialDataView.h; sourceTree = "<group>"; };
 		8BC2C60B118ED172003F2295 /* AerialDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AerialDataView.m; sourceTree = "<group>"; };
 		8BCD1FB7118F6FA100371703 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		8BCD1FD1118F7D1F00371703 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = /Users/elliot/Documents/BWToolkitFramework.framework; sourceTree = "<absolute>"; };
+		8BCD1FD1118F7D1F00371703 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = ../../../../../BWToolkitFramework.framework; sourceTree = SOURCE_ROOT; };
 		8BCD207E118F835000371703 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		8BCD2127118F8EB200371703 /* AerialDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AerialDataViewController.h; sourceTree = "<group>"; };
 		8BCD2128118F8EB200371703 /* AerialDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AerialDataViewController.m; sourceTree = "<group>"; };

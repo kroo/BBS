@@ -1,0 +1,194 @@
+// !$*UTF8*$!
+{
+	1720A57C118FD30E00699DFB /* AerialDataViewer */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = AerialDataViewer;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	1720A593118FD31400699DFB /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	1720A594118FD31400699DFB /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	1720A62A118FDBAB00699DFB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8BC2C60A118ED172003F2295 /* AerialDataView.h */;
+		name = "AerialDataView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 469;
+		vrLoc = 0;
+	};
+	1720A62B118FDBAB00699DFB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8BCD2281118FB3B600371703 /* AerialPhotograph.m */;
+		name = "AerialPhotograph.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 244;
+		vrLoc = 0;
+	};
+	1761336A11911924007BFFF3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8BCD2127118F8EB200371703 /* AerialDataViewController.h */;
+		name = "AerialDataViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 489;
+		vrLoc = 0;
+	};
+	1761336B11911924007BFFF3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8BCD2128118F8EB200371703 /* AerialDataViewController.m */;
+		name = "AerialDataViewController.m: 42";
+		rLen = 0;
+		rLoc = 1231;
+		rType = 0;
+		vrLen = 2117;
+		vrLoc = 0;
+	};
+	1761336C11911924007BFFF3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8BC2C60B118ED172003F2295 /* AerialDataView.m */;
+		name = "AerialDataView.m: 66";
+		rLen = 0;
+		rLoc = 2001;
+		rType = 0;
+		vrLen = 1901;
+		vrLoc = 1054;
+	};
+	1761336D11911924007BFFF3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8BC2C60B118ED172003F2295 /* AerialDataView.m */;
+		name = "AerialDataView.m: 47";
+		rLen = 0;
+		rLoc = 1429;
+		rType = 0;
+		vrLen = 2163;
+		vrLoc = 489;
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 1720A57C118FD30E00699DFB /* AerialDataViewer */;
+		activeTarget = 8D1107260486CEB800E47090 /* AerialDataViewer */;
+		codeSenseManager = 1720A594118FD31400699DFB /* Code sense */;
+		executables = (
+			1720A57C118FD30E00699DFB /* AerialDataViewer */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1473,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 294641670;
+			PBXWorkspaceStateSaveDate = 294641670;
+		};
+		perUserProjectItems = {
+			1720A62A118FDBAB00699DFB /* PBXTextBookmark */ = 1720A62A118FDBAB00699DFB /* PBXTextBookmark */;
+			1720A62B118FDBAB00699DFB /* PBXTextBookmark */ = 1720A62B118FDBAB00699DFB /* PBXTextBookmark */;
+			1761336A11911924007BFFF3 /* PBXTextBookmark */ = 1761336A11911924007BFFF3 /* PBXTextBookmark */;
+			1761336B11911924007BFFF3 /* PBXTextBookmark */ = 1761336B11911924007BFFF3 /* PBXTextBookmark */;
+			1761336C11911924007BFFF3 /* PBXTextBookmark */ = 1761336C11911924007BFFF3 /* PBXTextBookmark */;
+			1761336D11911924007BFFF3 /* PBXTextBookmark */ = 1761336D11911924007BFFF3 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 1720A593118FD31400699DFB /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8BC2C60A118ED172003F2295 /* AerialDataView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 780}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 469}";
+		};
+	};
+	8BC2C60B118ED172003F2295 /* AerialDataView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 1716}}";
+			sepNavSelRange = "{1429, 0}";
+			sepNavVisRange = "{489, 2163}";
+		};
+	};
+	8BCD2127118F8EB200371703 /* AerialDataViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 772}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 489}";
+		};
+	};
+	8BCD2128118F8EB200371703 /* AerialDataViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 806}}";
+			sepNavSelRange = "{1231, 0}";
+			sepNavVisRange = "{0, 2117}";
+		};
+	};
+	8BCD2281118FB3B600371703 /* AerialPhotograph.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 780}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 244}";
+		};
+	};
+	8D1107260486CEB800E47090 /* AerialDataViewer */ = {
+		activeExec = 0;
+		executables = (
+			1720A57C118FD30E00699DFB /* AerialDataViewer */,
+		);
+	};
+}
