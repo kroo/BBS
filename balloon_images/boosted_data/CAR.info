@@ -1,0 +1,50 @@
+Command line parameters:  C:\Users\Alex\BBS\balloon_images\boosted_data\CAR 10 C:\Users\Alex\BBS\balloon_images\boosted_data\CAR_scoring_function.m
+
+Configuration parameters:
+serialTreeInput = null
+booster_type = jboost.booster.AdaBoost
+args =  C:\Users\Alex\BBS\balloon_images\boosted_data\CAR 10 C:\Users\Alex\BBS\balloon_images\boosted_data\CAR_scoring_function.m
+boostingRuntime = 1.0
+pythonCodeOutputFileName = null
+m = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR_scoring_function.m
+nthreads = null
+cCodeOutputFileName = null
+javaCodeOutputFileName = null
+version = null
+numRounds = 10
+testFileName = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.test
+trainFileName = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.train
+specFileName = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.spec
+serializationOutputFileName = null
+S = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR
+resultOutputFileName = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.output.tree
+matlabCodeOutputFileName = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR_scoring_function.m
+
+
+FILENAMES
+specFilename = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.spec
+trainFilename = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.train
+testFilename = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.test
+trainBoostingInfo = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.train.boosting.info
+testBoostingInfo = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.test.boosting.info
+resultOutputFilename = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.output.tree
+logOutputFilename = C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.log
+
+Train set size = 400509
+Test set size = 400510
+
+Init  Start time = Wed May 12 14:07:23 PDT 2010
+Learn Start time = Wed May 12 14:07:46 PDT 2010
+iter 	bound 	train 	test
+0	1.0000	0.4999	0.5003
+1	0.7376	0.1626	0.1631
+2	0.6621	0.1395	0.1393
+3	0.6295	0.1395	0.1393
+4	0.6055	0.1395	0.1393
+5	0.5845	0.1395	0.1393
+6	0.5698	0.1395	0.1393
+7	0.5553	0.1382	0.1381
+8	0.5482	0.1355	0.1354
+9	0.5439	0.1269	0.1276
+10	0.5390	0.1269	0.1276
+End time=Wed May 12 14:08:00 PDT 2010

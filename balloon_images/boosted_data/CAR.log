@@ -1,0 +1,10 @@
+Spec: C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.spec, Test: C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.test, Train: C:\Users\Alex\BBS\balloon_images\boosted_data\CAR.train
+The m_booster is: jboost.booster.AdaBoost. No of examples = 0, m_epsilon = 0.0
+index	margin	weight	old weight	label
+
+The m_booster is: jboost.booster.AdaBoost. No of examples = 0, m_epsilon = 0.0
+index	margin	weight	old weight	label
+
+It took 13.428 seconds to learn.
+Testing rule.
+finished closing output files
