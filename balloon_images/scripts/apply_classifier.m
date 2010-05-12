@@ -1,4 +1,4 @@
-function [] = apply_classifier(funct,imagepath,outputfile)
+function [] = apply_classifier(scorefunc,imagepath,outputfile)
 
 	image = imread(imagepath);
 	PicHSV=rgb2hsv(image);
@@ -9,7 +9,7 @@ function [] = apply_classifier(funct,imagepath,outputfile)
 	for i=1:m
 		for j=1:n;
 			pixel = squeeze(PicHSV(i,j,:));
-			result(i,j) = funct(pixel, [1,1,1]);
+			result(i,j) = scorefunc(pixel, [1,1,1]);
 		end
 	end
 
