@@ -211,8 +211,8 @@ int main(int argc, char *argv[])
 
         if(i%100 == 0) printf("frame %d reached\n", i);
         // Save the frame to disk
-        int firstFrame = 4800;
-        int lastFrame = 6600;
+        int firstFrame = 15000;
+        int lastFrame = 16000;
         if(++i<=lastFrame && i>firstFrame)
             SaveFrame(pFrameRGB, pCodecCtx->width, pCodecCtx->height, i);
         else if(i>lastFrame) break;
