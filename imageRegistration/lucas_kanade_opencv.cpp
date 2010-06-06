@@ -29,6 +29,50 @@ void PrintMat(CvMat *A)
   printf("\n");
 }
 
+void calcNecessaryImageRotation(IplImage *src) {
+#define MAX_LINES 100
+  CvMemStorage* storage = cvCreateMemStorage(0);
+  CvSize img_sz = cvGetSize( src );
+
+	IplImage* color_dst = cvCreateImage( img_sz, 8, 3 );
+	IplImage* dst = cvCreateImage( img_sz, 8, 1 );
+  CvSeq* lines = 0;
+  int i;
+  
+  cvCanny( src, dst, 50, 200, 3 );
+  cvCvtColor( dst, color_dst, CV_GRAY2BGR );
+	
+  cvSaveImage("canny.png", dst);
+  
+  lines = cvHoughLines2( dst,
+                         storage,
+                         CV_HOUGH_PROBABILISTIC,
+                         1,
+                         CV_PI/180,
+                         80,
+                         30,
+                         10 );
+  for( i = 0; i < lines->total; i++ )
+  {
+      CvPoint* line = (CvPoint*)cvGetSeqElem(lines,i);
+      cvLine( color_dst, line[0], line[1], CV_RGB(255,0,0), 1, 8 );
+      printf("%f\n", atan((double)(line[1].y-line[0].y) / (double)(line[1].x-line[0].x)));
+  }
+
+  // TODO(kroo): build up a smoothed histogram (cvHistogram)
+  // TODO(kroo): find two peaks, assert that they are separated by roughly 90˚
+  // TODO(kroo): find smallest rotation necessary to cause the lines to point straight up/down/left/right
+  
+
+  cvSaveImage("hough.png", color_dst);
+
+  cvNamedWindow( "Hough Transform", 1 );
+  cvShowImage( "Hough Transform", color_dst );
+  
+  cvWaitKey(0);
+
+}
+
 const int MAX_CORNERS = 500;
 void processImagePair(const char *file1, const char *file2, CvVideoWriter *out, struct CvMat *currentOrientation) {
   // Load two images and allocate other structures
@@ -64,6 +108,8 @@ void processImagePair(const char *file1, const char *file2, CvVideoWriter *out, 
 	IplImage* pyrB = cvCreateImage( pyr_sz, IPL_DEPTH_32F, 1 );
  
 	CvPoint2D32f* cornersB = new CvPoint2D32f[ MAX_CORNERS ];
+ 
+  calcNecessaryImageRotation(imgA);
  
 	cvCalcOpticalFlowPyrLK( imgA, imgB, pyrA, pyrB, cornersA, cornersB, corner_count, 
 		cvSize( win_size, win_size ), 5, features_found, feature_errors,
@@ -104,7 +150,18 @@ void processImagePair(const char *file1, const char *file2, CvVideoWriter *out, 
   
 }
 
- 
+
+#if 1
+
+int main(int argc, char *argv[]) {
+  IplImage* src;
+  if( argc == 2 && (src=cvLoadImage(argv[1], 0))!= 0)
+  {
+    calcNecessaryImageRotation(src);
+  }
+}
+
+#else
 int main(int argc, char* argv[])
 {
 
@@ -137,4 +194,4 @@ int main(int argc, char* argv[])
  
 	return 0;
 }
-
+#endif
