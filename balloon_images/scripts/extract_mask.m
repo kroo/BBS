@@ -1,4 +1,4 @@
-function [] = prepare_data(imagepath,xmlpath,outputfile)
+function [] = extract_mask(imagepath,xmlpath,outputfile)
 
     image = imread(imagepath);
     xml = xmlread(xmlpath);
@@ -25,24 +25,7 @@ function [] = prepare_data(imagepath,xmlpath,outputfile)
 
     BW(BW>1) = 1; % some polygons may overlap
 
-    imageHSV=rgb2hsv(image);
-
-    fid = fopen(outputfile,'w');
-
-    nNegativeTrainingExamples = size(BW(BW==0),1);
-    nPositiveTrainingExamples = size(BW(BW==1),1);
-
-    for i=1:m
-        for j=1:n;
-            %if(BW(i,j)==0)
-            %    if(rand>nPositiveTrainingExamples/nNegativeTrainingExamples)
-            %        continue;
-            %    end
-            %end
-            fprintf(fid, '%d,%3.2f,%3.2f,%3.2f;\n',BW(i,j),imageHSV(i,j,:));
-        end
-    end
-    fclose(fid);
+    imwrite(BW,outputfile);
     exit;
 
 

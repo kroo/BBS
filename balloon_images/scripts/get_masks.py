@@ -2,12 +2,12 @@
 
 import os,sys,shutil
 
-testdir = 'C:\\Users\\Alex\\BBS\\balloon_images\\road_pics_and_xml'
-temp = os.path.join(os.path.dirname(testdir),'road_processed_data_all')
+testdir = 'C:\\Users\\Alex\\BBS\\balloon_images\\original_data'
+temp = os.path.join(os.path.dirname(testdir),'masks')
 os.mkdir(temp)
 os.chdir(temp)
 
-data = {'ROAD':open('ROAD.data','a')}
+data = ['CAR']
 
 counter = 0
 
@@ -28,28 +28,18 @@ for path,dirs,files in os.walk(testdir):
     for file in files:
         name = os.path.splitext(file)[0]
         if name in data:
-            # call MATLAB
-            tempfilepath = os.path.join(temp,name + '_temp')
-            matlab_command = "prepare_data('%s','%s','%s')"\
-                             %(os.path.join(path,pic),
-                               os.path.join(path,file),
-                               tempfilepath)
-            matlab_options = '-nodisplay -nodesktop -nosplash -wait'
-            os.system('matlab %s -r "%s"'%(matlab_options,matlab_command))
-            
             # counter
             counter += 1
             print '[%s/4]'%(counter)
             
-            # append to data file
-            tempfile = open(tempfilepath)
-            shutil.copyfileobj(tempfile,data[name])
-            tempfile.close()
-            os.remove(tempfilepath)
+            # call MATLAB
+            outputfilepath = os.path.join(temp,'mask_' + pic)
+            matlab_command = "extract_mask('%s','%s','%s')"\
+                             %(os.path.join(path,pic),
+                               os.path.join(path,file),
+                               outputfilepath)
+            matlab_options = '-nodisplay -nodesktop -nosplash -wait'
+            os.system('matlab %s -r "%s"'%(matlab_options,matlab_command))
+            
         else:
             print '%s NOT in data near [%s/4]'%(name,counter)
-
-    print
-
-for item in data:
-    data[item].close()
