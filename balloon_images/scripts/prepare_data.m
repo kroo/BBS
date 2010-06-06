@@ -3,7 +3,8 @@ function [] = prepare_data(imagepath,xmlpath,outputfile)
     image = imread(imagepath);
     xml = xmlread(xmlpath);
 
-    m = 480; n = 640;
+    m = size(image,1);
+    n = size(image,2);
     BW = zeros(m,n);
     polygonList = xml.getElementsByTagName('polygon');
     for i = 0:polygonList.getLength()-1;
@@ -22,6 +23,8 @@ function [] = prepare_data(imagepath,xmlpath,outputfile)
         BW = BW + poly2mask(x, y, m, n);    
     end
 
+    BW(BW>1) = 1; % some polygons may overlap
+
     imageHSV=rgb2hsv(image);
 
     fid = fopen(outputfile,'w');
@@ -31,11 +34,11 @@ function [] = prepare_data(imagepath,xmlpath,outputfile)
 
     for i=1:m
         for j=1:n;
-            if(BW(i,j)==0)
-                if(rand>nPositiveTrainingExamples/nNegativeTrainingExamples)
-                    continue;
-                end
-            end
+            %if(BW(i,j)==0)
+            %    if(rand>nPositiveTrainingExamples/nNegativeTrainingExamples)
+            %        continue;
+            %    end
+            %end
             fprintf(fid, '%d,%3.2f,%3.2f,%3.2f;\n',BW(i,j),imageHSV(i,j,:));
         end
     end

@@ -2,12 +2,12 @@
 
 import os,sys,shutil
 
-testdir = 'C:\\Users\\Alex\\BBS\\balloon_images\\original_data'
-temp = os.path.join(os.path.dirname(testdir),'processed_data')
+testdir = 'C:\\Users\\Alex\\BBS\\balloon_images\\road_pics_and_xml'
+temp = os.path.join(os.path.dirname(testdir),'road_processed_data_all')
 os.mkdir(temp)
 os.chdir(temp)
 
-data = {'CAR':open('CAR.data','a')}
+data = {'ROAD':open('ROAD.data','a')}
 
 counter = 0
 
@@ -39,7 +39,7 @@ for path,dirs,files in os.walk(testdir):
             
             # counter
             counter += 1
-            print '[%s/119]'%(counter)
+            print '[%s/4]'%(counter)
             
             # append to data file
             tempfile = open(tempfilepath)
@@ -47,7 +47,7 @@ for path,dirs,files in os.walk(testdir):
             tempfile.close()
             os.remove(tempfilepath)
         else:
-            print '%s NOT in data near [%s/119]'%(name,counter)
+            print '%s NOT in data near [%s/4]'%(name,counter)
 
     print
 

@@ -1,18 +1,22 @@
 import os,sys,glob
 
-working_path = 'C:\\Users\\Alex\\BBS\\balloon_images\\images'
+boost_option = 'all_100_c'
+
+working_path = 'C:\\Users\\Alex\\BBS\\balloon_images\\road_scored_pics'
 os.chdir(working_path)
-temp_path = 'C:\\Users\\Alex\\BBS\\balloon_images\\boosted_data'
+temp_path = 'C:\\Users\\Alex\\BBS\\balloon_images\\road_boosted_data_' + boost_option
 stem = os.path.basename(working_path)
 
 for file in os.listdir(working_path):
+	if 'scored' in file:
+		continue
+	
 	print file
 	print os.path.splitext(file)[1]
-	if os.path.splitext(file)[1] == '.jpg':
+	if True:
 		# call MATLAB to score images
 		data = os.path.join(temp_path,stem + '.data')
-		scored_image = 'scored_' + file
-		###scoring_function = 'CAR_scoring_function'
+		scored_image = 'scored_%s_%s'%(boost_option,file)
 		scoring_path = os.path.join(temp_path,'*.m')
 		print scoring_path
 		scoring_function = glob.glob(scoring_path)
