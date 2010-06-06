@@ -1,5 +1,9 @@
 import os
-env = Environment(ENV = {'PATH' : os.environ['PATH']})
+if ARGUMENTS.get('debug', 0):
+  env = Environment(ENV = {'PATH' : os.environ['PATH']}, CCFLAGS = '-g')
+else:
+  env = Environment(ENV = {'PATH' : os.environ['PATH']})
+
 
 # compile the avcodec example program (this grabs frames from an h264 movie, and
 # churns out the individual frames)
@@ -59,7 +63,12 @@ env.Program(
 
 env.Program(
   'bbs_registration',
+  [
   'bbs_registration.cpp',
+  'CAR_scoring_function.c',
+  'GREEN_scoring_function.c',
+  'ROAD_scoring_function.c'
+  ],
   LIBS = [
     'm',
     'cv',
