@@ -1,4 +1,4 @@
-import os
+import os, glob
 if ARGUMENTS.get('debug', 0):
   env = Environment(ENV = {'PATH' : os.environ['PATH']}, CCFLAGS = '-g')
 else:
@@ -8,13 +8,13 @@ else:
 # compile the avcodec example program (this grabs frames from an h264 movie, and
 # churns out the individual frames)
 env.Program(
-  'avcodec_sample', 
-  'avcodec_sample.cpp', 
+  'avcodec_sample',
+  'avcodec_sample.cpp',
   LIBS = [
-    'avformat', 
-    'avcodec', 
-    'avutil', 
-    'swscale', 
+    'avformat',
+    'avcodec',
+    'avutil',
+    'swscale',
     'z'
   ],
   LIBPATH = "/opt/local/lib",
@@ -67,23 +67,28 @@ env.Program(
   'bbs_registration.cpp',
   'CAR_scoring_function.c',
   'GREEN_scoring_function.c',
-  'ROAD_scoring_function.c'
-  ],
+  'ROAD_scoring_function.c',
+  ] + glob.glob("./libs/*.a"),
   LIBS = [
     'm',
-    'cv',
-    'highgui',
-    'cvaux',
     'stdc++',
+    'objc',
     'cxcore',
-    'avformat', 
-    'avcodec', 
-    'avutil', 
-    'swscale', 
-    'z'
+    'libcvaux',
+    'libcv'
   ],
-  LIBPATH = ["/usr/local/lib", "/opt/local/lib"],
+  FRAMEWORKS = [
+    'CoreFoundation',
+    'QuartzCore',
+    'Cocoa',
+    'QTKit',
+    'ApplicationServices',
+    'Foundation',
+    'CoreVideo',
+    'AppKit'
+  ],
+  LIBPATH = ["/usr/local/lib", "./dynlibs"],
   CPPPATH = ["/usr/local/include", "/usr/include/opencv", "/opt/local/include"],
-  # CCFLAGS = "-arch i386",
-  # LINKFLAGS = "-arch i386"
+  CCFLAGS = "-m64",
+  LINKFLAGS = "-m64"
 )
