@@ -8,6 +8,11 @@ extern "C" {
 #include <libswscale/swscale.h>
 #include <libavutil/avutil.h> // include the header!
 }
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
 
 extern "C" {
   double car_predict(void **attr, double *ret);
@@ -114,20 +119,24 @@ void PrintMat(CvMat *A)
   printf("\n");
 }
 
-float calcNecessaryImageRotation(IplImage *src) {
-#define MAX_LINES 100
+
+static int rotated_image_count = 0;
+CvMat *calcNecessaryImageRotation(IplImage *src) {
+#define MAX_LINES 360
   CvMemStorage* storage = cvCreateMemStorage(0);
   CvSize img_sz = cvGetSize( src );
 
 	IplImage* color_dst = cvCreateImage( img_sz, 8, 3 );
 	IplImage* dst = cvCreateImage( img_sz, 8, 1 );
   CvSeq* lines = 0;
+  float avg = 0;
+  int count = 0;
   int i;
   
   cvCanny( src, dst, 50, 200, 3 );
   cvCvtColor( dst, color_dst, CV_GRAY2BGR );
 	
-  cvSaveImage("canny.png", dst);
+  // cvSaveImage("canny.png", dst);
   
   lines = cvHoughLines2( dst,
                          storage,
@@ -137,7 +146,7 @@ float calcNecessaryImageRotation(IplImage *src) {
                          80,
                          30,
                          10 );
-  int nbins = 1000;
+  int nbins = 360;
   int *hist = (int*)malloc(sizeof(int) * nbins);
   bzero(hist, sizeof(int) * nbins);
   for( i = 0; i < lines->total; i++ )
@@ -145,33 +154,73 @@ float calcNecessaryImageRotation(IplImage *src) {
       CvPoint* line = (CvPoint*)cvGetSeqElem(lines,i);
       cvLine( color_dst, line[0], line[1], CV_RGB(255,0,0), 1, 8 );
       double angle = atan((double)(line[1].y-line[0].y) / (double)(line[1].x-line[0].x));
-      // 1000 bin histogram from 0 -> 2 pi
-      hist[(int)(angle * (nbins / 2 / M_PI)) % nbins] ++;
+      // histogram from 0 -> 2 pi
+      hist[(int)(angle * ((float)nbins / (2. * M_PI))) % nbins] ++;
+      avg += angle;
+      count ++;
       // printf("%f\n", );
   }
   
   int max=0;
   for(int i=0; i<nbins; i++) {
+    printf("%2.5f\t", ((float)i) * 2.f * M_PI / (float)nbins);
+    for(int v=0; v<hist[i]; v++) printf("x");
+    printf("\n");
     if(hist[i] > hist[max]) max = i;
   }
+  avg /= (float)count;
   
   // TODO(kroo): build up a smoothed histogram (cvHistogram)
   // TODO(kroo): find two peaks, assert that they are separated by roughly 90˚
   // TODO(kroo): find smallest rotation necessary to cause the lines to point straight up/down/left/right
   
 
-  cvSaveImage("hough.png", color_dst);
+  // cvSaveImage("hough.png", color_dst);
+  // 
+  // cvNamedWindow( "Hough Transform", 1 );
+  // cvShowImage( "Hough Transform", color_dst );
+  // 
+  // cvWaitKey(0);
+  // exit(0);
+  float radians = ((float)max) * 2.f * M_PI / (float)nbins;
+  printf("radians: %f\n", radians);
   
-  cvNamedWindow( "Hough Transform", 1 );
-  cvShowImage( "Hough Transform", color_dst );
+  CvMat *transform = cvCreateMat(2,3, CV_32FC1);
+  CvMat *bigger = cvCreateMat(3,3, CV_32FC1);
+  cvSetIdentity(transform);
+  cvSetIdentity(bigger);
+
+  transform = cv2DRotationMatrix(cvPoint2D32f(640.0, 360.0), radians, 1.0, transform);
+  for(int y=0; y<2; y++) {
+    for(int x=0; x<3; x++) {
+      cvSet2D(bigger, y, x, cvGet2D(transform, y, x));
+    }
+  }
+  PrintMat(transform);
+  PrintMat(bigger);
+
+
+  char str[1024];
+  sprintf(str, "rotated_image_%d.png", rotated_image_count++);
+  CvMat *rotation = bigger;//calcNecessaryImageRotation(imgB);
+  // cvInvert(rotation, rotation);
+  IplImage *rotatedImage = cvCreateImage(img_sz, 8, color_dst->nChannels);
+  cvSetZero(rotatedImage);
+  cvWarpPerspective(color_dst, rotatedImage, rotation, CV_INTER_CUBIC);
+  cvSaveImage(str, rotatedImage);
+  cvReleaseImage(&rotatedImage);
+
+  PrintMat(rotation);  
+
+
+
   
-  cvWaitKey(0);
-  exit(0);
-  return ((float)max) * 2 * M_PI / nbins;
+  return bigger;
+  // return transform;
 
 }
 
-const int MAX_CORNERS = 25;
+const int MAX_CORNERS = 150;
 static IplImage* trans_image = 0; // draw everything onto a shared canvas
 
 // void processImagePair(const char *file1, const char *file2, CvVideoWriter *out, struct CvMat *currentOrientation) {
@@ -238,7 +287,7 @@ bool processImagePair(int num, IplImage *imgAcolor, IplImage *imgBcolor, IplImag
   cvInvert(transform, invTransform);
   // check if currentOrientation is modified significantly:
 
-  PrintMat(invTransform);
+  // PrintMat(invTransform);
   cvMatMul(currentOrientation, invTransform, tempCurrentOrientation);
   if(cvmGet(tempCurrentOrientation, 0, 0) > 10.f ||
     cvmGet(tempCurrentOrientation, 2, 2) < 0.0f ||
@@ -252,9 +301,9 @@ bool processImagePair(int num, IplImage *imgAcolor, IplImage *imgBcolor, IplImag
   CvMat *tf_scaled_offset = cvCloneMat(currentOrientation);
   CvMat *scaled_down = cvCreateMat(3,3, CV_32FC1);
   cvSetIdentity(scaled_down);
-  cvSet2D(scaled_down, 2,2, cvScalar(2.5)); // 0.0 0.5 300
-  cvSet2D(scaled_down, 0,2, cvScalar(800));
-  cvSet2D(scaled_down, 1,2, cvScalar(600));
+  // cvSet2D(scaled_down, 2,2, cvScalar(2.5)); // 0.0 0.5 300
+  // cvSet2D(scaled_down, 0,2, cvScalar(800));
+  // cvSet2D(scaled_down, 1,2, cvScalar(600));
   cvMatMul(scaled_down, currentOrientation, tf_scaled_offset);
 
   // save the translated image
@@ -267,9 +316,10 @@ bool processImagePair(int num, IplImage *imgAcolor, IplImage *imgBcolor, IplImag
   // cvWarpPerspective(imgBcolorReal, temp_image, tf_scaled_offset, CV_INTER_CUBIC+CV_WARP_FILL_OUTLIERS);
   // calcNecessaryImageRotation(temp_image);
   cvWarpPerspective(imgBcolorReal, trans_image, tf_scaled_offset, CV_INTER_CUBIC);
-
-  printf("%d:\n", num);
-  PrintMat(currentOrientation);
+  printf("\n\n%d:\n", num);
+  PrintMat(invTransform);
+  calcNecessaryImageRotation(imgB);
+  // PrintMat(currentOrientation);
 
   // cvSaveImage(out, trans_image);
   cvWriteFrame(out, trans_image);
@@ -389,7 +439,7 @@ void SetUpProcessing() {
   cvSetData( gammaMappingMat, gamma_mapping, 0 );
 }
 
-void ProcessImage(AVFrame *pFrame, int width, int height, int frameno, CvMat *orientation, CvVideoWriter *writer) {
+void ProcessImage(AVFrame *pFrame, int width, int height, int frameno, CvMat *orientation, CvVideoWriter *writer, bool detect_cars) {
   if(!gammaMappingMat) SetUpProcessing();
   
   // set up an IplImage from the AVFrame
@@ -400,7 +450,8 @@ void ProcessImage(AVFrame *pFrame, int width, int height, int frameno, CvMat *or
   // duplicate the image, to apply a gamma mapping
   IplImage* originalColorImage = cvCloneImage(myIplImage);
   IplImage* adjustedImage = cvCloneImage(myIplImage);
-  adjustedImage = ProcessColors(adjustedImage);
+  if(detect_cars)
+    adjustedImage = ProcessColors(adjustedImage);
   
   // cvSaveImage("color_processed_image.png", adjustedImage);
   // exit(0);
@@ -427,7 +478,7 @@ void ProcessImage(AVFrame *pFrame, int width, int height, int frameno, CvMat *or
 }
 
 
-int ReadVideo(const char *filename) {
+int ReadVideo(const char *filename, int firstFrame_arg, int lastFrame_arg, const char *outputfile, bool detect_cars) {
     AVFormatContext *pFormatCtx;
     int             i, videoStream;
     AVCodecContext  *pCodecCtx;
@@ -439,13 +490,9 @@ int ReadVideo(const char *filename) {
 
     // int64_t firstFrame = 30 * 60 * 17;
     int64_t firstFrame = 22560;
-// #define LONG_RUN
-// #ifdef LONG_RUN
-//     int64_t lastFrame = firstFrame + 2679;
-// #else
-//     int64_t lastFrame = firstFrame + 2000;
-// #endif
+    if(firstFrame_arg != -1) firstFrame = 0+firstFrame_arg;
     int64_t lastFrame = 26640;
+    if(lastFrame_arg != -1) lastFrame = 0+lastFrame_arg;
 
     printf("Initting video output...\n");
     int frame = 11;
@@ -460,8 +507,7 @@ int ReadVideo(const char *filename) {
     // Register all formats and codecs
     av_register_all();
     
-    
-    writer=cvCreateVideoWriter("/Users/elliot/Desktop/out.avi",CV_FOURCC('P','I','M','1'),
+    writer=cvCreateVideoWriter(outputfile,CV_FOURCC('P','I','M','1'),
       fps,cvSize(frameW,frameH),isColor);
     printf("finished: %p\n", writer);
 
@@ -549,7 +595,7 @@ int ReadVideo(const char *filename) {
         if(i%100 == 0) printf("frame %lld reached\n", i+firstFrame);
         // Save the frame to disk
         if(++i<=lastFrame-firstFrame && i>0)
-          ProcessImage(pFrameBGR, pCodecCtx->width, pCodecCtx->height, i, orientation, writer);
+          ProcessImage(pFrameBGR, pCodecCtx->width, pCodecCtx->height, i, orientation, writer, detect_cars);
         else if(i>(lastFrame-firstFrame)) break;
     }
     
@@ -573,11 +619,57 @@ int ReadVideo(const char *filename) {
     return 0;
 }
 
-int main (int argc, char const *argv[])
+int main (int argc, char **argv)
 {
-  if(argc > 1)
-    ReadVideo(argv[1]);
-  else
-    printf("usage: bbs_registration VideoFile.avi");
+  char *filename = 0;
+  char *outputfile = 0;
+  int firstFrame = -1;
+  int lastFrame = -1;
+  int i=0, c=0, index=0;
+  opterr = 0;
+  bool die = false, detect_cars = false;
+  
+  while ((c = getopt (argc, argv, "cs:e:")) != -1)
+    switch (c)
+  {
+    case 's':
+    firstFrame = atoi(optarg);
+    break;
+    case 'c':
+    detect_cars = true;
+    case 'e':
+    lastFrame = atoi(optarg);
+    break;
+    case '?':
+    if (optopt == 's' || optopt == 'e')
+      fprintf (stderr, "Option -%c requires an argument.\n", optopt);
+    else if (isprint (optopt))
+      fprintf (stderr, "Unknown option `-%c'.\n", optopt);
+    else
+      fprintf (stderr, "Unknown option character `\\x%x'.\n", optopt);
+    return 1;
+    default:
+    die = true;
+    break;
+  }
+  
+  for (index = optind; index < argc; index++, i++) {
+    switch(i) {
+      case 0: filename = argv[index]; break;
+      case 1: outputfile = argv[index]; break;
+      default:
+      die=true;
+      break;
+    }
+  }  
+  
+  if(!filename || die) {
+    fprintf(stderr, "Usage: bbs_registration [-s startFrame] [-e endFrame] [filename] [outputfile]\n");
+    exit(-1);
+  } else {
+    fprintf(stderr, "Start: %d End: %d Input: %s Output: %s\n", firstFrame, lastFrame, filename, outputfile);
+  }
+  if(!outputfile) outputfile = "output.avi";
+  ReadVideo(filename, firstFrame, lastFrame, outputfile, detect_cars);
   return 0;
 }
